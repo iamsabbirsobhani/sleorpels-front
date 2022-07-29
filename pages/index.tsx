@@ -47,7 +47,7 @@ const Home = (props: any) => {
     );
 
   return (
-    <div className={styles.container}>
+    <>
       <Head>
         <title>Sleorpels | Trusted Buy</title>
         <meta
@@ -71,37 +71,43 @@ const Home = (props: any) => {
         />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
+      <div className={styles.container}>
+        <main className={styles.main}>
+          {data?.data &&
+            data?.data.map((item: any) => (
+              <Link key={item.id} href={`/product/${item.id}`}>
+                <div className=" cursor-pointer m-5">
+                  <ProductCard
+                    width={500}
+                    height={500}
+                    src={item.attributes.p_images.data[0].attributes.url}
+                    productName={item.attributes.productName}
+                    productPrice={item.attributes.price}
+                  />
+                </div>
+              </Link>
+            ))}
+        </main>
 
-      <main className={styles.main}>
-        {data?.data &&
-          data?.data.map((item: any) => (
-            <Link key={item.id} href={`/product/${item.id}`}>
-              <div className=" cursor-pointer m-5">
-                <ProductCard
-                  width={500}
-                  height={500}
-                  src={item.attributes.p_images.data[0].attributes.url}
-                  productName={item.attributes.productName}
-                  productPrice={item.attributes.price}
-                />
-              </div>
-            </Link>
-          ))}
-      </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{" "}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
-      </footer>
-    </div>
+        <footer className={styles.footer}>
+          <a
+            href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Powered by{" "}
+            <span className={styles.logo}>
+              <Image
+                src="/vercel.svg"
+                alt="Vercel Logo"
+                width={72}
+                height={16}
+              />
+            </span>
+          </a>
+        </footer>
+      </div>
+    </>
   );
 };
 
