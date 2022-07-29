@@ -4,11 +4,7 @@ import { useState } from "react";
 import Script from "next/script";
 import Image from "next/image";
 
-type ProductData = {
-  data: object;
-};
-
-export default function ProductDetails(props: ProductData) {
+export default function ProductDetails(props: any) {
   const [product, setproduct] = useState(props.data.data.attributes);
   const router = useRouter();
   const { pid } = router.query;
@@ -53,7 +49,7 @@ export default function ProductDetails(props: ProductData) {
               {/* sizes */}
               <div className=" flex">
                 {product.sizes &&
-                  product.sizes.data.map((item) => (
+                  product.sizes.data.map((item: any) => (
                     <div key={item.id} className="mr-2">
                       <p>{item.attributes.sizeName}</p>
                     </div>
@@ -77,7 +73,7 @@ export default function ProductDetails(props: ProductData) {
 }
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
-  const { pid } = context.params;
+  const pid = context.params?.pid;
 
   //   const res = await fetch(
   //     `http://localhost:1337/api/products/${pid}?populate=*`

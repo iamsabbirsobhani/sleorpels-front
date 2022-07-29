@@ -8,13 +8,10 @@ import ProductCard from "../components/product/ProductCard";
 import Link from "next/link";
 import { GetServerSideProps } from "next";
 
-type ProductsData = {
-  data: object;
-};
-
-const Home = (props: ProductsData) => {
+const Home = (props: any) => {
   const count = useSelector((state: any) => state.global.value);
   const dispatch = useDispatch();
+  console.log(props.data);
   return (
     <div className={styles.container}>
       <Head>
@@ -25,7 +22,7 @@ const Home = (props: ProductsData) => {
 
       <main className={styles.main}>
         {props.data.data &&
-          props.data?.data.map((item) => (
+          props.data?.data.map((item: any) => (
             <Link key={item.id} href={`/product/${item.id}`}>
               <div className=" cursor-pointer m-5">
                 <ProductCard
