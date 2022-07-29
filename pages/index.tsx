@@ -45,7 +45,7 @@ const Home = (props: any) => {
           width="500"
           height="80"
           blurDataURL={loading.src}
-          placeholder="blur"
+          placeholder="empty"
         />
       </div>
     );
