@@ -1,7 +1,6 @@
 import { useRouter } from "next/router";
 import { GetServerSideProps } from "next";
 import { useState } from "react";
-import Script from "next/script";
 import Image from "next/image";
 
 export default function ProductDetails(props: any) {
@@ -12,15 +11,6 @@ export default function ProductDetails(props: any) {
 
   return (
     <>
-      <Script
-        type="module"
-        src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
-      ></Script>
-      <Script
-        noModule
-        src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
-      ></Script>
-
       <div className=" max-w-5xl m-auto">
         {props.data && props.data.data.attributes && product ? (
           <div className=" flex justify-around mt-8 lg:flex-row xl:flex-row 2xl:flex-row flex-col">
@@ -61,7 +51,20 @@ export default function ProductDetails(props: any) {
                   Add to bag
                 </button>
                 <div>
-                  <ion-icon name="heart-outline"></ion-icon>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-6 w-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    strokeWidth={2}
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+                    />
+                  </svg>
                 </div>
               </div>
             </div>
