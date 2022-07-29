@@ -6,8 +6,13 @@ import { useSelector, useDispatch } from "react-redux";
 import { increment, decrement } from "../features/global/globalSlice";
 import ProductCard from "../components/product/ProductCard";
 import Link from "next/link";
+import { GetServerSideProps } from "next";
 
-const Home: NextPage = ({ data }) => {
+type ProductsData = {
+  data: object;
+};
+
+const Home = (props: ProductsData) => {
   const count = useSelector((state: any) => state.global.value);
   const dispatch = useDispatch();
   return (
@@ -19,8 +24,8 @@ const Home: NextPage = ({ data }) => {
       </Head>
 
       <main className={styles.main}>
-        {data.data &&
-          data?.data.map((item) => (
+        {props.data.data &&
+          props.data?.data.map((item) => (
             <Link key={item.id} href={`/product/${item.id}`}>
               <div className=" cursor-pointer m-5">
                 <ProductCard
@@ -51,7 +56,7 @@ const Home: NextPage = ({ data }) => {
   );
 };
 
-export async function getServerSideProps(context) {
+export const getServerSideProps: GetServerSideProps = async (context) => {
   // const res = await fetch("http://localhost:1337/api/products?populate=*");
   const res = await fetch(
     "https://sleorpels.herokuapp.com/api/products?populate=*"
@@ -61,6 +66,6 @@ export async function getServerSideProps(context) {
   return {
     props: { data },
   };
-}
+};
 
 export default Home;
