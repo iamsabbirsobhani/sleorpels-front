@@ -14,14 +14,20 @@ const Home = (props: any) => {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Seorpels | Trusted Buy</title>
-        <meta name="description" content="Seorpels | Trusted Buy" />
+        <title>Sleorpels | Trusted Buy</title>
+        <meta name="description" content="Sleorpels | Trusted Buy" />
         <link rel="icon" href="/favicon.ico" />
 
-        <meta property="og:title" content="Seorpels | Trusted Buy" />
-        <meta property="og:type" content="products" />
-        <meta property="og:image" content="../public/sleorpels-thumb.png" />
-        <meta property="og:url" content="../public/sleorpels-thumb.png" />
+        <meta property="og:title" content="Sleorpels | Trusted Buy" />
+        <meta property="og:type" content="online products ecommerce" />
+        <meta
+          property="og:image"
+          content="https://firebasestorage.googleapis.com/v0/b/iceland-2b5ae.appspot.com/o/sleorpels-thumb.png?alt=media&token=e03032b6-5004-4499-8c95-0ca023943edf"
+        />
+        <meta
+          property="og:url"
+          content="https://firebasestorage.googleapis.com/v0/b/iceland-2b5ae.appspot.com/o/sleorpels-thumb.png?alt=media&token=e03032b6-5004-4499-8c95-0ca023943edf"
+        />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
 

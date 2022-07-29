@@ -13,12 +13,12 @@ export default function ProductDetails(props: any) {
   return (
     <>
       <Head>
-        <title>Seorpels | {product.productName}</title>
+        <title>Sleorpels | {product.productName}</title>
         <meta name="description" content={product.productName} />
         <link rel="icon" href="/favicon.ico" />
 
-        <meta property="og:title" content="Seorpels | Trusted Buy" />
-        <meta property="og:type" content="products" />
+        <meta property="og:title" content="Sleorpels | Trusted Buy" />
+        <meta property="og:type" content="online products ecommerce" />
         <meta
           property="og:image"
           content={product.p_images.data[0].attributes.url}
