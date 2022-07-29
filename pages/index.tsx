@@ -28,11 +28,11 @@ const Home = (props: any) => {
         <meta property="og:type" content="online products ecommerce" />
         <meta
           property="og:image"
-          content="https://firebasestorage.googleapis.com/v0/b/iceland-2b5ae.appspot.com/o/sleorpels-thumb.png?alt=media&token=0aaa63e4-c65d-46d4-b8f1-f251dfe89b48"
+          content="https://firebasestorage.googleapis.com/v0/b/iceland-2b5ae.appspot.com/o/sleorpels-thumb.png?alt=media&token=5fb0783c-9980-4fee-bd1c-6699e2d63de9"
         />
         <meta
           property="og:url"
-          content="https://firebasestorage.googleapis.com/v0/b/iceland-2b5ae.appspot.com/o/sleorpels-thumb.png?alt=media&token=e03032b6-5004-4499-8c95-0ca023943edf"
+          content="https://firebasestorage.googleapis.com/v0/b/iceland-2b5ae.appspot.com/o/sleorpels-thumb.png?alt=media&token=5fb0783c-9980-4fee-bd1c-6699e2d63de9"
         />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
