@@ -2,15 +2,33 @@ import { useRouter } from "next/router";
 import { GetServerSideProps } from "next";
 import { useState } from "react";
 import Image from "next/image";
+import Head from "next/head";
 
 export default function ProductDetails(props: any) {
   const [product, setproduct] = useState(props.data.data.attributes);
   const router = useRouter();
   const { pid } = router.query;
-  console.log(props.data);
+  //   console.log(props.data);
 
   return (
     <>
+      <Head>
+        <title>Seorpels | {product.productName}</title>
+        <meta name="description" content={product.productName} />
+        <link rel="icon" href="/favicon.ico" />
+
+        <meta property="og:title" content="Seorpels | Trusted Buy" />
+        <meta property="og:type" content="products" />
+        <meta
+          property="og:image"
+          content={product.p_images.data[0].attributes.url}
+        />
+        <meta
+          property="og:url"
+          content={product.p_images.data[0].attributes.url}
+        />
+        <meta name="twitter:card" content="summary_large_image" />
+      </Head>
       <div className=" max-w-5xl m-auto">
         {props.data && props.data.data.attributes && product ? (
           <div className=" flex justify-around mt-8 lg:flex-row xl:flex-row 2xl:flex-row flex-col">
