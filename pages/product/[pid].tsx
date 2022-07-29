@@ -14,10 +14,13 @@ export default function ProductDetails(props: any) {
     <>
       <Head>
         <title>Sleorpels | {product.productName}</title>
-        <meta name="description" content={product.productName} />
+        <meta name="description" content={product.productSnippet} />
         <link rel="icon" href="/favicon.ico" />
 
-        <meta property="og:title" content="Sleorpels | Trusted Buy" />
+        <meta
+          property="og:title"
+          content="Buy latest fashion with trusted brand"
+        />
         <meta property="og:type" content="online products ecommerce" />
         <meta
           property="og:image"

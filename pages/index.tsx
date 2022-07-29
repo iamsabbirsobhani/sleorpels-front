@@ -15,14 +15,20 @@ const Home = (props: any) => {
     <div className={styles.container}>
       <Head>
         <title>Sleorpels | Trusted Buy</title>
-        <meta name="description" content="Sleorpels | Trusted Buy" />
+        <meta
+          name="description"
+          content="All types of clothing with latest design and western vibe. Visit today to get many offers and discounts."
+        />
         <link rel="icon" href="/favicon.ico" />
 
-        <meta property="og:title" content="Sleorpels | Trusted Buy" />
+        <meta
+          property="og:title"
+          content="Buy latest fashion with trusted brand"
+        />
         <meta property="og:type" content="online products ecommerce" />
         <meta
           property="og:image"
-          content="https://firebasestorage.googleapis.com/v0/b/iceland-2b5ae.appspot.com/o/sleorpels-thumb.png?alt=media&token=e03032b6-5004-4499-8c95-0ca023943edf"
+          content="https://firebasestorage.googleapis.com/v0/b/iceland-2b5ae.appspot.com/o/sleorpels-thumb.png?alt=media&token=0aaa63e4-c65d-46d4-b8f1-f251dfe89b48"
         />
         <meta
           property="og:url"
