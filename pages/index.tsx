@@ -9,8 +9,14 @@ import { GetServerSideProps } from "next";
 import useSWR, { Key, Fetcher } from "swr";
 import loading from "../public/sleorpels-loading.png";
 
-const fetcher: Fetcher<object> = (...args) =>
-  fetch(...args).then((res) => res.json());
+const fetcher = async (
+  input: RequestInfo,
+  init: RequestInit,
+  ...args: any[]
+) => {
+  const res = await fetch(input, init);
+  return res.json();
+};
 
 const Home = (props: any) => {
   const count = useSelector((state: any) => state.global.value);
@@ -27,13 +33,14 @@ const Home = (props: any) => {
   if (!data)
     return (
       <div className=" w-64 m-auto animate-pulse absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center">
+        <div className=" absolute z-50 w-72 h-20 bg-transparent"></div>
         <Image
           className=" object-cover"
           src={loading}
           alt="sleorpels-loading"
           width="500"
           height="80"
-          blurDataURL="../public/sleorpels-loading.png"
+          blurDataURL={loading.src}
           placeholder="blur"
         />
       </div>
