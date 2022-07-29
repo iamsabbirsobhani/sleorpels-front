@@ -1,9 +1,15 @@
-import type { NextPage } from 'next'
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
+import type { NextPage } from "next";
+import Head from "next/head";
+import Image from "next/image";
+import styles from "../styles/Home.module.css";
+import { useSelector, useDispatch } from "react-redux";
+import { increment, decrement } from "../features/global/globalSlice";
+import ProductCard from "../components/product/ProductCard";
+import Link from "next/link";
 
-const Home: NextPage = () => {
+const Home: NextPage = ({ data }) => {
+  const count = useSelector((state: any) => state.global.value);
+  const dispatch = useDispatch();
   return (
     <div className={styles.container}>
       <Head>
@@ -13,44 +19,20 @@ const Home: NextPage = () => {
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.tsx</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h2>Documentation &rarr;</h2>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h2>Learn &rarr;</h2>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/canary/examples"
-            className={styles.card}
-          >
-            <h2>Examples &rarr;</h2>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h2>Deploy &rarr;</h2>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
+        {data.data &&
+          data?.data.map((item) => (
+            <Link key={item.id} href={`/product/${item.id}`}>
+              <div className=" cursor-pointer m-5">
+                <ProductCard
+                  width={500}
+                  height={500}
+                  src={item.attributes.p_images.data[0].attributes.url}
+                  productName={item.attributes.productName}
+                  productPrice={item.attributes.price}
+                />
+              </div>
+            </Link>
+          ))}
       </main>
 
       <footer className={styles.footer}>
@@ -59,14 +41,26 @@ const Home: NextPage = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Powered by{' '}
+          Powered by{" "}
           <span className={styles.logo}>
             <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
           </span>
         </a>
       </footer>
     </div>
-  )
+  );
+};
+
+export async function getServerSideProps(context) {
+  // const res = await fetch("http://localhost:1337/api/products?populate=*");
+  const res = await fetch(
+    "https://sleorpels.herokuapp.com/api/products?populate=*"
+  );
+
+  const data = await res.json();
+  return {
+    props: { data },
+  };
 }
 
-export default Home
+export default Home;
