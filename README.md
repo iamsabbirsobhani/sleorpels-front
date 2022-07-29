@@ -2,4 +2,4 @@
 
 ## Component Diagram
 
-![ER Model](public\sleorpels.png)
+![Component Diagram](https://github.com/iamsabbirsobhani/sleorpels-front/blob/main/public/sleorpels.png)
