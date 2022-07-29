@@ -22,8 +22,12 @@ const Home = (props: any) => {
   const count = useSelector((state: any) => state.global.value);
   const dispatch = useDispatch();
 
+  // const { data, error } = useSWR(
+  //   "http://localhost:1337/api/products?populate=*",
+  //   fetcher
+  // );
   const { data, error } = useSWR(
-    "http://localhost:1337/api/products?populate=*",
+    "https://sleorpels.herokuapp.com/api/products?populate=*",
     fetcher
   );
 
