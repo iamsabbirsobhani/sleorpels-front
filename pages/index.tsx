@@ -6,11 +6,39 @@ import { increment, decrement } from "../features/global/globalSlice";
 import ProductCard from "../components/product/ProductCard";
 import Link from "next/link";
 import { GetServerSideProps } from "next";
+import useSWR, { Key, Fetcher } from "swr";
+import loading from "../public/sleorpels-loading.png";
+
+const fetcher: Fetcher<object> = (...args) =>
+  fetch(...args).then((res) => res.json());
 
 const Home = (props: any) => {
   const count = useSelector((state: any) => state.global.value);
   const dispatch = useDispatch();
-  // console.log(props.data);
+
+  const { data, error } = useSWR(
+    "http://localhost:1337/api/products?populate=*",
+    fetcher
+  );
+
+  if (error) return <div>Failed to load</div>;
+
+  // loading while data is fetching
+  if (!data)
+    return (
+      <div className=" w-64 m-auto animate-pulse absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center">
+        <Image
+          className=" object-cover"
+          src={loading}
+          alt="sleorpels-loading"
+          width="500"
+          height="80"
+          blurDataURL="../public/sleorpels-loading.png"
+          placeholder="blur"
+        />
+      </div>
+    );
+
   return (
     <div className={styles.container}>
       <Head>
@@ -38,8 +66,8 @@ const Home = (props: any) => {
       </Head>
 
       <main className={styles.main}>
-        {props.data.data &&
-          props.data?.data.map((item: any) => (
+        {data?.data &&
+          data?.data.map((item: any) => (
             <Link key={item.id} href={`/product/${item.id}`}>
               <div className=" cursor-pointer m-5">
                 <ProductCard
@@ -68,18 +96,6 @@ const Home = (props: any) => {
       </footer>
     </div>
   );
-};
-
-export const getServerSideProps: GetServerSideProps = async (context) => {
-  // const res = await fetch("http://localhost:1337/api/products?populate=*");
-  const res = await fetch(
-    "https://sleorpels.herokuapp.com/api/products?populate=*"
-  );
-
-  const data = await res.json();
-  return {
-    props: { data },
-  };
 };
 
 export default Home;
