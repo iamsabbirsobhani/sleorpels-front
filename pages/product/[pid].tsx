@@ -19,7 +19,7 @@ export default function ProductDetails(props: any) {
 
         <meta
           property="og:title"
-          content="Buy latest fashion with trusted brand"
+          content={`${product.productName}. Buy latest fashion with trusted brand`}
         />
         <meta property="og:type" content="online products ecommerce" />
         <meta
