@@ -22,14 +22,17 @@ const Home = (props: any) => {
   const count = useSelector((state: any) => state.global.value);
   const dispatch = useDispatch();
 
-  // const { data, error } = useSWR(
-  //   "http://localhost:1337/api/products?populate=*",
-  //   fetcher
-  // );
+  // development api end poing
   const { data, error } = useSWR(
-    "https://sleorpels.herokuapp.com/api/products?populate=*",
+    "http://localhost:1337/api/products?populate=*",
     fetcher
   );
+
+  // production end point
+  // const { data, error } = useSWR(
+  //   "https://sleorpels.herokuapp.com/api/products?populate=*",
+  //   fetcher
+  // );
 
   if (error) return <div>Failed to load</div>;
 
@@ -75,18 +78,21 @@ const Home = (props: any) => {
         />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
-      <div className={styles.container}>
-        <main className={styles.main}>
+
+      {/* <div className={styles.container}> */}
+      <div className=" mt-10">
+        <main className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-7 gap-2">
           {data?.data &&
             data?.data.map((item: any) => (
               <Link key={item.id} href={`/product/${item.id}`}>
-                <div className=" cursor-pointer m-5">
+                <div className=" cursor-pointer flex justify-center ">
                   <ProductCard
-                    width={500}
+                    width={400}
                     height={500}
                     src={item.attributes.p_images.data[0].attributes.url}
                     productName={item.attributes.productName}
                     productPrice={item.attributes.price}
+                    off={item.attributes.off}
                   />
                 </div>
               </Link>

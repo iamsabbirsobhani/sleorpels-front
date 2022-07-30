@@ -10,6 +10,10 @@ export default function ProductDetails(props: any) {
   const { pid } = router.query;
   //   console.log(props.data);
 
+  function computedOffPrice() {
+    return product.price - Math.ceil((product.price * product.off) / 100);
+  }
+
   return (
     <>
       <Head>
@@ -47,10 +51,24 @@ export default function ProductDetails(props: any) {
                 placeholder="blur" // Optional blur-up while loading
               />
             </div>
+
             {/* product details part */}
             <div className=" p-2">
               <h1>{product.productName}</h1>
-              <p className=" font-bold">$&nbsp;{product.price}</p>
+              {/* if there is an offer */}
+              {product.off ? (
+                <div>
+                  <h1>
+                    Was ${product.price} <span> Now ${computedOffPrice()}</span>{" "}
+                    <span>(-{product.off}%)</span>{" "}
+                  </h1>
+                </div>
+              ) : (
+                <div>
+                  <p className=" font-bold">$&nbsp;{product.price}</p>
+                </div>
+              )}
+
               <p className=" uppercase font-bold">
                 Colour:{" "}
                 <span className=" normal-case font-normal">
@@ -99,12 +117,16 @@ export default function ProductDetails(props: any) {
 export const getServerSideProps: GetServerSideProps = async (context) => {
   const pid = context.params?.pid;
 
-  //   const res = await fetch(
-  //     `http://localhost:1337/api/products/${pid}?populate=*`
-  //   );
+  // development api end point
   const res = await fetch(
-    `https://sleorpels.herokuapp.com/api/products/${pid}?populate=*`
+    `http://localhost:1337/api/products/${pid}?populate=*`
   );
+
+  // production api end point
+  // const res = await fetch(
+  //   `https://sleorpels.herokuapp.com/api/products/${pid}?populate=*`
+  // );
+
   const data = await res.json();
 
   if (!data?.data) {
