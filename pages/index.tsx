@@ -39,18 +39,43 @@ const Home = (props: any) => {
   // loading while data is fetching
   if (!data)
     return (
-      <div className=" w-64 m-auto animate-pulse absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center">
-        <div className=" absolute z-50 w-72 h-20 bg-transparent"></div>
-        <Image
-          className=" object-cover"
-          src={loading}
-          alt="sleorpels-loading"
-          width="500"
-          height="80"
-          blurDataURL={loading.src}
-          placeholder="empty"
-        />
-      </div>
+      <>
+        <Head>
+          <title>Sleorpels | Trusted Buy</title>
+          <meta
+            name="description"
+            content="All types of clothing with latest design and western vibe. Visit today to get many offers and discounts."
+          />
+          <link rel="icon" href="/favicon.ico" />
+
+          <meta
+            property="og:title"
+            content="Buy latest fashion with trusted brand"
+          />
+          <meta property="og:type" content="online products ecommerce" />
+          <meta
+            property="og:image"
+            content="https://firebasestorage.googleapis.com/v0/b/iceland-2b5ae.appspot.com/o/sleorpels-thumb.png?alt=media&token=5fb0783c-9980-4fee-bd1c-6699e2d63de9"
+          />
+          <meta
+            property="og:url"
+            content="https://firebasestorage.googleapis.com/v0/b/iceland-2b5ae.appspot.com/o/sleorpels-thumb.png?alt=media&token=5fb0783c-9980-4fee-bd1c-6699e2d63de9"
+          />
+          <meta name="twitter:card" content="summary_large_image" />
+        </Head>
+        <div className=" w-64 m-auto animate-pulse absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center">
+          <div className=" absolute z-50 w-72 h-20 bg-transparent"></div>
+          <Image
+            className=" object-cover"
+            src={loading}
+            alt="sleorpels-loading"
+            width="500"
+            height="80"
+            blurDataURL={loading.src}
+            placeholder="empty"
+          />
+        </div>
+      </>
     );
 
   return (
