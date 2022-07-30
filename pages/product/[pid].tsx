@@ -4,8 +4,18 @@ import { useState } from "react";
 import Image from "next/image";
 import Head from "next/head";
 
+type SelectedImageUrl = {
+  id: number;
+  url: string;
+};
+
 export default function ProductDetails(props: any) {
   const [product, setproduct] = useState(props.data.data.attributes);
+  const [selectedImageUrl, setselectedImageUrl] = useState<SelectedImageUrl>({
+    id: product.p_images.data[0].id,
+    url: product.p_images.data[0].attributes.url,
+  });
+
   const router = useRouter();
   const { pid } = router.query;
   //   console.log(props.data);
@@ -40,13 +50,49 @@ export default function ProductDetails(props: any) {
         {props.data && props.data.data.attributes && product ? (
           <div className=" flex justify-around mt-8 lg:flex-row xl:flex-row 2xl:flex-row flex-col">
             {/* product image part */}
-            <div>
+            <div className=" flex-col-reverse flex lg:flex-row xl:flex-row 2xl:flex-row ">
+              <div className=" ml-2  mr-2 mt-2 lg:inline-block xl:inline-block 2xl:inline-block inline-flex">
+                {product.p_images.data.length >= 0 &&
+                  product.p_images.data.map((item: any) => (
+                    <div
+                      key={item.id}
+                      onClick={() => {
+                        setselectedImageUrl({
+                          id: item.id,
+                          url: item.attributes.url,
+                        });
+                      }}
+                      className=" mr-3 lg:mt-3 xl:mt3 2xl:mt3 justify-items-center w-32 hover:scale-105 transition-all duration-150 cursor-pointer  active:border-2 focus:border-2 border-emerald-500"
+                      style={{
+                        border:
+                          selectedImageUrl?.id === item.id
+                            ? "2px solid #14b8a6"
+                            : "0",
+                      }}
+                    >
+                      <Image
+                        className=" object-cover block mb-3"
+                        src={item.attributes.url}
+                        width={500}
+                        height={500}
+                        blurDataURL={item.attributes.url}
+                        placeholder="blur"
+                        layout="responsive"
+                        objectFit="cover"
+                      />
+                    </div>
+                  ))}
+              </div>
               <Image
                 className=" object-cover"
-                src={product.p_images.data[0].attributes.url}
+                src={
+                  selectedImageUrl?.url ||
+                  product.p_images.data[0].attributes.url
+                }
                 alt={product.productName}
-                width={500}
-                height={500}
+                width={900}
+                height={1000}
+                objectFit="cover"
                 blurDataURL={product.p_images.data[0].attributes.url}
                 placeholder="blur" // Optional blur-up while loading
               />

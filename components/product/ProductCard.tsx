@@ -29,7 +29,7 @@ export default function ProductCard(props: props) {
             width={props.width}
             height={props.height}
             blurDataURL={props.src}
-            placeholder="blur" // Optional blur-up while loading
+            placeholder="blur"
           />
 
           <div>
