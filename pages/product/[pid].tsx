@@ -47,13 +47,13 @@ export default function ProductDetails(props: any) {
   return (
     <>
       <Head>
-        <title>Sleorpels | {product.productName}</title>
+        <title>{product.productName} | Sleorpels</title>
         <meta name="description" content={product.productSnippet} />
         <link rel="icon" href="/favicon.ico" />
 
         <meta
           property="og:title"
-          content={`${product.productName}. Buy latest fashion with trusted brand`}
+          content={`${product.productName}. Buy this latest fashion with the trusted brand SLEORPELS`}
         />
         <meta property="og:type" content="online products ecommerce" />
         <meta
@@ -160,7 +160,7 @@ export default function ProductDetails(props: any) {
                     <div
                       className={
                         sizeStyle(item.attributes.sizeName) +
-                        " w-6 text-center text-white font-bold rounded-sm cursor-pointer"
+                        " w-6 text-center text-white font-bold rounded-sm cursor-pointer border-[1px] border-white shadow-md"
                       }
                       onClick={() => {
                         setselectSize({

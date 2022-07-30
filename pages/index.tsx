@@ -44,7 +44,7 @@ const Home = (props: any) => {
           <title>Sleorpels | Trusted Buy</title>
           <meta
             name="description"
-            content="All types of clothing with latest design and western vibe. Visit today to get many offers and discounts."
+            content="Buy all types of clothing with latest design and western vibe. Visit today and get many discounts."
           />
           <link rel="icon" href="/favicon.ico" />
 
