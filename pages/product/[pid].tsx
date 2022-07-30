@@ -118,14 +118,14 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
   const pid = context.params?.pid;
 
   // development api end point
-  const res = await fetch(
-    `http://localhost:1337/api/products/${pid}?populate=*`
-  );
+  // const res = await fetch(
+  //   `http://localhost:1337/api/products/${pid}?populate=*`
+  // );
 
   // production api end point
-  // const res = await fetch(
-  //   `https://sleorpels.herokuapp.com/api/products/${pid}?populate=*`
-  // );
+  const res = await fetch(
+    `https://sleorpels.herokuapp.com/api/products/${pid}?populate=*`
+  );
 
   const data = await res.json();
 
