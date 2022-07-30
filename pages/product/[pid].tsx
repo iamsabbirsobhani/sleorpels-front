@@ -1,6 +1,6 @@
 import { useRouter } from "next/router";
 import { GetServerSideProps } from "next";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import Image from "next/image";
 import Head from "next/head";
 
@@ -9,12 +9,18 @@ type SelectedImageUrl = {
   url: string;
 };
 
+type SelectSize = {
+  id: number;
+  size: string;
+};
+
 export default function ProductDetails(props: any) {
   const [product, setproduct] = useState(props.data.data.attributes);
   const [selectedImageUrl, setselectedImageUrl] = useState<SelectedImageUrl>({
     id: product.p_images.data[0].id,
     url: product.p_images.data[0].attributes.url,
   });
+  const [selectSize, setselectSize] = useState<SelectSize>();
 
   const router = useRouter();
   const { pid } = router.query;
@@ -22,6 +28,20 @@ export default function ProductDetails(props: any) {
 
   function computedOffPrice() {
     return product.price - Math.ceil((product.price * product.off) / 100);
+  }
+
+  function sizeStyle(size: string) {
+    return size === "S"
+      ? "bg-emerald-500 mr-2"
+      : size === "M"
+      ? "bg-cyan-500 mr-2"
+      : size === "L"
+      ? "bg-violet-500 mr-2"
+      : size === "X"
+      ? "bg-lime-500 mr-2"
+      : size === "XL"
+      ? "bg-fuchsia-500 mr-2"
+      : "hidden";
   }
 
   return (
@@ -48,7 +68,7 @@ export default function ProductDetails(props: any) {
       </Head>
       <div className=" max-w-5xl m-auto">
         {props.data && props.data.data.attributes && product ? (
-          <div className=" flex justify-around mt-8 lg:flex-row xl:flex-row 2xl:flex-row flex-col">
+          <div className=" flex justify-between mt-8 lg:flex-row xl:flex-row 2xl:flex-row flex-col">
             {/* product image part */}
             <div className=" flex-col-reverse flex lg:flex-row xl:flex-row 2xl:flex-row ">
               <div className=" ml-2  mr-2 mt-2 lg:inline-block xl:inline-block 2xl:inline-block inline-flex">
@@ -99,43 +119,74 @@ export default function ProductDetails(props: any) {
             </div>
 
             {/* product details part */}
-            <div className=" p-2">
-              <h1>{product.productName}</h1>
+            <div className=" p-2 mt-4">
+              <h1 className=" text-xl tracking-wide">{product.productName}</h1>
               {/* if there is an offer */}
               {product.off ? (
-                <div>
+                <div className=" mt-3">
                   <h1>
-                    Was ${product.price} <span> Now ${computedOffPrice()}</span>{" "}
-                    <span>(-{product.off}%)</span>{" "}
+                    Was ${product.price}.00{" "}
+                    <span className=" font-bold text-red-600">
+                      {" "}
+                      Now ${computedOffPrice()}.00
+                    </span>{" "}
+                    <span className=" normal-case text-red-600">
+                      (-{product.off}%)
+                    </span>{" "}
                   </h1>
                 </div>
               ) : (
                 <div>
-                  <p className=" font-bold">$&nbsp;{product.price}</p>
+                  <p
+                    className=" font-extrabold text-lg tracking-wide mt-3"
+                    style={{ fontFamily: "futura-price" }}
+                  >
+                    $&nbsp;{product.price}.00
+                  </p>
                 </div>
               )}
 
-              <p className=" uppercase font-bold">
+              <p className=" uppercase font-bold mt-3">
                 Colour:{" "}
                 <span className=" normal-case font-normal">
                   {product.color}
                 </span>
               </p>
               {/* sizes */}
-              <div className=" flex">
+              <div className=" flex mt-3">
+                <h1 className=" font-bold uppercase">Size: &nbsp;</h1>
                 {product.sizes &&
                   product.sizes.data.map((item: any) => (
-                    <div key={item.id} className="mr-2">
+                    <div
+                      className={
+                        sizeStyle(item.attributes.sizeName) +
+                        " w-6 text-center text-white font-bold rounded-sm cursor-pointer"
+                      }
+                      onClick={() => {
+                        setselectSize({
+                          id: item.id,
+                          size: item.attributes.sizeName,
+                        });
+                      }}
+                      key={item.id}
+                      style={{
+                        outline:
+                          selectSize?.id === item.id
+                            ? "3px solid #10b981"
+                            : "none",
+                        transition: "outline 150ms linear",
+                      }}
+                    >
                       <p>{item.attributes.sizeName}</p>
                     </div>
                   ))}
               </div>
 
-              <div className=" flex items-center">
-                <button className=" bg-emerald-500 p-2 uppercase font-bold text-white w-52 mr-5 transition-all hover:bg-emerald-600">
+              <div className=" flex items-center mt-3">
+                <button className=" rounded-sm bg-emerald-500 p-2 uppercase font-bold text-white w-52 mr-5 transition-all hover:bg-emerald-600">
                   Add to bag
                 </button>
-                <div>
+                <div className=" cursor-pointer ">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="h-6 w-6"

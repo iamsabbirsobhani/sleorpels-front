@@ -41,7 +41,7 @@ export default function ProductCard(props: props) {
                   className=" font-bold mr-5"
                   style={{ fontFamily: "futura-price" }}
                 >
-                  ${computedOffPrice()}
+                  ${computedOffPrice()}.00
                 </p>
                 <p className=" font-bold line-through text-red-500">
                   ${props.productPrice}.00
