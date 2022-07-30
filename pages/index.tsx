@@ -79,16 +79,15 @@ const Home = (props: any) => {
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
 
-      {/* <div className={styles.container}> */}
       <div className=" mt-10">
-        <main className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-7 gap-2">
+        <main className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-7 gap-3 m-2">
           {data?.data &&
             data?.data.map((item: any) => (
               <Link key={item.id} href={`/product/${item.id}`}>
                 <div className=" cursor-pointer flex justify-center ">
                   <ProductCard
-                    width={400}
-                    height={500}
+                    width={900}
+                    height={1000}
                     src={item.attributes.p_images.data[0].attributes.url}
                     productName={item.attributes.productName}
                     productPrice={item.attributes.price}
