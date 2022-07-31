@@ -6,6 +6,7 @@ import { useRouter } from "next/router";
 import NProgress from "nprogress";
 import "../public/nprogress.css";
 import { useEffect } from "react";
+import Navbar from "../components/navbar/Navbar";
 
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
@@ -30,6 +31,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   }, [router]);
   return (
     <Provider store={store}>
+      <Navbar />
       <Component {...pageProps} />
     </Provider>
   );
