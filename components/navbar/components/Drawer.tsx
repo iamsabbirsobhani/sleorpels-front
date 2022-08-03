@@ -3,7 +3,11 @@ import DrawerMen from "./DrawerMen";
 import { useSelector, useDispatch } from "react-redux";
 import { setOpenDrawer } from "../../../features/global/globalSlice";
 
-export function Drawer({ openDrawer }) {
+type DrawerProps = {
+  openDrawer: boolean;
+};
+
+export function Drawer(props: DrawerProps) {
   const [openMen, setopenMen] = useState(false);
   const dispatch = useDispatch();
 
@@ -11,8 +15,8 @@ export function Drawer({ openDrawer }) {
     <>
       <div
         style={{
-          opacity: openDrawer ? "1" : "0",
-          visibility: openDrawer ? "visible" : "hidden",
+          opacity: props.openDrawer ? "1" : "0",
+          visibility: props.openDrawer ? "visible" : "hidden",
           transition: "all 0.24s ease-in",
         }}
         onClick={() => dispatch(setOpenDrawer(false))}
@@ -22,7 +26,7 @@ export function Drawer({ openDrawer }) {
       {/* drawer */}
       <div
         style={{
-          left: openDrawer ? "0" : "-100%",
+          left: props.openDrawer ? "0" : "-100%",
           transition: "left 0.24s linear",
         }}
         className=" z-50 fixed h-full top-0  w-2/3 bg-white"
@@ -52,7 +56,7 @@ export function Drawer({ openDrawer }) {
       </div>
       <div
         style={{
-          left: openDrawer ? "" : "-100%",
+          left: props.openDrawer ? "" : "-100%",
           transition: "left 0.24s linear",
         }}
         className=" z-50 absolute text-black top-0 left-2/3"
