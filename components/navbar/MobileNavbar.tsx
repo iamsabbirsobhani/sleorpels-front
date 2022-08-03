@@ -1,14 +1,25 @@
 import Link from "next/link";
+import { Drawer } from "./components/Drawer";
+import { useSelector, useDispatch } from "react-redux";
+import { setOpenDrawer } from "../../features/global/globalSlice";
 
 export default function MobileNavbar() {
+  const openDrawer = useSelector((state: any) => state.global.openDrawer);
+  const dispatch = useDispatch();
   return (
     <>
       <div className=" flex justify-around items-center h-[3.6rem] bg-[#2d2d2d] border-b-[1px]">
         <div className=" flex items-center ">
-          <button className=" mr-3 text-white">
+          <button
+            onClick={() => {
+              dispatch(setOpenDrawer(true));
+              document.body.style.overflow = "hidden";
+            }}
+            className=" mr-3 text-white text-xl"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="h-6 w-6"
+              className="h-7 w-7"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -83,6 +94,9 @@ export default function MobileNavbar() {
             </svg>
           </div>
         </div>
+      </div>
+      <div>
+        <Drawer openDrawer={openDrawer} />
       </div>
     </>
   );
