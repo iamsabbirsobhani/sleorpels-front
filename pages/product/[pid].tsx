@@ -49,7 +49,7 @@ export default function ProductDetails(props: any) {
       <Head>
         <title>{product.productName} | Sleorpels</title>
         <meta name="description" content={product.productSnippet} />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.png" />
 
         <meta
           property="og:title"

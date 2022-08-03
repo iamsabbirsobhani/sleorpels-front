@@ -46,7 +46,7 @@ const Home = (props: any) => {
             name="description"
             content="Buy all types of clothing with latest design and western vibe. Visit today and get many discounts."
           />
-          <link rel="icon" href="/favicon.ico" />
+          <link rel="icon" href="/public/favicon.png" />
 
           <meta
             property="og:title"
@@ -86,7 +86,7 @@ const Home = (props: any) => {
           name="description"
           content="All types of clothing with latest design and western vibe. Visit today to get many offers and discounts."
         />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.png" />
 
         <meta
           property="og:title"
