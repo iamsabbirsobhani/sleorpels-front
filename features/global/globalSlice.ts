@@ -1,4 +1,4 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 export const globalSlice = createSlice({
   name: "global",
@@ -8,7 +8,7 @@ export const globalSlice = createSlice({
   },
   reducers: {
     // drawer
-    setOpenDrawer: (state, action) => {
+    setOpenDrawer: (state, action: PayloadAction<boolean>) => {
       state.openDrawer = action.payload;
     },
     increment: (state) => {
