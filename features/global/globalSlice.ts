@@ -11,6 +11,9 @@ export const globalSlice = createSlice({
     setOpenDrawer: (state, action: PayloadAction<boolean>) => {
       state.openDrawer = action.payload;
     },
+    setScroll: () => {
+      document.body.style.overflow = "scroll";
+    },
     increment: (state) => {
       // Redux Toolkit allows us to write "mutating" logic in reducers. It
       // doesn't actually mutate the state because it uses the Immer library,
@@ -28,7 +31,12 @@ export const globalSlice = createSlice({
 });
 
 // Action creators are generated for each case reducer function
-export const { increment, decrement, incrementByAmount, setOpenDrawer } =
-  globalSlice.actions;
+export const {
+  increment,
+  decrement,
+  incrementByAmount,
+  setOpenDrawer,
+  setScroll,
+} = globalSlice.actions;
 
 export default globalSlice.reducer;

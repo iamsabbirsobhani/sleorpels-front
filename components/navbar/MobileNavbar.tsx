@@ -8,8 +8,8 @@ export default function MobileNavbar() {
   const dispatch = useDispatch();
   return (
     <>
-      <div className=" flex justify-around items-center h-[3.6rem] bg-[#2d2d2d] border-b-[1px]">
-        <div className=" flex items-center ">
+      <div className=" flex justify-between items-center h-[3.6rem] bg-[#2d2d2d] border-b-[1px]">
+        <div className=" flex items-center  ml-2">
           <button
             onClick={() => {
               dispatch(setOpenDrawer(true));
@@ -36,14 +36,14 @@ export default function MobileNavbar() {
             <Link href={"/"}>
               <h1
                 style={{ fontFamily: "Readex Pro" }}
-                className="text-3xl tracking-tighter font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-gray-50 to-gray-300 cursor-pointer"
+                className="text-2xl tracking-tighter font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-gray-50 to-gray-300 cursor-pointer"
               >
                 SLEORPELS®
               </h1>
             </Link>
           </div>
         </div>
-        <div className=" flex justify-between w-28 text-white">
+        <div className=" flex justify-between w-28 text-white mr-3">
           <div>
             <svg
               xmlns="http://www.w3.org/2000/svg"
