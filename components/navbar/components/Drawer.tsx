@@ -22,6 +22,7 @@ export function Drawer(props: DrawerProps) {
         onClick={() => {
           dispatch(setOpenDrawer(false));
           dispatch(setScroll());
+          setopenMen(false);
         }}
         className=" z-30 w-full h-full fixed top-0 left-0 right-0 bottom-0 bg-gray-600/30 "
       ></div>
