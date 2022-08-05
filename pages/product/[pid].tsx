@@ -20,10 +20,12 @@ export default function ProductDetails(props: any) {
     id: product.p_images.data[0].id,
     url: product.p_images.data[0].attributes.url,
   });
+
   const [selectSize, setselectSize] = useState<SelectSize>();
 
   const router = useRouter();
   const { pid } = router.query;
+
   //   console.log(props.data);
 
   function computedOffPrice() {
@@ -32,16 +34,16 @@ export default function ProductDetails(props: any) {
 
   function sizeStyle(size: string) {
     return size === "S"
-      ? "bg-emerald-500 mr-2"
+      ? "#475569"
       : size === "M"
-      ? "bg-cyan-500 mr-2"
+      ? "#57534e"
       : size === "L"
-      ? "bg-violet-500 mr-2"
+      ? "#52525b"
       : size === "X"
-      ? "bg-lime-500 mr-2"
+      ? "#525252"
       : size === "XL"
-      ? "bg-fuchsia-500 mr-2"
-      : "hidden";
+      ? "#57534e"
+      : "none";
   }
 
   return (
@@ -170,9 +172,11 @@ export default function ProductDetails(props: any) {
                       }}
                       key={item.id}
                       style={{
+                        backgroundColor: sizeStyle(item.attributes.sizeName),
+                        marginRight: "5px",
                         outline:
                           selectSize?.id === item.id
-                            ? "3px solid #10b981"
+                            ? `3px solid #52525b`
                             : "none",
                         transition: "outline 150ms linear",
                       }}

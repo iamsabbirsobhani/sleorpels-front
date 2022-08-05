@@ -1,6 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
+  reactStrictMode: false,
+  ignoreBuildErrors: true,
   swcMinify: true,
   images: {
     domains: ["images.asos-media.com"],

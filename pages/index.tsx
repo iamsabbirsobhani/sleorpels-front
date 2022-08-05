@@ -2,12 +2,11 @@ import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import { useSelector, useDispatch } from "react-redux";
-import { increment, decrement } from "../features/global/globalSlice";
 import ProductCard from "../components/product/ProductCard";
 import Link from "next/link";
-import { GetServerSideProps } from "next";
-import useSWR, { Key, Fetcher } from "swr";
+import useSWR from "swr";
 import loading from "../public/sleorpels-loading.png";
+import HomePage from "./Home";
 
 const fetcher = async (
   input: RequestInfo,
@@ -63,6 +62,7 @@ const Home = (props: any) => {
           />
           <meta name="twitter:card" content="summary_large_image" />
         </Head>
+
         <div className=" w-64 m-auto animate-pulse absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center">
           <div className=" absolute z-50 w-72 h-20 bg-transparent"></div>
           <Image
@@ -103,7 +103,9 @@ const Home = (props: any) => {
         />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
-
+      <div>
+        <HomePage />
+      </div>
       <div className=" mt-10">
         <main className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-7 gap-3 m-2">
           {data?.data &&
