@@ -41,10 +41,15 @@ export default function PopulateOffer() {
       </div>
       <div className=" block lg:hidden xl:hidden 2xl:hidden  w-full h-16 bg-[#2d2d2d]">
         <div style={slide} className=" slider-wrapper text-white">
-          <div className=" slider text-center flex items-center h-16">
+          <div className=" slider text-center flex justify-center items-center h-16">
             {data.map((item) => (
-              <h1 style={slider} key={item.id}>
-                {item.msg}
+              <h1
+                key={item.id}
+                className=" text-center font-semibold tracking-wider"
+                style={slider}
+              >
+                {item.msg} <br />
+                {item.condition ?? null}
               </h1>
             ))}
           </div>
@@ -55,7 +60,8 @@ export default function PopulateOffer() {
 }
 
 const slide = {
-  width: "230px",
+  width: "100%",
+  wordBreak: "break-all",
   height: "4rem",
   padding: 0,
   margin: "auto",
@@ -66,6 +72,7 @@ const slide = {
 
 const slider = {
   position: "absolute",
+  transition: "all 0.24s ease-in-out",
 } as React.CSSProperties;
 
 // React.CSSProperties: TS bugs was resolved by:

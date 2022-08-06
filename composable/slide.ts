@@ -7,13 +7,13 @@ export function startSlide(dc: any) {
 
   function nextSlide(slide: number) {
     Array.from(slider.children).forEach((item: any, index) => {
-      item.style.transform = `translateX(${120 * (index - slide)}%)`;
+      item.style.opacity = `${!(index - slide) ? 1 : 0}`;
     });
   }
 
   nextSlide(0); // initial slide on mounted
 
-  var stopSliding = null;
+  var stopSliding: any = null;
 
   function startAutoSliding() {
     stopSliding = setInterval(() => {
@@ -27,13 +27,13 @@ export function startSlide(dc: any) {
     }, 4000);
   }
 
-  // sliderWrapper.addEventListener("mouseover", (event) => {
+  // sliderWrapper.addEventListener("mouseover", (event: Event) => {
   //   console.log("mouseover");
   //   event.stopPropagation();
   //   clearInterval(stopSliding);
   // });
 
-  // sliderWrapper.addEventListener("mouseleave", (event) => {
+  // sliderWrapper.addEventListener("mouseleave", (event: Event) => {
   //   event.stopPropagation();
   //   console.log("mouseleave");
   //   startAutoSliding();
