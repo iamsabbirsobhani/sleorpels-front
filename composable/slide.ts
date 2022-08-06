@@ -1,4 +1,4 @@
-export function startSlide(dc) {
+export function startSlide(dc: any) {
   const slider = dc.querySelector(".slider");
   const sliderWrapper = dc.querySelector(".slider-wrapper");
 
