@@ -5,8 +5,8 @@ export function startSlide(dc) {
   let slideLength = Array.from(slider.children).length;
   let currentSlide = 0;
 
-  function nextSlide(slide) {
-    Array.from(slider.children).forEach((item, index) => {
+  function nextSlide(slide: number) {
+    Array.from(slider.children).forEach((item: any, index) => {
       item.style.transform = `translateX(${120 * (index - slide)}%)`;
     });
   }

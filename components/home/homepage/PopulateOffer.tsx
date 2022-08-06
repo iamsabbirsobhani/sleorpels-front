@@ -1,9 +1,10 @@
 import { offer } from "../../../dummy/PopulateOffer";
-import { useState } from "react";
+import React, { useState } from "react";
 import { useEffect } from "react";
 import { data } from "../../../dummy/homeOffer";
 type Data = { id: number; msg: string; condition?: string };
 import { startSlide } from "../../../composable/slide";
+import popStyle from "../../../styles/populateOffer.module.scss";
 export default function PopulateOffer() {
   const [populateOffer, setpopulateOffer] = useState<any>();
   let length = data.length;
@@ -39,10 +40,10 @@ export default function PopulateOffer() {
         </div>
       </div>
       <div className=" block lg:hidden xl:hidden 2xl:hidden  w-full h-16 bg-[#2d2d2d]">
-        <div style={styles.slide} className=" slider-wrapper text-white">
+        <div style={slide} className=" slider-wrapper text-white">
           <div className=" slider text-center flex items-center h-16">
             {data.map((item) => (
-              <h1 style={styles.slider} key={item.id}>
+              <h1 style={slider} key={item.id}>
                 {item.msg}
               </h1>
             ))}
@@ -53,17 +54,19 @@ export default function PopulateOffer() {
   );
 }
 
-const styles = {
-  slide: {
-    width: "230px",
-    height: "4rem",
-    padding: 0,
-    margin: "auto",
-    overflow: "hidden",
-    position: "relative",
-    transition: "all 0.24s ease",
-  },
-  slider: {
-    position: "absolute",
-  },
-};
+const slide = {
+  width: "230px",
+  height: "4rem",
+  padding: 0,
+  margin: "auto",
+  overflow: "hidden",
+  position: "relative",
+  transition: "all 0.24s ease",
+} as React.CSSProperties;
+
+const slider = {
+  position: "absolute",
+} as React.CSSProperties;
+
+// React.CSSProperties: TS bugs was resolved by:
+// Andy, T. (12 Oct, 2017). https://stackoverflow.com/a/46711592/7009215
