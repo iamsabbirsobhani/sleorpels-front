@@ -7,15 +7,7 @@ import Link from "next/link";
 import useSWR from "swr";
 import loading from "../public/sleorpels-loading.png";
 import HomePage from "./HomePage";
-
-const fetcher = async (
-  input: RequestInfo,
-  init: RequestInit,
-  ...args: any[]
-) => {
-  const res = await fetch(input, init);
-  return res.json();
-};
+import { fetcher } from "../composable/fetcher";
 
 const Home = (props: any) => {
   const count = useSelector((state: any) => state.global.value);
@@ -30,7 +22,7 @@ const Home = (props: any) => {
   // production end point
   const { data, error } = useSWR(
     "https://sleorpels.herokuapp.com/api/products?populate=*",
-    fetcher
+    fetcher()
   );
 
   if (error) return <div>Failed to load</div>;

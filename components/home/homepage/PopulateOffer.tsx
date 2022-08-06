@@ -1,18 +1,26 @@
 import { offer } from "../../../dummy/PopulateOffer";
 import React, { useState } from "react";
 import { useEffect } from "react";
-import { data } from "../../../dummy/homeOffer";
 type Data = { id: number; msg: string; condition?: string };
-import { startSlide } from "../../../composable/slide";
+// import { startSlide } from "../../../composable/slide";
+import { nNextSlide } from "../../../composable/slide";
 import popStyle from "../../../styles/populateOffer.module.scss";
-export default function PopulateOffer() {
-  const [populateOffer, setpopulateOffer] = useState<any>();
-  let length = data.length;
-  let i = 0;
+import { fetcher } from "../../../composable/fetcher";
+import useSWR from "swr";
+
+export default function PopulateOffer(props: any) {
+  const [data, setdata] = useState<any>();
+
+  const { data: informs, error } = useSWR(
+    "https://sleorpels.herokuapp.com/api/informs?populate=*",
+    fetcher()
+  );
 
   useEffect(() => {
-    startSlide(document);
-  }, []);
+    // startSlide(document);
+    nNextSlide.instance.startSlide(document);
+    console.log("executes");
+  }, [informs]);
 
   return (
     <>
@@ -42,14 +50,14 @@ export default function PopulateOffer() {
       <div className=" block lg:hidden xl:hidden 2xl:hidden  w-full h-16 bg-[#2d2d2d]">
         <div style={slide} className=" slider-wrapper text-white">
           <div className=" slider text-center flex justify-center items-center h-16">
-            {data.map((item) => (
+            {informs?.data.map((item: any) => (
               <h1
                 key={item.id}
                 className=" text-center font-semibold tracking-wider"
                 style={slider}
               >
-                {item.msg} <br />
-                {item.condition ?? null}
+                {item?.attributes.msg} <br />
+                {item?.attributes.condition ?? null}
               </h1>
             ))}
           </div>
@@ -72,7 +80,6 @@ const slide = {
 
 const slider = {
   position: "absolute",
-  transition: "all 0.24s ease-in-out",
 } as React.CSSProperties;
 
 // React.CSSProperties: TS bugs was resolved by:
