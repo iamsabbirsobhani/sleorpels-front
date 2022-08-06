@@ -6,7 +6,7 @@ import ProductCard from "../components/product/ProductCard";
 import Link from "next/link";
 import useSWR from "swr";
 import loading from "../public/sleorpels-loading.png";
-import HomePage from "./Home";
+import HomePage from "./HomePage";
 
 const fetcher = async (
   input: RequestInfo,
