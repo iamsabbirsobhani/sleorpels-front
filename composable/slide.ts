@@ -1,92 +1,38 @@
-export class nNextSlide {
-  public static instance: nNextSlide = new nNextSlide();
-  private constructor() {
-    // this.socket = io("http://localhost:8081");
-  }
+import { fetcher } from "./fetcher";
+import useSWR from "swr";
 
-  public startSlide(dc: any) {
-    const slider = dc.querySelector(".slider");
-    const sliderWrapper = dc.querySelector(".slider-wrapper");
-    console.log("Get once");
-    let slideLength = Array.from(slider.children).length;
-    let currentSlide = 0;
-
-    function nextSlide(slide: number) {
-      Array.from(slider.children).forEach((item: any, index) => {
-        item.style.visibility = `${!(index - slide) ? "visible" : "hidden"}`;
-      });
-    }
-
-    nextSlide(0); // initial slide on mounted
-
-    var stopSliding: any = null;
-
-    function startAutoSliding() {
-      stopSliding = setInterval(() => {
-        currentSlide++;
-        if (currentSlide >= 0 && currentSlide < slideLength) {
-          nextSlide(currentSlide);
-        } else {
-          currentSlide = 0;
-          nextSlide(currentSlide);
-        }
-      }, 4000);
-    }
-
-    // sliderWrapper.addEventListener("mouseover", (event: Event) => {
-    //   console.log("mouseover");
-    //   event.stopPropagation();
-    //   clearInterval(stopSliding);
-    // });
-
-    // sliderWrapper.addEventListener("mouseleave", (event: Event) => {
-    //   event.stopPropagation();
-    //   console.log("mouseleave");
-    //   startAutoSliding();
-    // });
-    startAutoSliding();
-  }
-}
-
-// export function startSlide(dc: any) {
-//   const slider = dc.querySelector(".slider");
-//   const sliderWrapper = dc.querySelector(".slider-wrapper");
-
-//   let slideLength = Array.from(slider.children).length;
-//   let currentSlide = 0;
-
-//   function nextSlide(slide: number) {
-//     Array.from(slider.children).forEach((item: any, index) => {
-//       item.style.opacity = `${!(index - slide) ? 1 : 0}`;
-//     });
+// export class MyLength {
+//   public length: any;
+//   public static instance: MyLength = new MyLength();
+//   private constructor() {
+//     fetch("https://sleorpels.herokuapp.com/api/informs?populate=*")
+//       .then((response) => response.json())
+//       .then((data) => {
+//         this.length = data.data.length;
+//       });
+//     console.log("Length: ", this.length);
 //   }
-
-//   nextSlide(0); // initial slide on mounted
-
-//   var stopSliding: any = null;
-
-//   function startAutoSliding() {
-//     stopSliding = setInterval(() => {
-//       currentSlide++;
-//       if (currentSlide >= 0 && currentSlide < slideLength) {
-//         nextSlide(currentSlide);
-//       } else {
-//         currentSlide = 0;
-//         nextSlide(currentSlide);
-//       }
-//     }, 4000);
-//   }
-
-//   // sliderWrapper.addEventListener("mouseover", (event: Event) => {
-//   //   console.log("mouseover");
-//   //   event.stopPropagation();
-//   //   clearInterval(stopSliding);
-//   // });
-
-//   // sliderWrapper.addEventListener("mouseleave", (event: Event) => {
-//   //   event.stopPropagation();
-//   //   console.log("mouseleave");
-//   //   startAutoSliding();
-//   // });
-//   startAutoSliding();
 // }
+
+export function startSlide(dc: any, length: number) {
+  const slider = dc.querySelector(".slider");
+  let currentSlide = 0;
+
+  function nextSlide(slide: number) {
+    Array.from(slider.children).forEach((item: any, index) => {
+      item.style.visibility = `${!(index - slide) ? "visible" : "hidden"}`;
+    });
+  }
+
+  var stopSliding: any = null;
+
+  stopSliding = setInterval(() => {
+    if (currentSlide >= 0 && currentSlide < length) {
+      nextSlide(currentSlide);
+    } else {
+      currentSlide = 0;
+      nextSlide(currentSlide);
+    }
+    currentSlide++;
+  }, 3000);
+}

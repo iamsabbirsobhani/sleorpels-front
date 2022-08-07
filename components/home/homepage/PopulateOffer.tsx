@@ -1,26 +1,20 @@
 import { offer } from "../../../dummy/PopulateOffer";
-import React, { useState } from "react";
-import { useEffect } from "react";
-type Data = { id: number; msg: string; condition?: string };
-// import { startSlide } from "../../../composable/slide";
-import { nNextSlide } from "../../../composable/slide";
-import popStyle from "../../../styles/populateOffer.module.scss";
+import React from "react";
+import { useEffect, useState } from "react";
+import { startSlide } from "../../../composable/slide";
 import { fetcher } from "../../../composable/fetcher";
 import useSWR from "swr";
 
 export default function PopulateOffer(props: any) {
-  const [data, setdata] = useState<any>();
-
   const { data: informs, error } = useSWR(
     "https://sleorpels.herokuapp.com/api/informs?populate=*",
     fetcher()
   );
 
   useEffect(() => {
-    // startSlide(document);
-    nNextSlide.instance.startSlide(document);
-    console.log("executes");
-  }, [informs]);
+    console.log("Length: ", informs?.data.length);
+    if (informs?.data.length) startSlide(document, informs?.data.length);
+  }, [informs?.data.length]);
 
   return (
     <>
@@ -80,6 +74,7 @@ const slide = {
 
 const slider = {
   position: "absolute",
+  visibility: "hidden",
 } as React.CSSProperties;
 
 // React.CSSProperties: TS bugs was resolved by:
