@@ -17,7 +17,7 @@ export default function PopulateOffer(props: any) {
 
   return (
     <>
-      <div className="hidden lg:flex xl:flex 2xl:flex bg-red-500 w-full h-16  justify-between items-center">
+      <div className="hidden lg:flex xl:flex 2xl:flex bg-red-500 w-full h-16  justify-between items-center border-b-2 border-white">
         <div className=" ml-5">
           <button className=" border-2 border-gray-900 p-[5px] font-bold hover:border-gray-900/80 hover:text-gray-900/80 duration-300 transition-all w-24">
             Women
