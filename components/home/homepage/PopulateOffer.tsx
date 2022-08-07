@@ -12,7 +12,6 @@ export default function PopulateOffer(props: any) {
   );
 
   useEffect(() => {
-    console.log("Length: ", informs?.data.length);
     if (informs?.data.length) startSlide(document, informs?.data.length);
   }, [informs?.data.length]);
 

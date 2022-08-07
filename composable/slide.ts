@@ -23,16 +23,16 @@ export function startSlide(dc: any, length: number) {
       item.style.visibility = `${!(index - slide) ? "visible" : "hidden"}`;
     });
   }
-
+  nextSlide(0); // initial slide
   var stopSliding: any = null;
 
   stopSliding = setInterval(() => {
+    currentSlide++; // after initial slide
     if (currentSlide >= 0 && currentSlide < length) {
       nextSlide(currentSlide);
     } else {
       currentSlide = 0;
       nextSlide(currentSlide);
     }
-    currentSlide++;
   }, 3000);
 }
