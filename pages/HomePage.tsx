@@ -74,16 +74,16 @@ export default function HomePage() {
                 SLEORPELS DESIGN and 850+ brands
               </p>
             </div>
-            <div className=" flex flex-col mt-3">
+            <div className=" flex mt-5">
               <button
                 style={{ fontFamily: "Futura PT Bold" }}
-                className=" mt-2 bg-white text-gray-900 hover:text-white hover:bg-gray-900 transition-all duration-500 align-text-bottom uppercase p-2 px-4"
+                className=" mt-2 mr-8 bg-white text-gray-900 hover:text-white hover:bg-gray-900 transition-all duration-500 align-text-bottom uppercase p-2 px-4 w-40"
               >
                 Shop Women
               </button>
               <button
                 style={{ fontFamily: "Futura PT Bold" }}
-                className=" mt-2 bg-white text-gray-900 hover:text-white hover:bg-gray-900 transition-all duration-500 align-text-bottom uppercase p-2 px-4 "
+                className=" mt-2 bg-white text-gray-900 hover:text-white hover:bg-gray-900 transition-all duration-500 align-text-bottom uppercase p-2 px-4 w-40"
               >
                 Shop men
               </button>

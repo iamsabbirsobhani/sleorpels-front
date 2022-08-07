@@ -17,13 +17,16 @@ export default function PopulateOffer(props: any) {
 
   return (
     <>
-      <div className="hidden lg:flex xl:flex 2xl:flex bg-red-500 w-full h-16  justify-between items-center border-b-2 border-white">
+      <div className="hidden lg:flex xl:flex 2xl:flex bg-rose-500 w-full h-16 p-2  justify-between items-center border-b-[1px] border-white">
         <div className=" ml-5">
-          <button className=" border-2 border-gray-900 p-[5px] font-bold hover:border-gray-900/80 hover:text-gray-900/80 duration-300 transition-all w-24">
+          <button className=" border-2 border-black p-[4px] font-bold hover:border-black/50 hover:text-black/50 duration-500 transition-all w-24">
             Women
           </button>
         </div>
-        <div className=" text-center  break-all">
+        <div
+          style={{ fontFamily: "Futura PT Bold" }}
+          className=" text-center  break-all tracking-wider antialiased text-gray-900"
+        >
           <p className="font-bold font-[14px] text-sm">
             {offer[0].offer.slice(0, offer[0].offer.indexOf("*") + 1)}
           </p>
@@ -35,7 +38,7 @@ export default function PopulateOffer(props: any) {
           </p>
         </div>
         <div className=" mr-5">
-          <button className=" border-2 border-gray-900 p-[5px] font-bold hover:border-gray-900/80 hover:text-gray-900/80 duration-300 transition-all w-24">
+          <button className=" border-2 border-black p-[4px] font-bold hover:border-black/50 hover:text-black/50 duration-500 transition-all w-24">
             Men
           </button>
         </div>
@@ -69,6 +72,7 @@ const slide = {
   overflow: "hidden",
   position: "relative",
   transition: "all 0.24s ease",
+  fontFamily: "Futura PT Bold",
 } as React.CSSProperties;
 
 const slider = {
