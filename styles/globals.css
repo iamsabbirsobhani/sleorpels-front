@@ -3,6 +3,63 @@
 @tailwind utilities;
 @import url("https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Quattrocento:wght@400;700&display=swap");
+
+@font-face {
+  font-family: "Futura PT Book";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Futura PT Book"),
+    url("../public/fonts/futura-pt/FuturaCyrillicBook.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Futura PT Light";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Futura PT Light"),
+    url("../public/fonts/futura-pt/FuturaCyrillicLight.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Futura PT Medium";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Futura PT Medium"),
+    url("../public/fonts/futura-pt/FuturaCyrillicMedium.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Futura PT Demi";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Futura PT Demi"),
+    url("../public/fonts/futura-pt/FuturaCyrillicDemi.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Futura PT Heavy";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Futura PT Heavy"),
+    url("../public/fonts/futura-pt/FuturaCyrillicHeavy.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Futura PT Bold";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Futura PT Bold"),
+    url("../public/fonts/futura-pt/FuturaCyrillicBold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Futura PT Extra Bold";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Futura PT Extra Bold"),
+    url("../public/fonts/futura-pt/FuturaCyrillicExtraBold.woff") format("woff");
+}
+
 @font-face {
   font-family: "futura";
   src: url("../public/fonts/futura/futuralightbt.ttf");
