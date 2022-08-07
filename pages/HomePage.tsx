@@ -6,7 +6,7 @@ export default function HomePage() {
       <div className=" relative ">
         <PopulateOffer />
         <div className=" relative">
-          <div className=" visible lg:hidden xl:hidden 2xl:hidden z-40">
+          <div className=" visible lg:hidden xl:hidden 2xl:hidden">
             <Image
               src={
                 "https://content.asos-media.com/-/media/homepages/unisex/generic-hp/august-2022/microsoftteams-image-(125).png"
@@ -17,7 +17,7 @@ export default function HomePage() {
               height={800}
             />
           </div>
-          <div className="hidden lg:block xl:block 2xl:block z-40">
+          <div className="hidden lg:block xl:block 2xl:block">
             <Image
               src={
                 "https://content.asos-media.com/-/media/homepages/unisex/generic-hp/august-2022/2022_unihp_desktop.jpg"
@@ -28,7 +28,7 @@ export default function HomePage() {
               height={500}
             />
           </div>
-          <div className=" visible lg:hidden xl:hidden 2xl:hidden absolute top-0 bottom-0 left-0 right-0 flex justify-center items-center flex-col z-40">
+          <div className=" visible lg:hidden xl:hidden 2xl:hidden absolute top-0 bottom-0 left-0 right-0 flex justify-center items-center flex-col ">
             <div>
               <h2
                 style={{ fontFamily: "Futura PT Bold" }}
@@ -59,7 +59,7 @@ export default function HomePage() {
             </div>
           </div>
 
-          <div className=" hidden lg:flex xl:flex 2xl:flex absolute top-0 bottom-0 left-0 right-0  justify-center items-center flex-col z-40">
+          <div className=" hidden lg:flex xl:flex 2xl:flex absolute top-0 bottom-0 left-0 right-0  justify-center items-center flex-col">
             <div>
               <h2
                 style={{ fontFamily: "Futura PT Extra Bold" }}
