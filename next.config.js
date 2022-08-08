@@ -3,7 +3,11 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   images: {
-    domains: ["images.asos-media.com", "content.asos-media.com"],
+    domains: [
+      "images.asos-media.com",
+      "content.asos-media.com",
+      "cdn.pixabay.com",
+    ],
   },
 };
 
