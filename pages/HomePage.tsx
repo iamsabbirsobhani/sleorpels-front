@@ -62,13 +62,13 @@ export default function HomePage() {
           <div className=" hidden lg:flex xl:flex 2xl:flex absolute top-0 bottom-0 left-0 right-0  justify-center items-center flex-col">
             <div>
               <h2
-                style={{ fontFamily: "Futura PT Extra Bold" }}
-                className=" bg-white w-[32rem] text-center m-auto p-2 font-extrabold text-5xl"
+                style={{ fontFamily: "Futura PT Bold" }}
+                className=" bg-white w-[32rem] text-center m-auto p-2 font-extrabold text-6xl"
               >
                 This is SLEORPELS
               </h2>
               <p
-                style={{ fontFamily: "Futura PT Light" }}
+                style={{ fontFamily: "Futura PT Book" }}
                 className=" bg-white w-[20rem] m-auto p-2 text-center  tracking-wider"
               >
                 SLEORPELS DESIGN and 850+ brands

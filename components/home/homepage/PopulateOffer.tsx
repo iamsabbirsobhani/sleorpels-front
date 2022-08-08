@@ -1,6 +1,6 @@
 import { offer } from "../../../dummy/PopulateOffer";
 import React from "react";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { startSlide } from "../../../composable/slide";
 import { fetcher } from "../../../composable/fetcher";
 import useSWR from "swr";
@@ -11,13 +11,18 @@ export default function PopulateOffer(props: any) {
     fetcher()
   );
 
+  const { data: hiddenOffer, error: hiddenOfferError } = useSWR(
+    "https://sleorpels.herokuapp.com/api/hidden-offer?populate=*",
+    fetcher()
+  );
+
   useEffect(() => {
     if (informs?.data.length) startSlide(document, informs?.data.length);
   }, [informs?.data.length]);
 
   return (
     <>
-      <div className="hidden lg:flex xl:flex 2xl:flex bg-rose-500 w-full h-16 p-2  justify-between items-center border-b-[1px] border-white">
+      <div className="hidden lg:flex xl:flex 2xl:flex bg-rose-500 w-full h-16 p-2  justify-between items-center border-b-[1px]  border-white">
         <div className=" ml-5">
           <button className=" border-2 border-black p-[4px] font-bold hover:border-black/50 hover:text-black/50 duration-500 transition-all w-24">
             Women
@@ -25,7 +30,7 @@ export default function PopulateOffer(props: any) {
         </div>
         <div
           style={{ fontFamily: "Futura PT Bold" }}
-          className=" text-center  break-all tracking-wider antialiased text-gray-900"
+          className=" text-center group break-all tracking-wider antialiased text-gray-900 w-3/4 relative"
         >
           <p className="font-bold font-[14px] text-sm">
             {offer[0].offer.slice(0, offer[0].offer.indexOf("*") + 1)}
@@ -36,6 +41,18 @@ export default function PopulateOffer(props: any) {
           <p className="font-bold font-[14px] text-sm">
             {offer[0].offer.slice(offer[0].offer.indexOf(")") + 1)}
           </p>
+
+          {hiddenOffer && hiddenOffer?.data && (
+            <div className="opacity-0 invisible group-hover:visible group-hover:opacity-100 transition-all duration-1000 bg-white/90 absolute  w-full -bottom-[max-h-max] z-10 p-2">
+              <div className=" absolute -top-[7px] w-0 h-0 border-l-[7px] border-l-transparent border-r-[7px] border-r-transparent border-b-[7px] border-b-white left-0 right-0 m-auto"></div>
+              <p
+                style={{ fontFamily: "Futura Std Light" }}
+                className=" text-xs"
+              >
+                {hiddenOffer?.data.attributes.msg ?? null}
+              </p>
+            </div>
+          )}
         </div>
         <div className=" mr-5">
           <button className=" border-2 border-black p-[4px] font-bold hover:border-black/50 hover:text-black/50 duration-500 transition-all w-24">
