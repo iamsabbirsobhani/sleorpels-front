@@ -14,7 +14,6 @@ type HiddenOffer = {
 };
 
 export default function PopulateOffer(props: any) {
-  const [offerheight, setofferheight] = useState<any>();
   const [hiddenOfferStyle, sethiddenOfferStyle] = useState<HiddenOffer>();
 
   const { data: informs, error } = useSWR(
@@ -32,70 +31,52 @@ export default function PopulateOffer(props: any) {
       -((document.querySelector(".hidden-offer")?.clientHeight ?? 10) + 10) +
         "px"
     );
-    if (informs?.data.length) startSlide(document, informs?.data.length);
+    if (informs?.data.length && hiddenOffer && hiddenOffer?.data.attributes)
+      startSlide(document, informs?.data.length);
   }, [informs?.data.length]);
 
   useEffect(() => {
-    console.log(hiddenOffer);
-    sethiddenOfferStyle({
-      textColor: hiddenOffer?.data.attributes.textColor,
-      bgColor: hiddenOffer?.data.attributes.backgroundColor,
-      borderColor: hiddenOffer?.data.attributes.borderColor,
-      button: `border-2  p-[4px] font-bold hover:${hiddenOffer?.data.attributes.borderColor}/50 hover:${hiddenOffer?.data.attributes.textColor}/50 duration-500 transition-all w-24 ${hiddenOffer?.data.attributes.borderColor}`,
-    });
-    console.log(hiddenOffer?.data.attributes.backgroundColor);
+    if (hiddenOffer?.data.attributes) {
+      sethiddenOfferStyle({
+        textColor: hiddenOffer?.data.attributes.textColor,
+        bgColor: hiddenOffer?.data.attributes.backgroundColor,
+        borderColor: hiddenOffer?.data.attributes.borderColor,
+        button: `border-2  p-[4px] font-bold hover:${hiddenOffer?.data.attributes.borderColor}/50 hover:${hiddenOffer?.data.attributes.textColor}/50 duration-500 transition-all w-24 ${hiddenOffer?.data.attributes.borderColor}`,
+      });
+    }
   }, [hiddenOffer]);
 
-  useEffect(() => {
-    setofferheight(
-      -(document.querySelector(".hidden-offer")?.clientHeight ?? 10) + "px"
-    );
-  });
-
-  return (
-    <div>
+  return hiddenOffer && hiddenOffer?.data.attributes ? (
+    <>
       <div
+        style={{
+          backgroundColor: hiddenOfferStyle?.bgColor,
+          color: hiddenOfferStyle?.textColor,
+        }}
         className={
-          "hidden-offer  hidden lg:flex xl:flex 2xl:flex  w-full h-16 p-2  justify-between items-center border-b-[1px]  border-white  " +
-          hiddenOffer?.data.attributes.backgroundColor +
-          " " +
-          hiddenOffer?.data.attributes.textColor
+          "hidden-offer   hidden lg:flex xl:flex 2xl:flex  w-full h-16 p-2  justify-between items-center border-b-[1px]  border-white "
         }
       >
-        {hiddenOffer?.data.attributes && (
-          <div className=" ml-5">
-            <button className={hiddenOfferStyle?.button}>Women</button>
-          </div>
-        )}
+        <div className=" ml-5">
+          <button className={hiddenOfferStyle?.button + " hiddenOfferButton"}>
+            Women
+          </button>
+        </div>
+
         <div
           style={{ fontFamily: "Futura PT Bold" }}
-          className=" text-center group break-all tracking-wider antialiased text-gray-900 w-3/4 relative"
+          className=" text-center group break-all tracking-wider antialiased text-gray-900 w-[70vw] relative cursor-default mb-2"
         >
-          {/* <p className="font-bold font-[14px] text-sm">
-            {offer[0].offer.slice(0, offer[0].offer.indexOf("*") + 1)}
-          </p>
-          <p className="font-bold font-[14px] text-sm">
-            {offer[0].offer.slice(0, offer[0].offer.indexOf(")") + 1)}
-          </p>
-          <p className="font-bold font-[14px] text-sm">
-            {offer[0].offer.slice(offer[0].offer.indexOf(")") + 1)}
-          </p> */}
-
           <ReactMarkdown
             className={
               "markdown-offer-title font-bold font-[14px] text-sm " +
-              hiddenOffer?.data.attributes.textColor
+              hiddenOffer?.data.attributes.titleColor
             }
           >
             {hiddenOffer?.data.attributes.offerTitle ?? null}
           </ReactMarkdown>
           {hiddenOffer && hiddenOffer?.data && (
-            <div
-              className=" opacity-0 invisible group-hover:visible group-hover:opacity-100 transition-all duration-1000 bg-white/80 absolute  w-full -bottom-[max-h-max] z-10 p-2"
-              style={{
-                bottom: offerheight,
-              }}
-            >
+            <div className=" opacity-0 invisible group-hover:visible group-hover:opacity-100 transition-all duration-1000 bg-white/80 absolute  w-full -bottom-[max-h-max] z-10 p-2 mt-4">
               <div className=" absolute -top-[7px] w-0 h-0 border-l-[7px] border-l-transparent border-r-[7px] border-r-transparent border-b-[7px] border-b-white left-0 right-0 m-auto"></div>
               <ReactMarkdown className="markdown text-xs">
                 {hiddenOffer?.data.attributes.offerDetails ?? null}
@@ -104,9 +85,7 @@ export default function PopulateOffer(props: any) {
           )}
         </div>
         <div className=" mr-5">
-          <button
-            className={`border-2  p-[4px] font-bold hover:${hiddenOffer?.data.attributes.borderColor}/50 hover:${hiddenOffer?.data.attributes.textColor}/50 duration-500 transition-all w-24 ${hiddenOffer?.data.attributes.borderColor}`}
-          >
+          <button className={hiddenOfferStyle?.button + " hiddenOfferButton"}>
             Men
           </button>
         </div>
@@ -127,8 +106,8 @@ export default function PopulateOffer(props: any) {
           </div>
         </div>
       </div>
-    </div>
-  );
+    </>
+  ) : null;
 }
 
 const slide = {
