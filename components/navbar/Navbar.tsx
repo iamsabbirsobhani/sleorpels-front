@@ -6,10 +6,16 @@ export default function Navbar() {
     <>
       <div className=" hidden lg:block xl:block 2xl:block">
         <div className=" w-full bg-gray-50 h-7 flex justify-end items-center">
-          <div className=" border-l-[1px]  border-r-[1px] border-gray-500/20 p-1 px-5 cursor-pointer">
+          <div
+            style={{ fontFamily: "Futura PT Light" }}
+            className=" border-l-[1px]  border-r-[1px] border-gray-500/20 p-1 px-5 cursor-pointer"
+          >
             <p>Marketplace</p>
           </div>
-          <div className="  border-r-[1px] border-gray-500/20 p-1 px-5 cursor-pointer">
+          <div
+            style={{ fontFamily: "Futura PT Light" }}
+            className="  border-r-[1px] border-gray-500/20 p-1 px-5 cursor-pointer"
+          >
             <p>Help & FAQs</p>
           </div>
         </div>
@@ -26,12 +32,18 @@ export default function Navbar() {
           </Link>
           <div className=" flex justify-between">
             <div>
-              <button className=" uppercase font-semibold tracking-wider text-white w-36 hover:bg-gray-50/10 h-16 border-l-[1px] border-r-[1px] border-gray-500/30">
+              <button
+                style={{ fontFamily: "Futura PT Demi" }}
+                className=" uppercase font-semibold tracking-wider text-white w-36 hover:bg-gray-50/10 h-16 border-l-[1px] border-r-[1px] border-gray-500/30"
+              >
                 Women
               </button>
             </div>
             <div>
-              <button className=" uppercase font-semibold tracking-wider text-white w-36 hover:bg-gray-50/10 h-16 border-r-[1px] border-gray-500/30">
+              <button
+                style={{ fontFamily: "Futura PT Demi" }}
+                className=" uppercase font-semibold tracking-wider text-white w-36 hover:bg-gray-50/10 h-16 border-r-[1px] border-gray-500/30"
+              >
                 Men
               </button>
             </div>
