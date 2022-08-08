@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import { startSlide } from "../../../composable/slide";
 import { fetcher } from "../../../composable/fetcher";
 import useSWR from "swr";
+import ReactMarkdown from "react-markdown";
 
 export default function PopulateOffer(props: any) {
   const { data: informs, error } = useSWR(
@@ -45,12 +46,9 @@ export default function PopulateOffer(props: any) {
           {hiddenOffer && hiddenOffer?.data && (
             <div className="opacity-0 invisible group-hover:visible group-hover:opacity-100 transition-all duration-1000 bg-white/90 absolute  w-full -bottom-[max-h-max] z-10 p-2">
               <div className=" absolute -top-[7px] w-0 h-0 border-l-[7px] border-l-transparent border-r-[7px] border-r-transparent border-b-[7px] border-b-white left-0 right-0 m-auto"></div>
-              <p
-                style={{ fontFamily: "Futura Std Light" }}
-                className=" text-xs"
-              >
+              <ReactMarkdown className="markdown text-xs">
                 {hiddenOffer?.data.attributes.msg ?? null}
-              </p>
+              </ReactMarkdown>
             </div>
           )}
         </div>
