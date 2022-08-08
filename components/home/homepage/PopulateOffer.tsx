@@ -55,8 +55,13 @@ export default function PopulateOffer(props: any) {
       >
         <div className=" ml-5">
           <button
-            style={{ border: `2px solid ${hiddenOfferStyle?.borderColor}` }}
-            className={hiddenOfferStyle?.button + " hiddenOfferButton"}
+            style={{
+              border: `2px solid ${hiddenOfferStyle?.borderColor}`,
+              fontFamily: "Futura PT Demi",
+            }}
+            className={
+              hiddenOfferStyle?.button + " hiddenOfferButton uppercase"
+            }
           >
             Women
           </button>
@@ -85,8 +90,13 @@ export default function PopulateOffer(props: any) {
         </div>
         <div className=" mr-5">
           <button
-            style={{ border: `2px solid ${hiddenOfferStyle?.borderColor}` }}
-            className={hiddenOfferStyle?.button + " hiddenOfferButton"}
+            style={{
+              border: `2px solid ${hiddenOfferStyle?.borderColor}`,
+              fontFamily: "Futura PT Demi",
+            }}
+            className={
+              hiddenOfferStyle?.button + " hiddenOfferButton uppercase"
+            }
           >
             Men
           </button>
