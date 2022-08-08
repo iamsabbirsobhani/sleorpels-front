@@ -27,10 +27,6 @@ export default function PopulateOffer(props: any) {
   );
 
   useEffect(() => {
-    console.log(
-      -((document.querySelector(".hidden-offer")?.clientHeight ?? 10) + 10) +
-        "px"
-    );
     if (informs?.data.length && hiddenOffer && hiddenOffer?.data.attributes)
       startSlide(document, informs?.data.length);
   }, [informs?.data.length]);
@@ -54,11 +50,14 @@ export default function PopulateOffer(props: any) {
           color: hiddenOfferStyle?.textColor,
         }}
         className={
-          "hidden-offer   hidden lg:flex xl:flex 2xl:flex  w-full h-16 p-2  justify-between items-center border-b-[1px]  border-white "
+          "hidden-offer   hidden lg:flex xl:flex 2xl:flex  w-full h-16 p-2  justify-between items-center border-b-[1px]  border-white  "
         }
       >
         <div className=" ml-5">
-          <button className={hiddenOfferStyle?.button + " hiddenOfferButton"}>
+          <button
+            style={{ border: `2px solid ${hiddenOfferStyle?.borderColor}` }}
+            className={hiddenOfferStyle?.button + " hiddenOfferButton"}
+          >
             Women
           </button>
         </div>
@@ -85,7 +84,10 @@ export default function PopulateOffer(props: any) {
           )}
         </div>
         <div className=" mr-5">
-          <button className={hiddenOfferStyle?.button + " hiddenOfferButton"}>
+          <button
+            style={{ border: `2px solid ${hiddenOfferStyle?.borderColor}` }}
+            className={hiddenOfferStyle?.button + " hiddenOfferButton"}
+          >
             Men
           </button>
         </div>
