@@ -13,6 +13,7 @@ export default function HomePage() {
     <>
       <div className=" relative ">
         <PopulateOffer />
+
         {cover?.data.attributes.mobile && cover?.data.attributes.desktop && (
           <div className=" relative">
             <div className=" visible lg:hidden xl:hidden 2xl:hidden">
@@ -97,6 +98,26 @@ export default function HomePage() {
             </div>
           </div>
         )}
+
+        <div className=" w-full h-14 lg:flex xl:flex 2xl:flex hidden bg-[#2d2d2d]  justify-around items-center text-white">
+          <div>
+            <h1
+              style={{ fontFamily: "Futura PT Bold" }}
+              className=" tracking-wider uppercase"
+            >
+              Easy world wide delivery
+            </h1>
+            <p>*minimum spends apply</p>
+          </div>
+          <div>
+            <h1
+              style={{ fontFamily: "Futura PT Bold" }}
+              className=" tracking-wider uppercase"
+            >
+              SLEORPELS DESIGN and 850+ brands
+            </h1>
+          </div>
+        </div>
       </div>
     </>
   );
