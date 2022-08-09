@@ -5,6 +5,7 @@ import { startSlide } from "../../../composable/slide";
 import { fetcher } from "../../../composable/fetcher";
 import useSWR from "swr";
 import ReactMarkdown from "react-markdown";
+import { hiddenOfferDOM } from "../../../composable/hiddenOffer";
 
 type HiddenOffer = {
   textColor: string;
@@ -40,6 +41,9 @@ export default function PopulateOffer(props: any) {
         button: `border-2  p-[4px] font-bold hover:${hiddenOffer?.data.attributes.borderColor}/50 hover:${hiddenOffer?.data.attributes.textColor}/50 duration-500 transition-all w-24 ${hiddenOffer?.data.attributes.borderColor}`,
       });
     }
+
+    // change text color of hiddenOffer
+    hiddenOfferDOM(document, hiddenOffer?.data.attributes.textColor);
   }, [hiddenOffer]);
 
   return hiddenOffer && hiddenOffer?.data.attributes ? (
@@ -72,17 +76,14 @@ export default function PopulateOffer(props: any) {
           className=" text-center group break-all tracking-wider antialiased text-gray-900 w-[70vw] relative cursor-default mb-2"
         >
           <ReactMarkdown
-            className={
-              "markdown-offer-title font-bold font-[14px] text-sm " +
-              hiddenOffer?.data.attributes.titleColor
-            }
+            className={"markdown-offer-title font-bold font-[14px] text-sm "}
           >
             {hiddenOffer?.data.attributes.offerTitle ?? null}
           </ReactMarkdown>
           {hiddenOffer && hiddenOffer?.data && (
             <div className=" opacity-0 invisible group-hover:visible group-hover:opacity-100 transition-all duration-1000 bg-white/80 absolute  w-full -bottom-[max-h-max] z-10 p-2 mt-4">
               <div className=" absolute -top-[7px] w-0 h-0 border-l-[7px] border-l-transparent border-r-[7px] border-r-transparent border-b-[7px] border-b-white left-0 right-0 m-auto"></div>
-              <ReactMarkdown className="markdown text-xs">
+              <ReactMarkdown className="markdown text-xs text-gray-900">
                 {hiddenOffer?.data.attributes.offerDetails ?? null}
               </ReactMarkdown>
             </div>
