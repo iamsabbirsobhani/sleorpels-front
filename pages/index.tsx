@@ -8,22 +8,22 @@ import useSWR from "swr";
 import loading from "../public/sleorpels-loading.png";
 import HomePage from "./HomePage";
 import { fetcher } from "../composable/fetcher";
-
+import Script from "next/script";
 const Home = (props: any) => {
   const count = useSelector((state: any) => state.global.value);
   const dispatch = useDispatch();
 
   // development api end poing
-  // const { data, error } = useSWR(
-  //   "http://localhost:1337/api/products?populate=*",
-  //   fetcher
-  // );
+  const { data, error } = useSWR(
+    "http://http://192.168.0.100:1337/api/products?populate=*",
+    fetcher
+  );
 
   // production end point
-  const { data, error } = useSWR(
-    "https://sleorpels.herokuapp.com/api/products?populate=*",
-    fetcher()
-  );
+  // const { data, error } = useSWR(
+  //   "https://sleorpels.herokuapp.com/api/products?populate=*",
+  //   fetcher()
+  // );
 
   if (error) return <div>Failed to load</div>;
 
@@ -53,6 +53,11 @@ const Home = (props: any) => {
             content="https://firebasestorage.googleapis.com/v0/b/iceland-2b5ae.appspot.com/o/sleorpels-thumb.png?alt=media&token=5fb0783c-9980-4fee-bd1c-6699e2d63de9"
           />
           <meta name="twitter:card" content="summary_large_image" />
+          <Script
+            type="module"
+            src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+          />
+          <Script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js" />
         </Head>
 
         <div className=" w-64 m-auto animate-pulse absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center">
@@ -97,43 +102,6 @@ const Home = (props: any) => {
       </Head>
       <div>
         <HomePage />
-      </div>
-      <div className=" mt-10">
-        <main className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-7 gap-3 m-2">
-          {data?.data &&
-            data?.data.map((item: any) => (
-              <Link key={item.id} href={`/product/${item.id}`}>
-                <div className=" cursor-pointer flex justify-center ">
-                  <ProductCard
-                    width={900}
-                    height={1000}
-                    src={item.attributes.p_images.data[0].attributes.url}
-                    productName={item.attributes.productName}
-                    productPrice={item.attributes.price}
-                    off={item.attributes.off}
-                  />
-                </div>
-              </Link>
-            ))}
-        </main>
-
-        <footer className={styles.footer}>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Powered by{" "}
-            <span className={styles.logo}>
-              <Image
-                src="/vercel.svg"
-                alt="Vercel Logo"
-                width={72}
-                height={16}
-              />
-            </span>
-          </a>
-        </footer>
       </div>
     </>
   );

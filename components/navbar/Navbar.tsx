@@ -20,7 +20,7 @@ export default function Navbar() {
           </div>
         </div>
         <div className=" w-full h-[3.6rem] bg-[#2d2d2d] flex items-center  justify-around">
-          <Link href={"/"}>
+          <Link href={"/"} scroll={false}>
             <div>
               <h1
                 style={{ fontFamily: "Readex Pro" }}

@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import DrawerMen from "./DrawerMen";
 import { useSelector, useDispatch } from "react-redux";
 import { setOpenDrawer, setScroll } from "../../../features/global/globalSlice";
+import DrawerFooter from "./DrawerFooter";
 
 type DrawerProps = {
   openDrawer: boolean;
@@ -24,7 +25,7 @@ export function Drawer(props: DrawerProps) {
           dispatch(setScroll());
           setopenMen(false);
         }}
-        className=" z-30 w-full h-full fixed top-0 left-0 right-0 bottom-0 bg-gray-600/30 "
+        className=" z-30 w-full h-full fixed top-0 left-0 right-0 bottom-0 bg-gray-600/30"
       ></div>
 
       {/* drawer */}
@@ -33,7 +34,7 @@ export function Drawer(props: DrawerProps) {
           left: props.openDrawer ? "0" : "-100%",
           transition: "left 0.24s linear",
         }}
-        className=" z-50 fixed h-full top-0  w-2/3 bg-white"
+        className=" z-50 fixed h-full top-0 bottom-0 w-4/5 bg-white overflow-y-scroll"
       >
         <div className=" flex border-b-[1px] border-gray-500/20 items-center">
           <button className=" w-1/2 uppercase p-3 font-semibold">Women</button>
@@ -59,10 +60,13 @@ export function Drawer(props: DrawerProps) {
         >
           <DrawerMen />
         </div>
+        <div className="">
+          <DrawerFooter />
+        </div>
       </div>
       <div
         style={{
-          left: props.openDrawer ? "" : "-100%",
+          left: props.openDrawer ? "80%" : "-100%",
           transition: "left 0.24s linear",
         }}
         className=" z-40 absolute text-black top-0 left-2/3"

@@ -5,8 +5,20 @@ export const globalSlice = createSlice({
   initialState: {
     openDrawer: false,
     value: 10,
+    // accordion
+    accordionItemId: [] as any,
   },
   reducers: {
+    // accordion
+    setAccordionItemId: (state, payload: any) => {
+      state.accordionItemId.push(payload.payload);
+    },
+    delAccordionItem: (state, payload: any) => {
+      state.accordionItemId.splice(
+        state.accordionItemId.indexOf(payload.payload),
+        1
+      );
+    },
     // drawer
     setOpenDrawer: (state, action: PayloadAction<boolean>) => {
       state.openDrawer = action.payload;
@@ -37,6 +49,8 @@ export const {
   incrementByAmount,
   setOpenDrawer,
   setScroll,
+  setAccordionItemId,
+  delAccordionItem,
 } = globalSlice.actions;
 
 export default globalSlice.reducer;

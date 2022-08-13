@@ -4,6 +4,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Quattrocento:wght@400;700&display=swap");
 
+@layer components {
+  .divide-line {
+    width: 1px;
+    height: 15px;
+    margin: 0 10px;
+    background-color: #9ca3af;
+  }
+}
+
 @font-face {
   font-family: "Futura PT Book";
   font-style: normal;
@@ -118,4 +127,8 @@ a {
 
 .hiddenOfferButton:hover {
   opacity: 0.5;
+}
+
+.svg-cls:hover .sgv {
+  fill: #0ea5e9;
 }

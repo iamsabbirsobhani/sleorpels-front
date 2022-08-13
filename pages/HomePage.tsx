@@ -2,6 +2,7 @@ import PopulateOffer from "../components/home/homepage/PopulateOffer";
 import Image from "next/image";
 import useSWR from "swr";
 import { fetcher } from "../composable/fetcher";
+import Link from "next/link";
 
 export default function HomePage() {
   const { data: cover, error } = useSWR(
@@ -57,12 +58,14 @@ export default function HomePage() {
                 >
                   Shop Women
                 </button>
-                <button
-                  style={{ fontFamily: "Futura PT Bold" }}
-                  className=" mt-2 bg-white text-gray-900 hover:text-white hover:bg-gray-900 transition-all duration-500 align-text-bottom uppercase p-2 px-4 "
-                >
-                  Shop men
-                </button>
+                <Link href="/product/men">
+                  <button
+                    style={{ fontFamily: "Futura PT Bold" }}
+                    className=" mt-2 bg-white text-gray-900 hover:text-white hover:bg-gray-900 transition-all duration-500 align-text-bottom uppercase p-2 px-4 "
+                  >
+                    Shop men
+                  </button>
+                </Link>
               </div>
             </div>
 
@@ -88,12 +91,14 @@ export default function HomePage() {
                 >
                   Shop Women
                 </button>
-                <button
-                  style={{ fontFamily: "Futura PT Bold" }}
-                  className=" mt-2 bg-white text-gray-900 hover:text-white hover:bg-gray-900 transition-all duration-500 align-text-bottom uppercase p-2 px-4 w-40"
-                >
-                  Shop men
-                </button>
+                <Link href="/product/men">
+                  <button
+                    style={{ fontFamily: "Futura PT Bold" }}
+                    className=" mt-2 bg-white text-gray-900 hover:text-white hover:bg-gray-900 transition-all duration-500 align-text-bottom uppercase p-2 px-4 w-40"
+                  >
+                    Shop men
+                  </button>
+                </Link>
               </div>
             </div>
           </div>

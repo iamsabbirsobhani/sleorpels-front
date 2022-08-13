@@ -33,7 +33,7 @@ export default function MobileNavbar() {
             </svg>
           </button>
           <div>
-            <Link href={"/"}>
+            <Link href={"/"} scroll={false}>
               <h1
                 style={{ fontFamily: "Readex Pro" }}
                 className="text-2xl tracking-tighter font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-gray-50 to-gray-300 cursor-pointer"

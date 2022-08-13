@@ -18,14 +18,23 @@ export default function PopulateOffer(props: any) {
   const [hiddenOfferStyle, sethiddenOfferStyle] = useState<HiddenOffer>();
 
   const { data: informs, error } = useSWR(
-    "https://sleorpels.herokuapp.com/api/informs?populate=*",
+    "http://192.168.0.100:1337/api/informs?populate=*",
     fetcher()
   );
 
   const { data: hiddenOffer, error: hiddenOfferError } = useSWR(
-    "https://sleorpels.herokuapp.com/api/hidden-offer?populate=*",
+    "http://192.168.0.100:1337/api/hidden-offer?populate=*",
     fetcher()
   );
+  // const { data: informs, error } = useSWR(
+  //   "https://sleorpels.herokuapp.com/api/informs?populate=*",
+  //   fetcher()
+  // );
+
+  // const { data: hiddenOffer, error: hiddenOfferError } = useSWR(
+  //   "https://sleorpels.herokuapp.com/api/hidden-offer?populate=*",
+  //   fetcher()
+  // );
 
   useEffect(() => {
     if (informs?.data.length && hiddenOffer && hiddenOffer?.data.attributes)
@@ -73,7 +82,7 @@ export default function PopulateOffer(props: any) {
 
         <div
           style={{ fontFamily: "Futura PT Bold" }}
-          className=" text-center group break-all tracking-wider antialiased text-gray-900 w-[70vw] relative cursor-default mb-2"
+          className=" text-center group break-all tracking-wider antialiased text-gray-900 w-[70vw] relative cursor-default"
         >
           <ReactMarkdown
             className={"markdown-offer-title font-bold font-[14px] text-sm "}
@@ -81,7 +90,7 @@ export default function PopulateOffer(props: any) {
             {hiddenOffer?.data.attributes.offerTitle ?? null}
           </ReactMarkdown>
           {hiddenOffer && hiddenOffer?.data && (
-            <div className=" opacity-0 invisible group-hover:visible group-hover:opacity-100 transition-all duration-1000 bg-white/80 absolute  w-full -bottom-[max-h-max] z-10 p-2 mt-4">
+            <div className=" opacity-0 invisible group-hover:visible group-hover:opacity-100 transition-all duration-1000 bg-white/80 absolute  w-full -bottom-[max-h-max] z-10 p-2 mt-3">
               <div className=" absolute -top-[7px] w-0 h-0 border-l-[7px] border-l-transparent border-r-[7px] border-r-transparent border-b-[7px] border-b-white left-0 right-0 m-auto"></div>
               <ReactMarkdown className="markdown text-xs text-gray-900">
                 {hiddenOffer?.data.attributes.offerDetails ?? null}

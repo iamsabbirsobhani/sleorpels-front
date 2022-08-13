@@ -68,7 +68,7 @@ export default function ProductDetails(props: any) {
         />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
-      <div className=" max-w-5xl m-auto">
+      <div className=" max-w-5xl m-auto mb-10">
         {props.data && props.data.data.attributes && product ? (
           <div className=" flex justify-between mt-8 lg:flex-row xl:flex-row 2xl:flex-row flex-col">
             {/* product image part */}
@@ -219,14 +219,14 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
   const pid = context.params?.pid;
 
   // development api end point
-  // const res = await fetch(
-  //   `http://localhost:1337/api/products/${pid}?populate=*`
-  // );
+  const res = await fetch(
+    `http://192.168.0.100:1337/api/products/${pid}?populate=*`
+  );
 
   // production api end point
-  const res = await fetch(
-    `https://sleorpels.herokuapp.com/api/products/${pid}?populate=*`
-  );
+  // const res = await fetch(
+  //   `https://sleorpels.herokuapp.com/api/products/${pid}?populate=*`
+  // );
 
   const data = await res.json();
 
