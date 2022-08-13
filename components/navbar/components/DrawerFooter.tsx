@@ -1,5 +1,5 @@
 import FooterIcon from "../../FooterIcon";
-import footer from "../../footer/footer.json";
+import footer from "../../../app-data/app-data.json";
 import { DetailedHTMLProps, useState, useEffect } from "react";
 import { useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
@@ -70,13 +70,13 @@ export default function DrawerFooter() {
                             cx="17.5"
                             cy="11.5"
                             r="10.5"
-                            stroke-miterlimit="10"
-                            stroke-width="3"
+                            strokeMiterlimit="10"
+                            strokeWidth="3"
                           />
                           <path
                             d="M22.59,26H13.76A12.76,12.76,0,0,0,1,38.76V46H35V38.41A12.41,12.41,0,0,0,22.59,26Z"
-                            stroke-miterlimit="10"
-                            stroke-width="3"
+                            strokeMiterlimit="10"
+                            strokeWidth="3"
                           />
                         </g>
                       </g>
@@ -131,11 +131,8 @@ export default function DrawerFooter() {
                 <div
                   className=" bg-[#f8f8f8] px-3"
                   style={{
-                    visibility: itemId.includes(item.id) ? "visible" : "hidden",
-                    opacity: itemId.includes(item.id) ? 1 : 0,
+                    display: itemId.includes(item.id) ? "block" : "none",
                     height: itemId.includes(item.id) ? "100%" : "0",
-                    WebkitTransitionProperty: "height",
-                    transition: "all 0.24s linear",
                   }}
                 >
                   {item.option.map((option, index) => (

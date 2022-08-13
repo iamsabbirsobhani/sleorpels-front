@@ -1,10 +1,8 @@
 import Image from "next/image";
 import FooterIcon from "../FooterIcon";
-import footer from "./footer.json";
+import footer from "../../app-data/app-data.json";
 
 export default function Footer() {
-  console.log(footer);
-
   return (
     <>
       <footer className="bg-[#eee] hidden lg:block xl:block 2xl:block">
@@ -61,7 +59,10 @@ export default function Footer() {
         </div>
       </footer>
 
-      <footer className=" bg-[#ddd] lg:hidden xl:hidden 2xl:hidden flex justify-between items-center p-3">
+      <footer
+        style={{ fontFamily: "Futura PT Light" }}
+        className=" bg-[#ddd] text-[#666] lg:hidden xl:hidden 2xl:hidden flex justify-between items-center p-3"
+      >
         <div>
           <p>© 2022 SLEORPELS</p>
         </div>

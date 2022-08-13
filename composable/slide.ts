@@ -21,6 +21,8 @@ export function startSlide(dc: any, length: number) {
   function nextSlide(slide: number) {
     Array.from(slider.children).forEach((item: any, index) => {
       item.style.visibility = `${!(index - slide) ? "visible" : "hidden"}`;
+      item.style.transform = `translateX(${100 * (index - slide)}px)`;
+      // item.style.transform = `translateX(${100 * (index - slide)}px)`;
     });
   }
   nextSlide(0); // initial slide

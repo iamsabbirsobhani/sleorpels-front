@@ -8,16 +8,7 @@ import "../public/nprogress.css";
 import { useEffect } from "react";
 import Navbar from "../components/navbar/Navbar";
 import Footer from "../components/footer/Footer";
-import { library } from "@fortawesome/fontawesome-svg-core";
-import {
-  faPlus,
-  faMinus,
-  faUser,
-  faCircleQuestion,
-  faBox,
-  faMessage,
-} from "@fortawesome/free-solid-svg-icons";
-library.add(faPlus, faMinus, faUser, faCircleQuestion, faBox, faMessage);
+
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
 

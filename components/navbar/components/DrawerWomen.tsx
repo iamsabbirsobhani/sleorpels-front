@@ -1,6 +1,7 @@
 import data from "../../../app-data/app-data.json";
 import DiscoverMore from "./DiscoverMore";
-export default function DrawerMen() {
+
+export default function DrawerWomen() {
   return (
     <>
       <div>
@@ -11,7 +12,7 @@ export default function DrawerMen() {
               style={{ fontFamily: "Futura PT Demi" }}
             >
               <a
-                className=" tracking-wider uppercase  flex font-bold bg-no-repeat bg-[url(https://images.asos-media.com/navigation/mw_homebuttonnew_1826147?&$n_320w$)] w-full  m-auto items-center p-2  bg-[length:100%_100%] h-full"
+                className=" tracking-wider uppercase  flex font-bold bg-no-repeat bg-[url(https://images.asos-media.com/navigation/ww_homebuttontemplate_1746711?&$n_320w$)] w-full  m-auto items-center p-2  bg-[length:100%_100%] h-full"
                 style={{ width: "calc(100% - 25px)", marginTop: "calc(15px)" }}
               >
                 <p> Home</p>
@@ -45,32 +46,34 @@ export default function DrawerMen() {
           </li>
           <li>
             <ul>
-              {data.men.map((men) => (
-                <li key={men.id}>
-                  <div
-                    className=" m-auto w-full h-[5.5rem] items-center "
-                    style={{ fontFamily: "Futura PT Demi" }}
-                  >
-                    <a
-                      className={
-                        "tracking-wider uppercase  flex bg-no-repeat  w-full  m-auto items-center p-2  bg-[length:100%_100%] h-full px-4"
-                      }
-                      style={{
-                        width: "calc(100% - 25px)",
-                        marginTop: "calc(15px)",
-                        backgroundImage: `url(${men.bgUrl})`,
-                      }}
+              {data &&
+                data.women.map((women) => (
+                  <li key={women.id}>
+                    <div
+                      className=" m-auto w-full h-[5.5rem] items-center "
+                      style={{ fontFamily: "Futura PT Demi" }}
                     >
-                      <p>{men.name}</p>
-                    </a>
-                  </div>
-                </li>
-              ))}
+                      <a
+                        className={
+                          "tracking-wider uppercase  flex font-bold bg-no-repeat  w-full  m-auto items-center p-2  bg-[length:100%_100%] h-full px-4"
+                        }
+                        style={{
+                          width: "calc(100% - 25px)",
+                          marginTop: "calc(15px)",
+                          backgroundImage: `url(${women.bgUrl})`,
+                        }}
+                      >
+                        <p>{women.name}</p>
+                      </a>
+                    </div>
+                  </li>
+                ))}
             </ul>
           </li>
+
           <li>
             {/* discover more */}
-            <DiscoverMore bg="https://images.asos-media.com/navigation/mw_mobilebanner_marketplace_030222?&$n_320w$" />
+            <DiscoverMore bg="https://images.asos-media.com/navigation/ww_mobilebanner_marketplace_030222?&$n_320w$" />
           </li>
         </ul>
       </div>

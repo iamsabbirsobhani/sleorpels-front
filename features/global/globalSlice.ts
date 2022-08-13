@@ -7,8 +7,14 @@ export const globalSlice = createSlice({
     value: 10,
     // accordion
     accordionItemId: [] as any,
+    // mobile navbar scrol up to show nav
+    showNav: true,
   },
   reducers: {
+    // mobile navbar scrol up to show nav
+    setShowNav: (state, payload) => {
+      state.showNav = payload.payload;
+    },
     // accordion
     setAccordionItemId: (state, payload: any) => {
       state.accordionItemId.push(payload.payload);
@@ -51,6 +57,7 @@ export const {
   setScroll,
   setAccordionItemId,
   delAccordionItem,
+  setShowNav,
 } = globalSlice.actions;
 
 export default globalSlice.reducer;

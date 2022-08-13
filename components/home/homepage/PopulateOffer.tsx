@@ -147,6 +147,8 @@ const slide = {
 const slider = {
   position: "absolute",
   visibility: "hidden",
+  transition: "transform 0.24s ease",
+  // visibility: "hidden",
 } as React.CSSProperties;
 
 // React.CSSProperties: TS bugs was resolved by:
