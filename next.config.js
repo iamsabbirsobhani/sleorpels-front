@@ -7,6 +7,7 @@ const nextConfig = {
       "images.asos-media.com",
       "content.asos-media.com",
       "cdn.pixabay.com",
+      "ipdata.co",
     ],
   },
 };

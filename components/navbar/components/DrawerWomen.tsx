@@ -1,5 +1,6 @@
 import data from "../../../app-data/app-data.json";
 import DiscoverMore from "./DiscoverMore";
+import SlideOffer from "./SlideOffer";
 
 export default function DrawerWomen() {
   return (
@@ -19,6 +20,7 @@ export default function DrawerWomen() {
               </a>
             </div>
           </li>
+          <li>{/* <SlideOffer /> */}</li>
           <li>
             <div
               className=" m-auto w-full h-[5.5rem] items-center "

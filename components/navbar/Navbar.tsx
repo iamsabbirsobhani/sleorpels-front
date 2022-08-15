@@ -1,22 +1,48 @@
 import Link from "next/link";
 import MobileNavbar from "./MobileNavbar";
+import { useState, useEffect, Dispatch } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { fetchFlag } from "../../features/global/globalSlice";
+import Image from "next/image";
 
 export default function Navbar() {
+  const flag = useSelector((state: any) => state.global.flagUrl);
+  const status = useSelector((state: any) => state.global.status);
+  const dispatch = useDispatch<any>();
+  useEffect(() => {
+    if (status === "idle") {
+      dispatch(fetchFlag());
+    }
+    console.log(status);
+  }, [status, dispatch]);
   return (
     <>
       <div className=" hidden lg:block xl:block 2xl:block">
         <div className=" w-full bg-gray-50 h-7 flex justify-end items-center">
           <div
             style={{ fontFamily: "Futura PT Light" }}
-            className=" border-l-[1px]  border-r-[1px] border-gray-500/20 p-1 px-5 cursor-pointer"
+            className=" border-l-[1px]  border-r-[1px] border-gray-500/20 p-1 px-5 cursor-pointer hover:text-blue-500"
           >
             <p>Marketplace</p>
           </div>
           <div
             style={{ fontFamily: "Futura PT Light" }}
-            className="  border-r-[1px] border-gray-500/20 p-1 px-5 cursor-pointer"
+            className="  border-r-[1px] border-gray-500/20 p-1 px-5 cursor-pointer hover:text-blue-500"
           >
             <p>Help & FAQs</p>
+          </div>
+          <div
+            style={{ fontFamily: "Futura PT Light" }}
+            className="  border-r-[1px] border-gray-500/20 p-1 px-5 cursor-pointer mt-1"
+          >
+            {flag && (
+              <Image
+                src={flag.flag}
+                width={20}
+                height={20}
+                className=" rounded-full hover:outline outline-1  outline-offset-1 outline-blue-500"
+              />
+            )}
           </div>
         </div>
         <div className=" w-full h-[3.6rem] bg-[#2d2d2d] flex items-center  justify-around">

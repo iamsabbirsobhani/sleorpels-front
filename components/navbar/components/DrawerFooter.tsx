@@ -17,9 +17,11 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import layer from "../../../public/layer.svg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Image from "next/image";
 
 export default function DrawerFooter() {
   const itemId = useSelector((state: any) => state.global.accordionItemId);
+  const flag = useSelector((state: any) => state.global.flagUrl);
   const dispatch = useDispatch();
 
   const handleAccord = (id: number) => {
@@ -147,8 +149,14 @@ export default function DrawerFooter() {
                 </div>
               </div>
             ))}
-            <div className=" bg-[#eee]  p-3">
-              <p>You're in: </p>
+            <div className=" bg-[#eee]  p-3 flex items-center">
+              <p className=" mr-5">You're in: </p>
+              <Image
+                src={flag.flag}
+                width={20}
+                height={20}
+                className=" rounded-full"
+              />
             </div>
           </div>
         </div>
