@@ -132,3 +132,8 @@ a {
 .svg-cls:hover .sgv {
   fill: #0ea5e9;
 }
+
+.nav-desk-men-btn:hover {
+  /* background-color: rgb(249 250 251 / 0.1); */
+  background-color: red;
+}

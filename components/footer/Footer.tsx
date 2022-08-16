@@ -1,8 +1,11 @@
 import Image from "next/image";
 import FooterIcon from "../FooterIcon";
 import footer from "../../app-data/app-data.json";
+import { useSelector } from "react-redux";
 
 export default function Footer() {
+  const flag = useSelector((state: any) => state.global.flagUrl);
+
   return (
     <>
       <footer className="bg-[#eee] hidden lg:block xl:block 2xl:block">
@@ -39,9 +42,19 @@ export default function Footer() {
               ))}
             </div>
           ))}
-          <div>
+          <div className="">
             <h1>Shopping from: </h1>
-            <p>You're in: </p>
+            <div className=" flex items-center mt-3">
+              <p className=" mr-5">You're in: </p>
+              {flag && (
+                <Image
+                  src={flag.flag}
+                  width={25}
+                  height={25}
+                  className=" rounded-full"
+                />
+              )}
+            </div>
           </div>
         </div>
 

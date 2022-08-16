@@ -12,7 +12,7 @@ import DrawerWomen from "./DrawerWomen";
 type DrawerProps = {
   openDrawer: boolean;
 };
-
+import { hideOnScroll } from "../../../composable/onScrollHide";
 export function Drawer(props: DrawerProps) {
   const [openMen, setopenMen] = useState(false);
   const [openWomen, setopenWomen] = useState(true);
@@ -20,18 +20,19 @@ export function Drawer(props: DrawerProps) {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    const scrl = document.querySelector("#scroller");
-    let previousPosition = 0;
+    // const scrl = document.querySelector("#scroller");
+    // let previousPosition = 0;
 
-    scrl?.addEventListener("scroll", (e) => {
-      if (scrl.scrollTop > previousPosition) {
-        previousPosition = scrl.scrollTop;
-        dispatch(setShowNav(false));
-      } else {
-        dispatch(setShowNav(true));
-        previousPosition = scrl.scrollTop;
-      }
-    });
+    // scrl?.addEventListener("scroll", (e) => {
+    //   if (scrl.scrollTop > previousPosition) {
+    //     previousPosition = scrl.scrollTop;
+    //     dispatch(setShowNav(false));
+    //   } else {
+    //     dispatch(setShowNav(true));
+    //     previousPosition = scrl.scrollTop;
+    //   }
+    // });
+    hideOnScroll(dispatch, setShowNav, document, "#scroller");
   }, []);
   return (
     <>

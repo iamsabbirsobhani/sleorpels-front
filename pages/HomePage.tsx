@@ -58,7 +58,7 @@ export default function HomePage() {
                 >
                   Shop Women
                 </button>
-                <Link href="/product/men">
+                <Link href="/men">
                   <button
                     style={{ fontFamily: "Futura PT Bold" }}
                     className=" mt-2 bg-white text-gray-900 hover:text-white hover:bg-gray-900 transition-all duration-500 align-text-bottom uppercase p-2 px-4 "
@@ -91,7 +91,7 @@ export default function HomePage() {
                 >
                   Shop Women
                 </button>
-                <Link href="/product/men">
+                <Link href="/men">
                   <button
                     style={{ fontFamily: "Futura PT Bold" }}
                     className=" mt-2 bg-white text-gray-900 hover:text-white hover:bg-gray-900 transition-all duration-500 align-text-bottom uppercase p-2 px-4 w-40"

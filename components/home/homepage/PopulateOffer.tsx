@@ -13,6 +13,7 @@ type HiddenOffer = {
   borderColor: string;
   button: string;
 };
+import Link from "next/link";
 
 export default function PopulateOffer(props: any) {
   const [hiddenOfferStyle, sethiddenOfferStyle] = useState<HiddenOffer>();
@@ -63,7 +64,7 @@ export default function PopulateOffer(props: any) {
           color: hiddenOfferStyle?.textColor,
         }}
         className={
-          "hidden-offer   hidden lg:flex xl:flex 2xl:flex  w-full h-16 p-2  justify-between items-center border-b-[1px]  border-white  "
+          "hidden-offer   hidden lg:flex xl:flex 2xl:flex  w-full h-16 p-2  justify-between items-center border-b-[1px]  border-white relative top-[3.6rem] z-10"
         }
       >
         <div className=" ml-5">
@@ -99,17 +100,19 @@ export default function PopulateOffer(props: any) {
           )}
         </div>
         <div className=" mr-5">
-          <button
-            style={{
-              border: `2px solid ${hiddenOfferStyle?.borderColor}`,
-              fontFamily: "Futura PT Demi",
-            }}
-            className={
-              hiddenOfferStyle?.button + " hiddenOfferButton uppercase"
-            }
-          >
-            Men
-          </button>
+          <Link href="/men">
+            <button
+              style={{
+                border: `2px solid ${hiddenOfferStyle?.borderColor}`,
+                fontFamily: "Futura PT Demi",
+              }}
+              className={
+                hiddenOfferStyle?.button + " hiddenOfferButton uppercase"
+              }
+            >
+              Men
+            </button>
+          </Link>
         </div>
       </div>
       <div className=" block lg:hidden xl:hidden 2xl:hidden  w-full h-16 bg-[#2d2d2d]">

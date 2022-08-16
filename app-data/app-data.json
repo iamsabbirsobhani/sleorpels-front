@@ -71,7 +71,7 @@
             "icon": "faMessage"
         }
     ],
-    "men": [
+    "men-nav-drawer-options": [
         {
             "id": 1,
             "name": "New In",
@@ -113,7 +113,7 @@
             "bgUrl": "https://images.asos-media.com/navigation/mw_gbl_toplevel_clothing_1m_115081355?&$n_320w$"
         }
     ],
-    "women": [
+    "women-nav-drawer-options": [
         {
             "id": 1,
             "name": "New In",

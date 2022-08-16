@@ -49,7 +49,7 @@ export default function DrawerWomen() {
           <li>
             <ul>
               {data &&
-                data.women.map((women) => (
+                data["women-nav-drawer-options"].map((women) => (
                   <li key={women.id}>
                     <div
                       className=" m-auto w-full h-[5.5rem] items-center "

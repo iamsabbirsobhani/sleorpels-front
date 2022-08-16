@@ -19,12 +19,18 @@ export const globalSlice = createSlice({
     accordionItemId: [] as any,
     // mobile navbar scrol up to show nav
     showNav: true,
+    // desktop navbar scrol up to show nav
+    showNavDesk: true,
     // geoflag
     flagUrl: null,
     status: "idle",
     error: null as string | null | undefined,
   },
   reducers: {
+    // desktop navbar scrol up to show nav
+    setShowDeskNav: (state, payload) => {
+      state.showNavDesk = payload.payload;
+    },
     // mobile navbar scrol up to show nav
     setShowNav: (state, payload) => {
       state.showNav = payload.payload;
@@ -88,6 +94,7 @@ export const {
   setAccordionItemId,
   delAccordionItem,
   setShowNav,
+  setShowDeskNav,
 } = globalSlice.actions;
 
 export default globalSlice.reducer;

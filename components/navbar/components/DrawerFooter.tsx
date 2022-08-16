@@ -151,12 +151,14 @@ export default function DrawerFooter() {
             ))}
             <div className=" bg-[#eee]  p-3 flex items-center">
               <p className=" mr-5">You're in: </p>
-              <Image
-                src={flag.flag}
-                width={20}
-                height={20}
-                className=" rounded-full"
-              />
+              {flag && (
+                <Image
+                  src={flag.flag}
+                  width={25}
+                  height={25}
+                  className=" rounded-full hover:outline outline-1  outline-offset-2 outline-blue-500"
+                />
+              )}
             </div>
           </div>
         </div>
