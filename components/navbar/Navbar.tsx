@@ -7,7 +7,11 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 import MenNavOptions from "./components/MenNavOptions";
 import { hideOnScroll } from "../../composable/onScrollHide";
-import { setShowDeskNav } from "../../features/global/globalSlice";
+import {
+  setShowDeskNav,
+  openOption,
+  closeOptions,
+} from "../../features/global/globalSlice";
 import OptionDetails from "./components/OptionDetails";
 export default function Navbar() {
   const router = useRouter();
@@ -15,6 +19,7 @@ export default function Navbar() {
   const flag = useSelector((state: any) => state.global.flagUrl);
   const status = useSelector((state: any) => state.global.status);
   const showNav = useSelector((state: any) => state.global.showNavDesk);
+  const options = useSelector((state: any) => state.global.options);
   const [isMen, setisMen] = useState(url.includes("men"));
   const [isWomen, setisWomen] = useState(url.includes("women"));
   const dispatch = useDispatch<any>();
@@ -49,25 +54,26 @@ export default function Navbar() {
   });
 
   useEffect(() => {
-    // const a = document.querySelector("#options");
-    // const b = document.querySelector("#option-details");
-    // a?.addEventListener("mouseenter", (e) => {
-    //   console.log("Mouse enter");
-    //   console.log(e);
-    //   setopenOptions(true);
-    // });
-    // b?.addEventListener("mouseenter", (e) => {
-    //   console.log("Mouse enter");
-    //   setopenOptions(true);
-    // });
-    // a?.addEventListener("mouseleave", (e) => {
-    //   console.log("Mouse leave");
-    //   setopenOptions(false);
-    // });
-    // b?.addEventListener("mouseleave", (e) => {
-    //   setopenOptions(false);
-    //   console.log("Mouse leave");
-    // });
+    const a = document.querySelector("#men-nav-options");
+    const b = document.querySelector("#option-details");
+    a?.addEventListener("mouseenter", (e) => {
+      // console.log("Mouse enter over nav options");
+      setopenOptions(true);
+    });
+    b?.addEventListener("mouseenter", (e) => {
+      // console.log("Mouse enter over options details");
+      setopenOptions(true);
+    });
+    a?.addEventListener("mouseleave", (e) => {
+      // console.log("Mouse leave from over options details");
+      // dispatch(closeOptions());
+      setopenOptions(false);
+    });
+    b?.addEventListener("mouseleave", (e) => {
+      setopenOptions(false);
+      // dispatch(closeOptions());
+      // console.log("Mouse leave from over nav options");
+    });
   });
 
   return (
@@ -220,7 +226,15 @@ export default function Navbar() {
             {/* below men navbar options */}
             <div className=" ">
               {isMen ? <MenNavOptions isMen={isMen} /> : null}
-              {<OptionDetails shopByProduct={true} />}
+
+              {openOptions && options && (
+                <OptionDetails
+                  sale={options[0].isTrue}
+                  newin={options[1].isTrue}
+                />
+              )}
+
+              {/* <OptionDetails sale={false} newin={false} clothing={true} /> */}
             </div>
             {/*  below women navbar options */}
             <div></div>
@@ -229,10 +243,12 @@ export default function Navbar() {
       </div>
 
       {/* overlay when optin open */}
-      <div
-        id="overlay-options"
-        className=" bg-gray-500/40 top-0 w-full fixed bottom-0 left-0 right-0 z-10"
-      ></div>
+      {openOptions && (
+        <div
+          id="overlay-options"
+          className="hidden lg:block xl:block 2xl:block bg-gray-500/40 top-0 w-full fixed bottom-0 left-0 right-0 z-10"
+        ></div>
+      )}
 
       <div className="block lg:hidden xl:hidden 2xl:hidden ">
         <MobileNavbar />

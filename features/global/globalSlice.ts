@@ -1,4 +1,5 @@
 import { createAsyncThunk, createSlice, PayloadAction } from "@reduxjs/toolkit";
+import options from "../../app-data/app-data.json";
 
 // geo flag
 export const fetchFlag = createAsyncThunk("flagUrl/fetchFlag", async () => {
@@ -6,7 +7,7 @@ export const fetchFlag = createAsyncThunk("flagUrl/fetchFlag", async () => {
     "https://api.ipdata.co/?api-key=037253635bedffc03ba3dd3073b737ffdde4fbed82b1abac868bc363"
   );
   const data = await response.json();
-  console.log(data);
+
   return data;
 });
 
@@ -27,8 +28,23 @@ export const globalSlice = createSlice({
     error: null as string | null | undefined,
     // options open on mouse over navbar
     optionOpen: [] as Array<object>,
+    // nav-men-options section
+    options: options["men-nav-options-isopen"],
   },
   reducers: {
+    // nav-men-options section
+    openOption: (state, payload) => {
+      state.options.map((item) => {
+        if (item.id === payload.payload) {
+          item.isTrue = true;
+        } else {
+          item.isTrue = false;
+        }
+      });
+    },
+    closeOptions: (state) => {
+      state.options.map((item) => (item.isTrue = false));
+    },
     // options open on mouse over navbar
     setOptionOpen: (state, payload) => {
       state.optionOpen.push(payload.payload);
@@ -102,6 +118,8 @@ export const {
   setShowNav,
   setShowDeskNav,
   setOptionOpen,
+  openOption,
+  closeOptions,
 } = globalSlice.actions;
 
 export default globalSlice.reducer;

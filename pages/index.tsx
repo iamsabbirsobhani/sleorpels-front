@@ -14,16 +14,16 @@ const Home = (props: any) => {
   const dispatch = useDispatch();
 
   // development api end poing
-  const { data, error } = useSWR(
-    "http://http://192.168.0.100:1337/api/products?populate=*",
-    fetcher
-  );
+  // const { data, error } = useSWR(
+  //   "http://http://192.168.0.100:1337/api/products?populate=*",
+  //   fetcher
+  // );
 
   // production end point
-  // const { data, error } = useSWR(
-  //   "https://sleorpels.herokuapp.com/api/products?populate=*",
-  //   fetcher()
-  // );
+  const { data, error } = useSWR(
+    "https://sleorpels.herokuapp.com/api/products?populate=*",
+    fetcher()
+  );
 
   if (error) return <div>Failed to load</div>;
 
