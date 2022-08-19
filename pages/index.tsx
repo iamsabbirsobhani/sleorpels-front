@@ -53,11 +53,6 @@ const Home = (props: any) => {
             content="https://firebasestorage.googleapis.com/v0/b/iceland-2b5ae.appspot.com/o/sleorpels-thumb.png?alt=media&token=5fb0783c-9980-4fee-bd1c-6699e2d63de9"
           />
           <meta name="twitter:card" content="summary_large_image" />
-          <Script
-            type="module"
-            src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
-          />
-          <Script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js" />
         </Head>
 
         <div className=" w-64 m-auto animate-pulse absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center">

@@ -150,7 +150,7 @@ export default function DrawerFooter() {
               </div>
             ))}
             <div className=" bg-[#eee]  p-3 flex items-center">
-              <p className=" mr-5">You're in: </p>
+              <p className=" mr-5">You&apos;re in: </p>
               {flag && (
                 <Image
                   src={flag.flag}

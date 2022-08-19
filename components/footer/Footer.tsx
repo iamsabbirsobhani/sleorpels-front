@@ -45,7 +45,7 @@ export default function Footer() {
           <div className="">
             <h1>Shopping from: </h1>
             <div className=" flex items-center mt-3">
-              <p className=" mr-5">You're in: </p>
+              <p className=" mr-5">You&apos;re in: </p>
               {flag && (
                 <Image
                   src={flag.flag}
