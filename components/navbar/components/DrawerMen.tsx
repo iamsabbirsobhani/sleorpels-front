@@ -45,7 +45,7 @@ export default function DrawerMen() {
           </li>
           <li>
             <ul>
-              {data["men-nav-drawer-options"].map((men) => (
+              {data["men-drawer-options"].map((men) => (
                 <li key={men.id}>
                   <div
                     className=" m-auto w-full h-[5.5rem] items-center "

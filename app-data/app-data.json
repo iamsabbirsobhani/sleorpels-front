@@ -71,7 +71,7 @@
             "icon": "faMessage"
         }
     ],
-    "men-nav-drawer-options": [
+    "men-drawer-options": [
         {
             "id": 1,
             "name": "New In",
@@ -113,7 +113,7 @@
             "bgUrl": "https://images.asos-media.com/navigation/mw_gbl_toplevel_clothing_1m_115081355?&$n_320w$"
         }
     ],
-    "women-nav-drawer-options": [
+    "women-drawer-options": [
         {
             "id": 1,
             "name": "New In",
@@ -158,6 +158,293 @@
             "id": 9,
             "name": "Brands",
             "bgUrl": "https://images.asos-media.com/navigation/mw_gbl_toplevel_clothing_1m_115081355?&$n_320w$"
+        }
+    ],
+    "men-nav-options": [
+        {
+            "id": 1,
+            "name": "Sale",
+            "shop-by-product": [
+                {
+                    "id": 1,
+                    "name": "Sale View All",
+                    "url": ""
+                },
+                {
+                    "id": 2,
+                    "name": "SALE New lines added",
+                    "url": ""
+                },
+                {
+                    "id": 3,
+                    "name": "SALE Selling fast",
+                    "url": ""
+                },
+                {
+                    "id": 4,
+                    "name": "SALE T-Shirts & Vests",
+                    "url": ""
+                },
+                {
+                    "id": 5,
+                    "name": "SALE Shorts",
+                    "url": ""
+                },
+                {
+                    "id": 6,
+                    "name": "SALE Swimwear",
+                    "url": ""
+                },
+                {
+                    "id": 7,
+                    "name": "SALE Sunglasses",
+                    "url": ""
+                },
+                {
+                    "id": 8,
+                    "name": "SALE Accessories",
+                    "url": ""
+                },
+                {
+                    "id": 9,
+                    "name": "SALE Activewear",
+                    "url": ""
+                },
+                {
+                    "id": 10,
+                    "name": "SALE Bags",
+                    "url": ""
+                },
+                {
+                    "id": 11,
+                    "name": "SALE Gifts",
+                    "url": ""
+                },
+                {
+                    "id": 12,
+                    "name": "SALE Hoodies & Sweatshirts",
+                    "url": ""
+                },
+                {
+                    "id": 13,
+                    "name": "SALE Jackets & Coats",
+                    "url": ""
+                },
+                {
+                    "id": 14,
+                    "name": "SALE Jeans",
+                    "url": ""
+                },
+                {
+                    "id": 15,
+                    "name": "SALE Jewellery & Watches",
+                    "url": ""
+                },
+                {
+                    "id": 16,
+                    "name": "SALE Jumpers & Cardigans",
+                    "url": ""
+                },
+                {
+                    "id": 17,
+                    "name": "SALE Loungewear",
+                    "url": ""
+                },
+                {
+                    "id": 18,
+                    "name": "SALE Polo shirts",
+                    "url": ""
+                },
+                {
+                    "id": 19,
+                    "name": "SALE Shirts",
+                    "url": ""
+                },
+                {
+                    "id": 20,
+                    "name": "SALE Shoes & Trainers",
+                    "url": ""
+                },
+                {
+                    "id": 21,
+                    "name": "SALE Suits & Tailoring",
+                    "url": ""
+                },
+                {
+                    "id": 22,
+                    "name": "SALE Tracksuits",
+                    "url": ""
+                },
+                {
+                    "id": 23,
+                    "name": "SALE Trousers & Chinos",
+                    "url": ""
+                },
+                {
+                    "id": 24,
+                    "name": "SALE Underwear & Socks",
+                    "url": ""
+                },
+                {
+                    "id": 25,
+                    "name": "A-Z of brands",
+                    "url": ""
+                }
+            ],
+            "shop-by-edit": [
+                {
+                    "id": 1,
+                    "name": "Biggest deals",
+                    "url": "#"
+                },
+                {
+                    "id": 2,
+                    "name": "Summer sale",
+                    "url": "#"
+                },
+                {
+                    "id": 3,
+                    "name": "Deals under £15",
+                    "url": "#"
+                },
+                {
+                    "id": 4,
+                    "name": "Bestselling brands",
+                    "url": "#"
+                },
+                {
+                    "id": 5,
+                    "name": "Sneakerbrands",
+                    "url": "#"
+                },
+                {
+                    "id": 6,
+                    "name": "T-shirts and Vests under £20",
+                    "url": "#"
+                }
+            ],
+            "shop-sale-by-body-fit": [
+                {
+                    "id": 1,
+                    "name": "Plus Size",
+                    "imgUrl": "https://images.asos-media.com/navigation/mw_gbl_sale_saleplussize_3m_1907351?&$n_240w$",
+                    "url": "#"
+                },
+                {
+                    "id": 2,
+                    "name": "Tall",
+                    "imgUrl": "https://images.asos-media.com/navigation/mw_gbl_sale_saletall_3m_108323541?&$n_240w$",
+                    "url": "#"
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "name": "New In",
+            "new-products": [
+                {
+                    "id": 1,
+                    "name": "View all",
+                    "url": "#"
+                },
+                {
+                    "id": 2,
+                    "name": "Clothing",
+                    "url": "#"
+                },
+                {
+                    "id": 3,
+                    "name": "Shoes",
+                    "url": "#"
+                },
+                {
+                    "id": 4,
+                    "name": "Accessories",
+                    "url": "#"
+                },
+                {
+                    "id": 5,
+                    "name": "Face + Body",
+                    "url": "#"
+                },
+                {
+                    "id": 6,
+                    "name": "Topman",
+                    "url": "#"
+                },
+                {
+                    "id": 7,
+                    "name": "Back in stock",
+                    "url": "#"
+                },
+                {
+                    "id": 8,
+                    "name": "Outlet",
+                    "url": "#"
+                },
+                {
+                    "id": 9,
+                    "name": "Trending Now",
+                    "url": "#"
+                }
+            ],
+            "new-edits": [
+                {
+                    "id": 1,
+                    "name": "Off campus",
+                    "imgUrl": "https://images.asos-media.com/navigation/mw_global_transitional_insta_alpha_1650x1884?&$n_320w$"
+                },
+                {
+                    "id": 2,
+                    "name": "Top man",
+                    "imgUrl": "https://images.asos-media.com/navigation/mw_global_topman_1650x1884?&$n_320w$"
+                },
+                {
+                    "id": 3,
+                    "name": "Golden Hour",
+                    "imgUrl": "https://images.asos-media.com/navigation/mw_global_insta_alpha_occasion_suits_1650x1884?&$n_320w$"
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "name": "Clothing"
+        },
+        {
+            "id": 4,
+            "name": "Shoes"
+        },
+        {
+            "id": 5,
+            "name": "Sportswear"
+        },
+        {
+            "id": 6,
+            "name": "Accessories"
+        },
+        {
+            "id": 7,
+            "name": "Summer"
+        },
+        {
+            "id": 8,
+            "name": "Trending Now"
+        },
+        {
+            "id": 9,
+            "name": "Topman"
+        },
+        {
+            "id": 10,
+            "name": "Brands"
+        },
+        {
+            "id": 11,
+            "name": "Outlet"
+        },
+        {
+            "id": 12,
+            "name": "Marketplace"
         }
     ]
 }

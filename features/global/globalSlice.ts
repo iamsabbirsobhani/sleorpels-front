@@ -25,8 +25,14 @@ export const globalSlice = createSlice({
     flagUrl: null,
     status: "idle",
     error: null as string | null | undefined,
+    // options open on mouse over navbar
+    optionOpen: [] as Array<object>,
   },
   reducers: {
+    // options open on mouse over navbar
+    setOptionOpen: (state, payload) => {
+      state.optionOpen.push(payload.payload);
+    },
     // desktop navbar scrol up to show nav
     setShowDeskNav: (state, payload) => {
       state.showNavDesk = payload.payload;
@@ -95,6 +101,7 @@ export const {
   delAccordionItem,
   setShowNav,
   setShowDeskNav,
+  setOptionOpen,
 } = globalSlice.actions;
 
 export default globalSlice.reducer;
