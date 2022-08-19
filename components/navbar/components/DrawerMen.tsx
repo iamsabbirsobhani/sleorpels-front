@@ -37,7 +37,6 @@ export default function DrawerMen() {
                   className=" text-lg"
                   style={{ fontFamily: "Futura PT Light" }}
                 >
-                  {" "}
                   Don't Miss Out
                 </p>
               </a>

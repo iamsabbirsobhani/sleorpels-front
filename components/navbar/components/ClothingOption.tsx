@@ -5,12 +5,12 @@ export default function ClothingOption() {
     <>
       <div className=" grid grid-cols-5">
         {/* shop by product */}
-        <div className=" col-span-2 grid-cols-2">
+        <div className=" ">
           {data["men-nav-options"].map(
             (option) =>
               option.id === 3 &&
               option["shop-by-product"]?.map((item) => (
-                <div key={item.id}>
+                <div key={item.id} className="grid col-span-2">
                   <a href={item.url}>{item.name}</a>
                 </div>
               ))
