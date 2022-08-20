@@ -227,14 +227,14 @@ export default function Navbar() {
             <div className=" ">
               {isMen ? <MenNavOptions isMen={isMen} /> : null}
 
-              {openOptions && options && (
+              {/* {openOptions && options && (
                 <OptionDetails
                   sale={options[0].isTrue}
                   newin={options[1].isTrue}
                 />
-              )}
+              )} */}
 
-              {/* <OptionDetails sale={false} newin={false} clothing={true} /> */}
+              <OptionDetails sale={false} newin={false} clothing={true} />
             </div>
             {/*  below women navbar options */}
             <div></div>
