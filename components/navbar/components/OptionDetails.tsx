@@ -10,6 +10,11 @@ import SportsWearOption from "./SportswearOption";
 import SummerOption from "./SummerOption";
 import TopmanOption from "./TopmanOption";
 import TrendingNowOption from "./TrendingNowOption";
+import { useDispatch } from "react-redux";
+import {
+  setOpenNavOption,
+  resetActivateOption,
+} from "../../../features/global/globalSlice";
 
 export default function OptionDetails(props: any) {
   const {
@@ -26,10 +31,17 @@ export default function OptionDetails(props: any) {
     outlet,
     marketplace,
   } = props;
+
+  const dispatch = useDispatch();
+
   return (
     <div
       id="option-details"
       className=" w-[98%]  bg-gray-100 m-auto absolute left-0 right-0 z-20 p-5"
+      onMouseLeave={() => {
+        dispatch(setOpenNavOption(false));
+        dispatch(resetActivateOption());
+      }}
     >
       {/* Sale option */}
       {sale && <SaleOption />}

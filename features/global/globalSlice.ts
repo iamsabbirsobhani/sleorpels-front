@@ -1,6 +1,43 @@
 import { createAsyncThunk, createSlice, PayloadAction } from "@reduxjs/toolkit";
 import options from "../../app-data/app-data.json";
 
+interface GlobalType {
+  openDrawer: boolean;
+  value: number;
+  accordionItemId: any;
+  showNav: boolean;
+  showNavDesk: boolean;
+  flagUrl: string | any;
+  status: string;
+  error: string | null | undefined;
+  optionOpen: Array<object>;
+  options: any;
+  openNavOption: boolean;
+  activatedOption: number;
+}
+
+// Define the initial state using that type
+const initialState: GlobalType = {
+  openDrawer: false,
+  value: 10,
+  // accordion
+  accordionItemId: [] as any,
+  // mobile navbar scrol up to show nav
+  showNav: true,
+  // desktop navbar scrol up to show nav
+  showNavDesk: true,
+  // geoflag
+  flagUrl: null,
+  status: "idle",
+  error: null as string | null | undefined,
+  // options open on mouse over navbar
+  optionOpen: [] as Array<object>,
+  // nav-men-options section
+  options: options["men-nav-options-isopen"],
+  openNavOption: false,
+  activatedOption: 0,
+};
+
 // geo flag
 export const fetchFlag = createAsyncThunk("flagUrl/fetchFlag", async () => {
   const response = await fetch(
@@ -13,37 +50,28 @@ export const fetchFlag = createAsyncThunk("flagUrl/fetchFlag", async () => {
 
 export const globalSlice = createSlice({
   name: "global",
-  initialState: {
-    openDrawer: false,
-    value: 10,
-    // accordion
-    accordionItemId: [] as any,
-    // mobile navbar scrol up to show nav
-    showNav: true,
-    // desktop navbar scrol up to show nav
-    showNavDesk: true,
-    // geoflag
-    flagUrl: null,
-    status: "idle",
-    error: null as string | null | undefined,
-    // options open on mouse over navbar
-    optionOpen: [] as Array<object>,
-    // nav-men-options section
-    options: options["men-nav-options-isopen"],
-  },
+  initialState,
   reducers: {
     // nav-men-options section
+    resetActivateOption: (state) => {
+      state.activatedOption = 0;
+    },
+    setOpenNavOption: (state, payload) => {
+      state.openNavOption = payload.payload;
+    },
     openOption: (state, payload) => {
-      state.options.map((item) => {
+      state.options.map((item: any) => {
         if (item.id === payload.payload) {
           item.isTrue = true;
+          state.activatedOption = item.id;
         } else {
           item.isTrue = false;
         }
       });
     },
     closeOptions: (state) => {
-      state.options.map((item) => (item.isTrue = false));
+      state.options.map((item: any) => (item.isTrue = false));
+      state.activatedOption = 0;
     },
     // options open on mouse over navbar
     setOptionOpen: (state, payload) => {
@@ -120,6 +148,8 @@ export const {
   setOptionOpen,
   openOption,
   closeOptions,
+  setOpenNavOption,
+  resetActivateOption,
 } = globalSlice.actions;
 
 export default globalSlice.reducer;

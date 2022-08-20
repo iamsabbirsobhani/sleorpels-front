@@ -29,7 +29,10 @@ export default function TopmanOption() {
           {data["men-nav-options"]?.map(
             (option: any) =>
               option.id === 9 && (
-                <div className=" flex justify-around flex-wrap ">
+                <div
+                  key={option.id}
+                  className=" flex justify-around flex-wrap "
+                >
                   {option["others"]?.map((other: any) => (
                     <div
                       key={other.id}
@@ -63,7 +66,10 @@ export default function TopmanOption() {
           {data["men-nav-options"]?.map(
             (option: any) =>
               option.id === 9 && (
-                <div className=" flex justify-around flex-wrap ">
+                <div
+                  key={option.id}
+                  className=" flex justify-around flex-wrap "
+                >
                   {option["others-second"]?.map((other: any) => (
                     <div
                       key={other.id}

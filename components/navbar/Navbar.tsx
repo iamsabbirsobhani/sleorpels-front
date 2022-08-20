@@ -11,6 +11,8 @@ import {
   setShowDeskNav,
   openOption,
   closeOptions,
+  setOpenNavOption,
+  resetActivateOption,
 } from "../../features/global/globalSlice";
 import OptionDetails from "./components/OptionDetails";
 export default function Navbar() {
@@ -20,6 +22,7 @@ export default function Navbar() {
   const status = useSelector((state: any) => state.global.status);
   const showNav = useSelector((state: any) => state.global.showNavDesk);
   const options = useSelector((state: any) => state.global.options);
+  const openNavOption = useSelector((state: any) => state.global.openNavOption);
   const [isMen, setisMen] = useState(url.includes("men"));
   const [isWomen, setisWomen] = useState(url.includes("women"));
   const dispatch = useDispatch<any>();
@@ -56,30 +59,30 @@ export default function Navbar() {
   useEffect(() => {
     const a = document.querySelector("#men-nav-options");
     const b = document.querySelector("#option-details");
-    a?.addEventListener("mouseenter", (e) => {
-      // console.log("Mouse enter over nav options");
-      setopenOptions(true);
-    });
+
     b?.addEventListener("mouseenter", (e) => {
-      // console.log("Mouse enter over options details");
-      setopenOptions(true);
+      dispatch(setOpenNavOption(true));
     });
+
     a?.addEventListener("mouseleave", (e) => {
-      // console.log("Mouse leave from over options details");
-      // dispatch(closeOptions());
-      setopenOptions(false);
+      b?.addEventListener("mouseenter", (b) => {
+        dispatch(setOpenNavOption(true));
+      });
+      dispatch(setOpenNavOption(false));
     });
-    b?.addEventListener("mouseleave", (e) => {
-      setopenOptions(false);
-      // dispatch(closeOptions());
-      // console.log("Mouse leave from over nav options");
+
+    document.addEventListener("mouseleave", (e) => {
+      dispatch(resetActivateOption());
     });
   });
 
   return (
     <>
-      <div className=" hidden lg:block xl:block 2xl:block">
-        <div className=" z-30 relative w-full bg-gray-50 h-7 flex justify-end items-center">
+      <div id="desk-navbar" className=" hidden lg:block xl:block 2xl:block">
+        <div
+          id="top-navbar-info"
+          className=" z-30 relative w-full bg-gray-50 h-7 flex justify-end items-center"
+        >
           <div
             style={{ fontFamily: "Futura PT Light" }}
             className=" border-l-[1px]  border-r-[1px] border-gray-500/20 p-1 px-5 cursor-pointer hover:text-blue-500"
@@ -121,7 +124,12 @@ export default function Navbar() {
               }`
             }
           >
-            <div className=" flex items-center  justify-around  ">
+            <div
+              onMouseEnter={() => {
+                dispatch(resetActivateOption());
+              }}
+              className=" flex items-center  justify-around  "
+            >
               <Link href={"/"} scroll={false}>
                 <div>
                   <h1
@@ -227,27 +235,22 @@ export default function Navbar() {
             <div className=" ">
               {isMen ? <MenNavOptions isMen={isMen} /> : null}
 
-              {/* {openOptions && options && (
+              {openNavOption && options && (
                 <OptionDetails
                   sale={options[0].isTrue}
                   newin={options[1].isTrue}
+                  clothing={options[2].isTrue}
+                  shoes={options[3].isTrue}
+                  sportswear={options[4].isTrue}
+                  accessories={options[5].isTrue}
+                  summer={options[6].isTrue}
+                  trending={options[7].isTrue}
+                  topman={options[8].isTrue}
+                  brands={options[9].isTrue}
+                  outlet={options[10].isTrue}
+                  marketplace={options[11].isTrue}
                 />
-              )} */}
-
-              <OptionDetails
-                sale={false}
-                newin={false}
-                clothing={false}
-                shoes={false}
-                sportswear={false}
-                accessories={false}
-                summer={false}
-                trending={false}
-                topman={false}
-                brands={false}
-                outlet={false}
-                marketplace={true}
-              />
+              )}
             </div>
             {/*  below women navbar options */}
             <div></div>
@@ -256,8 +259,11 @@ export default function Navbar() {
       </div>
 
       {/* overlay when optin open */}
-      {openOptions && (
+      {openNavOption && (
         <div
+          onMouseEnter={() => {
+            dispatch(setOpenNavOption(false));
+          }}
           id="overlay-options"
           className="hidden lg:block xl:block 2xl:block bg-gray-500/40 top-0 w-full fixed bottom-0 left-0 right-0 z-10"
         ></div>

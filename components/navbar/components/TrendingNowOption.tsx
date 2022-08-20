@@ -68,7 +68,10 @@ export default function TrendingNowOption() {
           {data["men-nav-options"]?.map(
             (option: any) =>
               option.id === 8 && (
-                <div className=" flex justify-around flex-wrap ">
+                <div
+                  key={option.id}
+                  className=" flex justify-around flex-wrap "
+                >
                   {option["others"]?.map((other: any) => (
                     <div
                       key={other.id}

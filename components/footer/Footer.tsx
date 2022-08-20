@@ -8,8 +8,8 @@ export default function Footer() {
 
   return (
     <>
-      <footer className="bg-[#eee] hidden lg:block xl:block 2xl:block">
-        <div className=" w-full h-14 border-t-[1px] border-gray-400/20  bg-white  flex justify-evenly items-center ">
+      <footer className="bg-[#eee] hidden lg:block xl:block 2xl:block relative z-10">
+        <div className=" w-full h-14 border-t-[1px] border-gray-400/20  bg-white  flex justify-evenly items-center">
           <div className=" flex items-center justify-evenly w-1/5">
             <FooterIcon />
           </div>

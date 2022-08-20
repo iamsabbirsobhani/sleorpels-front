@@ -15,6 +15,7 @@ export default function ClothingOption() {
             optionGroup={"shop-by-product"}
             data={data}
             title={"Shop by product"}
+            col={2}
           />
         </div>
 

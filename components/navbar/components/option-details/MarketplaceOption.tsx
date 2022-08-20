@@ -8,7 +8,10 @@ export function MarketplaceOption() {
           (option) =>
             option.id === 12 &&
             option["marketplace"]?.map((item) => (
-              <div className=" w-full cursor-pointer mt-5 bg-white shadow-sm">
+              <div
+                key={item.id}
+                className=" w-full cursor-pointer mt-5 bg-white shadow-sm"
+              >
                 <div
                   className=" w-full h-40 bg-contain bg-no-repeat relative"
                   style={{ backgroundImage: `url(${item.imgUrl})` }}
