@@ -2,6 +2,7 @@ import AccessoriesOption from "./AccessoriesOption";
 import ClothingOption from "./ClothingOption";
 import NewInOption from "./NewInOption";
 import BrandsOption from "./option-details/BrandsOption";
+import { MarketplaceOption } from "./option-details/MarketplaceOption";
 import OutletOption from "./option-details/OutletOption";
 import SaleOption from "./SaleOption";
 import ShoesOption from "./ShoesOption";
@@ -23,6 +24,7 @@ export default function OptionDetails(props: any) {
     topman,
     brands,
     outlet,
+    marketplace,
   } = props;
   return (
     <div
@@ -51,6 +53,8 @@ export default function OptionDetails(props: any) {
       {brands && <BrandsOption />}
       {/* outlet now option */}
       {outlet && <OutletOption />}
+      {/* marketplace now option */}
+      {marketplace && <MarketplaceOption />}
     </div>
   );
 }

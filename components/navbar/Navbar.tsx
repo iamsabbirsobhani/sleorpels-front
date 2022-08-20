@@ -245,7 +245,8 @@ export default function Navbar() {
                 trending={false}
                 topman={false}
                 brands={false}
-                outlet={true}
+                outlet={false}
+                marketplace={true}
               />
             </div>
             {/*  below women navbar options */}
