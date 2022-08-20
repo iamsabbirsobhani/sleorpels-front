@@ -1325,15 +1325,17 @@
                     "name": "Up to 30% off topman",
                     "url": "#",
                     "imgUrl": "https://images.asos-media.com/navigation/mw_30promo_1680x876_261021?&$n_320w$"
-                },
+                }
+            ],
+            "others-second": [
                 {
-                    "id": 3,
+                    "id": 1,
                     "name": "Jeans",
                     "url": "#",
                     "imgUrl": "https://images.asos-media.com/navigation/topman_denim_1680x876_june?&$n_320w$"
                 },
                 {
-                    "id": 4,
+                    "id": 2,
                     "name": "Suits",
                     "url": "#",
                     "imgUrl": "https://images.asos-media.com/navigation/mw_topmannav_suits_3wl_030522?&$n_320w$"

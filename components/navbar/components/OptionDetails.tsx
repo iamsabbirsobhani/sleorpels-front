@@ -5,6 +5,7 @@ import SaleOption from "./SaleOption";
 import ShoesOption from "./ShoesOption";
 import SportsWearOption from "./SportswearOption";
 import SummerOption from "./SummerOption";
+import TopmanOption from "./TopmanOption";
 import TrendingNowOption from "./TrendingNowOption";
 
 export default function OptionDetails(props: any) {
@@ -17,6 +18,7 @@ export default function OptionDetails(props: any) {
     accessories,
     summer,
     trending,
+    topman,
   } = props;
   return (
     <div
@@ -39,6 +41,8 @@ export default function OptionDetails(props: any) {
       {summer && <SummerOption />}
       {/* trending now option */}
       {trending && <TrendingNowOption />}
+      {/* topman now option */}
+      {topman && <TopmanOption />}
     </div>
   );
 }
