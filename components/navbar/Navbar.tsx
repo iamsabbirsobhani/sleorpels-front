@@ -234,7 +234,13 @@ export default function Navbar() {
                 />
               )} */}
 
-              <OptionDetails sale={false} newin={false} clothing={true} />
+              <OptionDetails
+                sale={false}
+                newin={false}
+                clothing={false}
+                shoes={false}
+                sportswear={true}
+              />
             </div>
             {/*  below women navbar options */}
             <div></div>

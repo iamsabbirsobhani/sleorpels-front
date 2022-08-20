@@ -1,5 +1,5 @@
 export default function ListOptions(props: any) {
-  const { data, title, optionNo, optionGroup, genderNavOption } = props;
+  const { data, title, optionNo, optionGroup, genderNavOption, col } = props;
   return (
     <>
       <h1 className=" underline-offset-4 font-bold underline uppercase mb-3 tracking-wider">
@@ -8,7 +8,7 @@ export default function ListOptions(props: any) {
       {data[genderNavOption].map(
         (option: any) =>
           option.id === optionNo && (
-            <div key={option.id} className=" grid grid-cols-2">
+            <div key={option.id} className={" grid " + ` grid-cols-${col}`}>
               {option[optionGroup]?.map((item: any) => (
                 <div key={item.id} className="">
                   <a
@@ -22,7 +22,6 @@ export default function ListOptions(props: any) {
             </div>
           )
       )}
-      <div className=" absolute w-[1px] top-0 bg-gray-500/30 h-full right-0"></div>
     </>
   );
 }

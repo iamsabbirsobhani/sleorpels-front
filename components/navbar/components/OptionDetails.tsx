@@ -1,9 +1,11 @@
 import ClothingOption from "./ClothingOption";
 import NewInOption from "./NewInOption";
 import SaleOption from "./SaleOption";
+import ShoesOption from "./ShoesOption";
+import SportsWearOption from "./SportswearOption";
 
 export default function OptionDetails(props: any) {
-  const { sale, newin, clothing } = props;
+  const { sale, newin, clothing, shoes, sportswear } = props;
   return (
     <div
       id="option-details"
@@ -15,6 +17,10 @@ export default function OptionDetails(props: any) {
       {newin && <NewInOption />}
       {/* clothing option */}
       {clothing && <ClothingOption />}
+      {/* shoes option */}
+      {shoes && <ShoesOption />}
+      {/* sportswear option */}
+      {sportswear && <SportsWearOption />}
     </div>
   );
 }
