@@ -34,6 +34,7 @@ export default function ShoesOption() {
         {/*  */}
         <div className=" col-span-2  ml-2">
           <ImageTiles
+            optionNo={4}
             data={data}
             width={200}
             height={250}

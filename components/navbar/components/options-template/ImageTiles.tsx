@@ -1,11 +1,11 @@
 import Image from "next/image";
 export default function ImageTiles(props: any) {
-  const { data, width, height, optionGroup, genderNavOption } = props;
+  const { data, width, optionNo, height, optionGroup, genderNavOption } = props;
   return (
     <>
       {data[genderNavOption]?.map(
         (option: any) =>
-          option.id === 4 && (
+          option.id === optionNo && (
             <div className=" flex justify-around">
               {option[optionGroup]?.map((other: any) => (
                 <div

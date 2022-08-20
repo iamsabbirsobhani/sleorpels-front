@@ -239,7 +239,8 @@ export default function Navbar() {
                 newin={false}
                 clothing={false}
                 shoes={false}
-                sportswear={true}
+                sportswear={false}
+                accessories={true}
               />
             </div>
             {/*  below women navbar options */}
