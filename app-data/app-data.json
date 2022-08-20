@@ -1454,15 +1454,17 @@
                     "name": "Designer Brands",
                     "url": "#",
                     "imgUrl": "https://images.asos-media.com/navigation/mw_brands_designerbrands_3wl_113480853?&$n_320w$"
-                },
+                }
+            ],
+            "others-second": [
                 {
-                    "id": 3,
+                    "id": 1,
                     "name": "Collusion",
                     "url": "#",
                     "imgUrl": "https://images.asos-media.com/navigation/mw_brands_collusionblackfriday_3wl_1781958?&$n_320w$"
                 },
                 {
-                    "id": 4,
+                    "id": 2,
                     "name": "Plus size brands",
                     "url": "#",
                     "imgUrl": "https://images.asos-media.com/navigation/mw_gbl_brands_plussizebrands_3WL_1815102?&$n_320w$"
