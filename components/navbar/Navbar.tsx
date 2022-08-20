@@ -244,7 +244,8 @@ export default function Navbar() {
                 summer={false}
                 trending={false}
                 topman={false}
-                brands={true}
+                brands={false}
+                outlet={true}
               />
             </div>
             {/*  below women navbar options */}
