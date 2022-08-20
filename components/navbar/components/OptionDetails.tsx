@@ -5,10 +5,19 @@ import SaleOption from "./SaleOption";
 import ShoesOption from "./ShoesOption";
 import SportsWearOption from "./SportswearOption";
 import SummerOption from "./SummerOption";
+import TrendingNowOption from "./TrendingNowOption";
 
 export default function OptionDetails(props: any) {
-  const { sale, newin, clothing, shoes, sportswear, accessories, summer } =
-    props;
+  const {
+    sale,
+    newin,
+    clothing,
+    shoes,
+    sportswear,
+    accessories,
+    summer,
+    trending,
+  } = props;
   return (
     <div
       id="option-details"
@@ -28,6 +37,8 @@ export default function OptionDetails(props: any) {
       {accessories && <AccessoriesOption />}
       {/* summer option */}
       {summer && <SummerOption />}
+      {/* trending now option */}
+      {trending && <TrendingNowOption />}
     </div>
   );
 }

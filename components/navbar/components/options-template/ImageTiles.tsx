@@ -6,7 +6,7 @@ export default function ImageTiles(props: any) {
       {data[genderNavOption]?.map(
         (option: any) =>
           option.id === optionNo && (
-            <div className=" flex justify-around">
+            <div className=" flex justify-around ">
               {option[optionGroup]?.map((other: any) => (
                 <div
                   key={other.id}
