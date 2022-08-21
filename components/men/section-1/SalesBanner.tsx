@@ -38,11 +38,12 @@ export default function SalesBanner() {
 
         <div className=" mt-3">
           <ReactMarkdown
-            children={md}
             className={
               "sales-banner-md-font antialiased tracking-wider text-center font-bold lg:text-4xl xl:text-4xl 2xl:text-4xl text-3xl italic  text-gray-900"
             }
-          />
+          >
+            {md}
+          </ReactMarkdown>
         </div>
         <div className=" mt-3">
           <h1 className=" font-bold text-center uppercase antialiased tracking-wider">
