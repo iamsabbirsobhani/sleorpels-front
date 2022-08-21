@@ -259,15 +259,15 @@ export default function Navbar() {
       </div>
 
       {/* overlay when optin open */}
-      {openNavOption && (
+      {openNavOption ? (
         <div
           onMouseEnter={() => {
             dispatch(setOpenNavOption(false));
           }}
           id="overlay-options"
-          className="hidden lg:block xl:block 2xl:block bg-gray-500/40 top-0 w-full fixed bottom-0 left-0 right-0 z-10"
+          className="hidden lg:block xl:block 2xl:block bg-gray-500/60 top-0 w-full fixed bottom-0 left-0 right-0 z-20"
         ></div>
-      )}
+      ) : null}
 
       <div className="block lg:hidden xl:hidden 2xl:hidden ">
         <MobileNavbar />

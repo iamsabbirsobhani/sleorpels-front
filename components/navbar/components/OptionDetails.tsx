@@ -37,7 +37,7 @@ export default function OptionDetails(props: any) {
   return (
     <div
       id="option-details"
-      className=" w-[98%]  bg-gray-100 m-auto absolute left-0 right-0 z-20 p-5"
+      className=" w-[98%] shadow-md  bg-gray-100 m-auto absolute left-0 right-0 z-20 p-5"
       onMouseLeave={() => {
         dispatch(setOpenNavOption(false));
         dispatch(resetActivateOption());
