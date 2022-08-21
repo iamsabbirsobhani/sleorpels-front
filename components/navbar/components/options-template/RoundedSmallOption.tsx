@@ -22,6 +22,7 @@ export default function RoundedSmallOption(props: any) {
                       width={43}
                       height={43}
                       className=" rounded-full"
+                      blurDataURL={item.imgUrl}
                       placeholder="blur"
                     />
                   </div>

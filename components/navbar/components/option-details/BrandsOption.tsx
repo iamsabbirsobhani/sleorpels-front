@@ -82,6 +82,7 @@ export default function BrandsOption() {
                         height={130}
                         layout="responsive"
                         className="  object-cover"
+                        blurDataURL={other.imgUrl}
                         placeholder="blur"
                       />
                       <div

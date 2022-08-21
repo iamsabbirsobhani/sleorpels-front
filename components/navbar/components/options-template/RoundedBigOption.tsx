@@ -21,6 +21,7 @@ export default function RoundedBigOption(props: any) {
                           width={90}
                           height={90}
                           className="rounded-[50%]  "
+                          blurDataURL={link.imgUrl}
                           placeholder="blur"
                         />
                         <p className="text-sm   antialiased tracking-wide">

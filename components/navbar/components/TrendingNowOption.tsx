@@ -48,6 +48,8 @@ export default function TrendingNowOption() {
                               width={80}
                               height={80}
                               className="rounded-[50%]  "
+                              blurDataURL={link.imgUrl}
+                              placeholder="blur"
                             />
                             <p className="text-sm   antialiased tracking-wide mt-3">
                               {link.name}
@@ -84,6 +86,8 @@ export default function TrendingNowOption() {
                         height={130}
                         layout="responsive"
                         className="  object-cover"
+                        blurDataURL={other.imgUrl}
+                        placeholder="blur"
                       />
                       <div
                         style={{ fontFamily: "Futura PT Bold" }}

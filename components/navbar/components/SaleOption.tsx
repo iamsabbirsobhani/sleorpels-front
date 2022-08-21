@@ -105,6 +105,7 @@ export default function SaleOption() {
                             height={90}
                             className="rounded-[50%]  "
                             style={imgStyle}
+                            blurDataURL={link.imgUrl}
                             placeholder="blur"
                           />
                           <p className="text-sm   antialiased tracking-wide">

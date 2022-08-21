@@ -45,6 +45,7 @@ export default function TopmanOption() {
                         height={130}
                         layout="responsive"
                         className="  object-cover"
+                        blurDataURL={other.imgUrl}
                         placeholder="blur"
                       />
                       <div
@@ -83,6 +84,7 @@ export default function TopmanOption() {
                         height={130}
                         layout="responsive"
                         className="  object-cover"
+                        blurDataURL={other.imgUrl}
                         placeholder="blur"
                       />
                       <div
