@@ -269,7 +269,7 @@ export default function Navbar() {
         ></div>
       ) : null}
 
-      <div className="block lg:hidden xl:hidden 2xl:hidden ">
+      <div className="block lg:hidden xl:hidden 2xl:hidden">
         <MobileNavbar />
       </div>
     </>
