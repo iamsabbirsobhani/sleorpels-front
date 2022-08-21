@@ -5,7 +5,9 @@ export default function SaleOption() {
     <div className="grid  grid-cols-4">
       {/* shop by product section */}
       <div className="grid grid-cols-1 col-span-2 gap-3 mt-3">
-        <h1 className=" underline uppercase font-bold">SHOP BY PRODUCT</h1>
+        <h1 className=" tracking-wider underline-offset-2 underline uppercase font-bold">
+          SHOP BY PRODUCT
+        </h1>
         {data["men-nav-options"].map(
           (option) =>
             option.id === 1 && (
@@ -54,7 +56,7 @@ export default function SaleOption() {
           (option) =>
             option.id === 1 && (
               <div key={option.id} className="">
-                <h1 className=" underline uppercase font-bold mb-3">
+                <h1 className=" underline-offset-2 underline uppercase font-bold mb-3">
                   Shop by edit
                 </h1>
                 {option["shop-by-edit"]?.map((link) =>
@@ -89,7 +91,7 @@ export default function SaleOption() {
           (option) =>
             option.id === 1 && (
               <div key={option.id}>
-                <h1 className="font-bold underline uppercase mb-3">
+                <h1 className="font-bold underline uppercase mb-3 underline-offset-2 tracking-wider">
                   SHOP SALE BY BODY FIT
                 </h1>
                 <div className="flex items-center">

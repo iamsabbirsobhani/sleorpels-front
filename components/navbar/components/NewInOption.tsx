@@ -6,7 +6,9 @@ export default function NewInOption() {
       <div className=" grid gap-2 grid-cols-3">
         {/* new products */}
         <div className="">
-          <h1 className=" uppercase underline font-bold">New Products</h1>
+          <h1 className=" tracking-wider uppercase underline font-bold underline-offset-2">
+            New Products
+          </h1>
           {data["men-nav-options"].map(
             (option) =>
               option.id === 2 &&
@@ -25,7 +27,9 @@ export default function NewInOption() {
 
         {/* new edits */}
         <div className=" col-span-2">
-          <h1 className="uppercase underline font-bold">New edits</h1>
+          <h1 className=" underline-offset-2 tracking-wider uppercase underline font-bold">
+            New edits
+          </h1>
           <div className=" flex justify-between">
             {data["men-nav-options"].map(
               (option) =>

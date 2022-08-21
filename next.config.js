@@ -8,6 +8,7 @@ const nextConfig = {
       "content.asos-media.com",
       "cdn.pixabay.com",
       "ipdata.co",
+      "firebasestorage.googleapis.com",
     ],
   },
 };

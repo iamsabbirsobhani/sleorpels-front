@@ -137,3 +137,7 @@ a {
   /* background-color: rgb(249 250 251 / 0.1); */
   background-color: red;
 }
+
+.sales-banner-md-font {
+  font-family: "Futura PT Bold";
+}
