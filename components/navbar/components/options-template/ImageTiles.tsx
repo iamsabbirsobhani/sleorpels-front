@@ -19,6 +19,7 @@ export default function ImageTiles(props: any) {
                     height={height}
                     layout="responsive"
                     className=" mr-5 object-cover"
+                    placeholder="blur"
                   />
                   <div
                     style={{ fontFamily: "Futura PT Bold" }}

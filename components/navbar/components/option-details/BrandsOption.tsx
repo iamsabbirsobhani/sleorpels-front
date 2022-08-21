@@ -82,6 +82,7 @@ export default function BrandsOption() {
                         height={130}
                         layout="responsive"
                         className="  object-cover"
+                        placeholder="blur"
                       />
                       <div
                         style={{ fontFamily: "Futura PT Bold" }}

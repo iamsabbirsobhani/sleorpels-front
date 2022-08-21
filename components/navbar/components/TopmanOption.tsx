@@ -45,6 +45,7 @@ export default function TopmanOption() {
                         height={130}
                         layout="responsive"
                         className="  object-cover"
+                        placeholder="blur"
                       />
                       <div
                         style={{ fontFamily: "Futura PT Bold" }}
@@ -82,6 +83,7 @@ export default function TopmanOption() {
                         height={130}
                         layout="responsive"
                         className="  object-cover"
+                        placeholder="blur"
                       />
                       <div
                         style={{ fontFamily: "Futura PT Bold" }}
