@@ -25,7 +25,6 @@ export default function MenNavOptions(props: any) {
             (option.id === 1 || option.id === 11) ? (
               <div
                 onMouseEnter={(e) => {
-                  console.log(option.id);
                   dispatch(openOption(option.id));
                   dispatch(setOpenNavOption(true));
                 }}
@@ -37,7 +36,6 @@ export default function MenNavOptions(props: any) {
             ) : activeOption === option.id ? (
               <div
                 onMouseEnter={(e) => {
-                  console.log(option.id);
                   dispatch(openOption(option.id));
                   dispatch(setOpenNavOption(true));
                 }}
@@ -49,7 +47,6 @@ export default function MenNavOptions(props: any) {
             ) : option.id === 1 || option.id === 11 ? (
               <div
                 onMouseEnter={(e) => {
-                  console.log(option.id);
                   dispatch(openOption(option.id));
                   dispatch(setOpenNavOption(true));
                 }}
@@ -62,7 +59,6 @@ export default function MenNavOptions(props: any) {
               <div
                 key={option.id}
                 onMouseEnter={(e) => {
-                  console.log(option.id);
                   dispatch(openOption(option.id));
                   dispatch(setOpenNavOption(true));
                 }}

@@ -30,12 +30,11 @@ export default function Navbar() {
 
   const [openOptions, setopenOptions] = useState(false);
   useEffect(() => {
-    console.log("Is this men page: ", url.includes("men"));
-    console.log("Is this women page: ", url.includes("women"));
+    // console.log("Is this men page: ", url.includes("men"));
+    // console.log("Is this women page: ", url.includes("women"));
     if (status === "idle") {
       dispatch(fetchFlag());
     }
-    console.log(status);
 
     return () => {};
   }, [status, dispatch]);
@@ -46,7 +45,6 @@ export default function Navbar() {
   }, [url]);
 
   useEffect(() => {
-    console.log("show nav: ", showNav);
     hideOnScroll(dispatch, setShowDeskNav, null, undefined, true, window);
   }, []);
 

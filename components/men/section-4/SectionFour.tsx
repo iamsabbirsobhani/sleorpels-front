@@ -4,7 +4,6 @@ import { useState, useEffect } from "react";
 export default function SectionFour() {
   const [screenSize, setscreenSize] = useState<any>();
   useEffect(() => {
-    console.log("Inner width ", innerWidth);
     setscreenSize(innerWidth);
   });
   return (
