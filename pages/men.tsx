@@ -1,6 +1,7 @@
 import SalesBanner from "../components/men/section-1/SalesBanner";
 import MenBanner from "../components/men/section-2/MenBanner";
 import SectionThree from "../components/men/section-3/SectionThree";
+import SectionFour from "../components/men/section-4/SectionFour";
 
 export default function Men() {
   return (
@@ -19,6 +20,11 @@ export default function Men() {
         {/* section 3 */}
         <div className=" section-3 mt-10">
           <SectionThree />
+        </div>
+
+        {/* section 4 */}
+        <div className=" section-4 mt-10">
+          <SectionFour />
         </div>
       </div>
     </>

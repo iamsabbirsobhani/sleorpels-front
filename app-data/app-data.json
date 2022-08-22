@@ -1796,5 +1796,21 @@
             "subtitle": "Heritage heroes",
             "imgUrl": "https://firebasestorage.googleapis.com/v0/b/sleorpels.appspot.com/o/men%2Fsection-three%2Fmw_global_fred_perry_moment_870x1110.avif?alt=media&token=d8706145-3079-4510-9f4c-888d6e372cc4"
         }
+    ],
+    "men-section-four": [
+        {
+            "id": 1,
+            "title": "Topman",
+            "subtitle": "New things = top vibes",
+            "btnText": "Shop the brand",
+            "imgUrl": "https://firebasestorage.googleapis.com/v0/b/sleorpels.appspot.com/o/men%2Fsection-four%2Fmw_global_topman_moment_870x1110.avif?alt=media&token=176a8447-172f-40ec-a0ef-d8dfcfd115f7"
+        },
+        {
+            "id": 2,
+            "title": "Golden hour",
+            "subtitle": "Suit-up szn",
+            "btnText": "Shop now",
+            "imgUrl": "https://firebasestorage.googleapis.com/v0/b/sleorpels.appspot.com/o/men%2Fsection-four%2Fmw_global_insta_alpha_occasion_suits_moment_870x1110.jpg?alt=media&token=f67db56a-f659-4994-9eb8-7fdc41c19d33"
+        }
     ]
 }
