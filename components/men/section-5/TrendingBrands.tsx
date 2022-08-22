@@ -30,7 +30,7 @@ export default function TrendingBrands() {
                 style={{ transition: "all 1s ease" }}
                 className=" basis-44 lg:basis-48 xl:basis-52 2xl:basis-56 opacity-100"
               >
-                <a href={item.url}>
+                <a title={item.title} href={item.url}>
                   <Image
                     src={item.imgUrl}
                     width={100}
@@ -50,7 +50,7 @@ export default function TrendingBrands() {
                 style={{ transition: "all 1s ease" }}
                 className=" basis-44 lg:basis-48 xl:basis-52 2xl:basis-56 opacity-50"
               >
-                <a href={item.url}>
+                <a title={item.title} href={item.url}>
                   <Image
                     src={item.imgUrl}
                     width={100}
@@ -70,7 +70,7 @@ export default function TrendingBrands() {
                 style={{ transition: "all 1s ease" }}
                 className=" basis-44 lg:basis-48 xl:basis-52 2xl:basis-56 opacity-100"
               >
-                <a href={item.url}>
+                <a title={item.title} href={item.url}>
                   <Image
                     src={item.imgUrl}
                     width={100}
