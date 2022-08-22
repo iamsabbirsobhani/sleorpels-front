@@ -235,7 +235,7 @@ export default function Navbar() {
             <div className=" ">
               {isMen ? <MenNavOptions isMen={isMen} /> : null}
 
-              {openNavOption && options && (
+              {openNavOption && options && isMen && (
                 <OptionDetails
                   sale={options[0].isTrue}
                   newin={options[1].isTrue}
