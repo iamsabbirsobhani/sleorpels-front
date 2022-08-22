@@ -44,16 +44,16 @@ export default function MenBanner() {
                   layout="responsive"
                   objectFit="fill"
                   width={500}
-                  height={600}
+                  height={550}
                 />
               </div>
-              <div className="hidden lg:block xl:block 2xl:block">
+              <div className="hidden lg:block xl:block 2xl:block w-[97%] m-auto">
                 <Image
                   src={cover?.data.attributes.deskBannerUrl}
                   layout="responsive"
                   objectFit="fill"
                   width={1000}
-                  height={500}
+                  height={478}
                   priority
                 />
               </div>
