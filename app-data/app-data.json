@@ -1770,5 +1770,31 @@
             "name": "Marketplace",
             "isTrue": false
         }
+    ],
+    "men-section-three": [
+        {
+            "id": 1,
+            "title": "Let's get preppy",
+            "subtitle": "Cool for school",
+            "imgUrl": "https://firebasestorage.googleapis.com/v0/b/sleorpels.appspot.com/o/men%2Fsection-three%2Fmw_global_bts_prep_moment_870x1110.avif?alt=media&token=56363088-7bc9-48b8-8739-2ef60edd9e9d"
+        },
+        {
+            "id": 2,
+            "title": "Let pr(into) it",
+            "subtitle": "Little logos, big impact",
+            "imgUrl": "https://firebasestorage.googleapis.com/v0/b/sleorpels.appspot.com/o/men%2Fsection-three%2Fmw_global_new_szn_prints_moment_870x1110.avif?alt=media&token=9cd0b51b-ac61-4af5-8f97-568acacbd440"
+        },
+        {
+            "id": 3,
+            "title": "Jacket pending",
+            "subtitle": "Colder weather ain't all bad",
+            "imgUrl": "https://firebasestorage.googleapis.com/v0/b/sleorpels.appspot.com/o/men%2Fsection-three%2Fmw_au_outerwear_moment_870x1110.avif?alt=media&token=ebb59882-e4fd-495b-af18-adc938f8e063"
+        },
+        {
+            "id": 4,
+            "title": "Fred perry",
+            "subtitle": "Heritage heroes",
+            "imgUrl": "https://firebasestorage.googleapis.com/v0/b/sleorpels.appspot.com/o/men%2Fsection-three%2Fmw_global_fred_perry_moment_870x1110.avif?alt=media&token=d8706145-3079-4510-9f4c-888d6e372cc4"
+        }
     ]
 }
