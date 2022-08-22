@@ -1812,5 +1812,37 @@
             "btnText": "Shop now",
             "imgUrl": "https://firebasestorage.googleapis.com/v0/b/sleorpels.appspot.com/o/men%2Fsection-four%2Fmw_global_insta_alpha_occasion_suits_moment_870x1110.jpg?alt=media&token=f67db56a-f659-4994-9eb8-7fdc41c19d33"
         }
+    ],
+    "men-trending-brands": [
+        {
+            "id": 1,
+            "url": "#",
+            "imgUrl": "https://firebasestorage.googleapis.com/v0/b/sleorpels.appspot.com/o/men%2Ftrending-brands%2Ftommy-hilfiger-hp-logos-256x256.webp?alt=media&token=8f2e3719-2b3c-44fd-befc-4b7465b1fd06"
+        },
+        {
+            "id": 2,
+            "url": "#",
+            "imgUrl": "https://firebasestorage.googleapis.com/v0/b/sleorpels.appspot.com/o/men%2Ftrending-brands%2Fnorth-face.avif?alt=media&token=04c4d499-1e80-4664-9493-4d209f09317f"
+        },
+        {
+            "id": 3,
+            "url": "#",
+            "imgUrl": "https://firebasestorage.googleapis.com/v0/b/sleorpels.appspot.com/o/men%2Ftrending-brands%2Fnike-hp-logos-256x256.avif?alt=media&token=27681307-d5b2-42ec-ae8b-63c27eea4535"
+        },
+        {
+            "id": 4,
+            "url": "#",
+            "imgUrl": "https://firebasestorage.googleapis.com/v0/b/sleorpels.appspot.com/o/men%2Ftrending-brands%2Fcarhartt-hp-logos-256x256.avif?alt=media&token=0df0c265-d369-4cd6-b06d-6eedf326a504"
+        },
+        {
+            "id": 5,
+            "url": "#",
+            "imgUrl": "https://firebasestorage.googleapis.com/v0/b/sleorpels.appspot.com/o/men%2Ftrending-brands%2Fellesse-hp-logos-256x256.avif?alt=media&token=78f6a138-313e-4a99-934e-7b165f452757"
+        },
+        {
+            "id": 6,
+            "url": "#",
+            "imgUrl": "https://firebasestorage.googleapis.com/v0/b/sleorpels.appspot.com/o/men%2Ftrending-brands%2Fdr-martens-hp-logos-256x256.avif?alt=media&token=5d500c39-017e-4d54-9786-d32774ec6515"
+        }
     ]
 }
