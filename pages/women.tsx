@@ -1,4 +1,5 @@
-import SectionTwo from "../components/women/section-1/SectionTwo";
+import SectionTwo from "../components/women/section-2/SectionTwo";
+import SectionTwoCustom from "../components/women/section-2/SectionTwoCustom";
 import { fetcher } from "../composable/fetcher";
 import useSWR from "swr";
 export default function Women() {
@@ -12,7 +13,11 @@ export default function Women() {
       <div>
         {/* section 2 or banner-heroin */}
         <div className=" mt-24">
-          <SectionTwo data={data} />
+          {data && data.data.attributes.isCustom ? (
+            <SectionTwoCustom data={data} />
+          ) : (
+            <SectionTwo data={data} />
+          )}
         </div>
       </div>
     </>
