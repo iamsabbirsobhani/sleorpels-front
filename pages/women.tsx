@@ -17,7 +17,7 @@ export default function Women() {
     <>
       <div>
         {/* section 2 or banner-heroin */}
-        <div className=" mt-24">
+        <div className=" mt-10">
           {data && data.data.attributes.isCustom ? (
             <SectionTwoCustom data={data} />
           ) : (
@@ -26,7 +26,7 @@ export default function Women() {
         </div>
 
         {/* section 3 or categories */}
-        <div className=" mt-24">
+        <div className=" mt-10">
           {data && data.data.attributes.isCustom ? (
             <SectionThreeCustom data={data} />
           ) : (
@@ -35,7 +35,7 @@ export default function Women() {
         </div>
 
         {/* section 4 */}
-        <div className=" mt-24">
+        <div className=" mt-10 mb-10">
           {data && data.data.attributes.isCustom ? (
             <SectionFourCustomW data={data} />
           ) : (
