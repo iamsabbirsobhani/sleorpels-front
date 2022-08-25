@@ -2,6 +2,7 @@ import SectionTwo from "../components/women/section-2/SectionTwo";
 import SectionTwoCustom from "../components/women/section-2/SectionTwoCustom";
 import { fetcher } from "../composable/fetcher";
 import useSWR from "swr";
+import SectionThreeW from "../components/women/section-3/SectionThreeW";
 export default function Women() {
   const { data, error } = useSWR(
     "https://sleorpels.herokuapp.com/api/women-home?populate=*",
@@ -18,6 +19,11 @@ export default function Women() {
           ) : (
             <SectionTwo data={data} />
           )}
+        </div>
+
+        {/* section 3 or categories */}
+        <div className=" mt-24">
+          <SectionThreeW data={data} />
         </div>
       </div>
     </>
