@@ -40,7 +40,7 @@ export default function HomePage() {
               <div>
                 <h2
                   style={{ fontFamily: "Futura PT Bold" }}
-                  className=" bg-white w-52 text-center m-auto p-2 font-extrabold text-2xl"
+                  className=" bg-white w-[80%] text-center m-auto p-2 font-extrabold text-2xl"
                 >
                   This is SLEORPELS
                 </h2>
@@ -52,12 +52,14 @@ export default function HomePage() {
                 </p>
               </div>
               <div className=" flex flex-col mt-3">
-                <button
-                  style={{ fontFamily: "Futura PT Bold" }}
-                  className=" mt-2 bg-white text-gray-900 hover:text-white hover:bg-gray-900 transition-all duration-500 align-text-bottom uppercase p-2 px-4"
-                >
-                  Shop Women
-                </button>
+                <Link href="/women">
+                  <button
+                    style={{ fontFamily: "Futura PT Bold" }}
+                    className=" mt-2 bg-white text-gray-900 hover:text-white hover:bg-gray-900 transition-all duration-500 align-text-bottom uppercase p-2 px-4"
+                  >
+                    Shop Women
+                  </button>
+                </Link>
                 <Link href="/men">
                   <button
                     style={{ fontFamily: "Futura PT Bold" }}
@@ -85,12 +87,14 @@ export default function HomePage() {
                 </p>
               </div>
               <div className=" flex mt-5">
-                <button
-                  style={{ fontFamily: "Futura PT Bold" }}
-                  className=" mt-2 mr-8 bg-white text-gray-900 hover:text-white hover:bg-gray-900 transition-all duration-500 align-text-bottom uppercase p-2 px-4 w-40"
-                >
-                  Shop Women
-                </button>
+                <Link href="/women">
+                  <button
+                    style={{ fontFamily: "Futura PT Bold" }}
+                    className=" mt-2 mr-8 bg-white text-gray-900 hover:text-white hover:bg-gray-900 transition-all duration-500 align-text-bottom uppercase p-2 px-4 w-40"
+                  >
+                    Shop Women
+                  </button>
+                </Link>
                 <Link href="/men">
                   <button
                     style={{ fontFamily: "Futura PT Bold" }}

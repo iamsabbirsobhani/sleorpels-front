@@ -68,17 +68,19 @@ export default function PopulateOffer(props: any) {
         }
       >
         <div className=" ml-5">
-          <button
-            style={{
-              border: `2px solid ${hiddenOfferStyle?.borderColor}`,
-              fontFamily: "Futura PT Demi",
-            }}
-            className={
-              hiddenOfferStyle?.button + " hiddenOfferButton uppercase"
-            }
-          >
-            Women
-          </button>
+          <Link href="/women">
+            <button
+              style={{
+                border: `2px solid ${hiddenOfferStyle?.borderColor}`,
+                fontFamily: "Futura PT Demi",
+              }}
+              className={
+                hiddenOfferStyle?.button + " hiddenOfferButton uppercase"
+              }
+            >
+              Women
+            </button>
+          </Link>
         </div>
 
         <div

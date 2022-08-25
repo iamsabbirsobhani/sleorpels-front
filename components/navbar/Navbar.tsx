@@ -23,8 +23,8 @@ export default function Navbar() {
   const showNav = useSelector((state: any) => state.global.showNavDesk);
   const options = useSelector((state: any) => state.global.options);
   const openNavOption = useSelector((state: any) => state.global.openNavOption);
-  const [isMen, setisMen] = useState(url.includes("men"));
-  const [isWomen, setisWomen] = useState(url.includes("women"));
+  const [isMen, setisMen] = useState(url.match(/\bmen/)?.index);
+  const [isWomen, setisWomen] = useState(url.match(/\bwomen/)?.index);
   const dispatch = useDispatch<any>();
   const [scrlY, setscrlY] = useState(0);
 
@@ -39,9 +39,10 @@ export default function Navbar() {
     return () => {};
   }, [status, dispatch]);
 
+  // checking url if men or women
   useEffect(() => {
-    setisMen(url.includes("men"));
-    setisWomen(url.includes("women"));
+    setisWomen(url.match(/\bwomen/)?.index);
+    setisMen(url.match(/\bmen/)?.index);
   }, [url]);
 
   useEffect(() => {
@@ -141,6 +142,9 @@ export default function Navbar() {
               <div className=" flex justify-between">
                 <div>
                   <button
+                    onClick={() => {
+                      router.push("/women");
+                    }}
                     style={{ fontFamily: "Futura PT Demi" }}
                     className=" uppercase font-semibold tracking-wider text-white w-36 hover:bg-gray-50/10 h-[3.6rem] border-l-[1px] border-r-[1px] border-gray-500/30"
                   >
@@ -251,7 +255,7 @@ export default function Navbar() {
               )}
             </div>
             {/*  below women navbar options */}
-            <div></div>
+            <div>{isWomen ? <MenNavOptions isMen={isMen} /> : null}</div>
           </div>
         </div>
       </div>
