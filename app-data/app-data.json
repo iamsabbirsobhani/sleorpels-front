@@ -1850,5 +1850,43 @@
             "title": "Go to Dr. Martens",
             "imgUrl": "https://firebasestorage.googleapis.com/v0/b/sleorpels.appspot.com/o/men%2Ftrending-brands%2Fdr-martens-hp-logos-256x256.avif?alt=media&token=5d500c39-017e-4d54-9786-d32774ec6515"
         }
+    ],
+    "women-trending-brands": [
+        {
+            "id": 1,
+            "url": "#",
+            "title": "Go to Monki",
+            "imgUrl": "https://firebasestorage.googleapis.com/v0/b/sleorpels.appspot.com/o/women%2Fsection-four%2Fmonkl-hp-logos-256x256.webp?alt=media&token=2bfcd478-33ae-4022-99d4-7c6667e70fbf"
+        },
+        {
+            "id": 2,
+            "url": "#",
+            "title": "Go to Never Fully Dressed",
+            "imgUrl": "https://firebasestorage.googleapis.com/v0/b/sleorpels.appspot.com/o/women%2Fsection-four%2Fnever-fully-dressed-hp-logos-256x256.avif?alt=media&token=e0bd9789-28d3-4594-bbc3-50c859110847"
+        },
+        {
+            "id": 3,
+            "url": "#",
+            "title": "Go to TOPSHOP",
+            "imgUrl": "https://firebasestorage.googleapis.com/v0/b/sleorpels.appspot.com/o/women%2Fsection-four%2F1x12x---test.avif?alt=media&token=b652ca02-b564-403a-ad4a-24c4ddc80cf9"
+        },
+        {
+            "id": 4,
+            "url": "#",
+            "title": "Go to Reclaimed Vintage",
+            "imgUrl": "https://firebasestorage.googleapis.com/v0/b/sleorpels.appspot.com/o/women%2Fsection-four%2Freclaimed-vintage-hp-logos-256x256.avif?alt=media&token=2fdfbfa3-78b4-4d7a-a125-0ada353ed00e"
+        },
+        {
+            "id": 5,
+            "url": "#",
+            "title": "Go to Collusion",
+            "imgUrl": "https://firebasestorage.googleapis.com/v0/b/sleorpels.appspot.com/o/women%2Fsection-four%2Fcollusion-hp-logos-256x256.webp?alt=media&token=007f8636-5c0c-4d59-94c8-8991d37aa286"
+        },
+        {
+            "id": 6,
+            "url": "#",
+            "title": "Go to Weekday",
+            "imgUrl": "https://firebasestorage.googleapis.com/v0/b/sleorpels.appspot.com/o/women%2Fsection-four%2Fweekday-hp-logos-256x256.webp?alt=media&token=15792551-1123-41f2-99dd-23dad4f02622"
+        }
     ]
 }
