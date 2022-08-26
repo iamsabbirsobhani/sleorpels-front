@@ -10,7 +10,7 @@ export default function Men() {
     <>
       <div className=" mb-[7.5rem]">
         {/* section 1 or salesbanner */}
-        <div className="section-1 mt-[6.3rem]">
+        <div className="section-1 lg:mt-[6.3rem] xl:mt-[6.3rem] 2xl:mt-[6.3rem]">
           <EmbeddedAnnounce />
         </div>
 
