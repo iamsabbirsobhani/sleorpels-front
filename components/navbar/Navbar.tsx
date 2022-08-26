@@ -132,6 +132,7 @@ export default function Navbar() {
               <Link href={"/"} scroll={false}>
                 <div>
                   <h1
+                    title="Go to SLEORPELS Home"
                     style={{ fontFamily: "Readex Pro" }}
                     className="text-3xl tracking-tighter font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-gray-50 to-gray-300 cursor-pointer"
                   >

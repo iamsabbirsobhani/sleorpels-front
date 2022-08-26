@@ -30,7 +30,7 @@ export default function SectionTwo(props: any) {
         />
         <meta name="twitter:card" content="summary_large_image" /> */}
       </Head>
-      <div className=" lg:mt-40 xl:mt-40 2xl:mt-40 mt-10">
+      <div className=" lg:mt-16 xl:mt-16 2xl:mt-16 mt-10">
         {data?.data.attributes.customMainBannerMobile &&
           data?.data.attributes.customMainBannerDesktop && (
             <div className=" relative">

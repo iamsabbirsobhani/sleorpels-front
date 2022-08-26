@@ -34,7 +34,7 @@ export default function MenBanner() {
         />
         <meta name="twitter:card" content="summary_large_image" /> */}
       </Head>
-      <div className=" lg:mt-40 xl:mt-40 2xl:mt-40 mt-10">
+      <div className=" lg:mt-16 xl:mt-16 2xl:mt-16 mt-10">
         {cover?.data.attributes.mobileBannerUrl &&
           cover?.data.attributes.deskBannerUrl && (
             <div className=" relative">

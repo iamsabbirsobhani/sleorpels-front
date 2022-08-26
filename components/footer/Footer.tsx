@@ -74,7 +74,7 @@ export default function Footer() {
 
       <footer
         style={{ fontFamily: "Futura PT Light" }}
-        className=" bg-[#ddd] text-[#666] lg:hidden xl:hidden 2xl:hidden flex justify-between items-center p-3"
+        className=" bg-[#ddd] text-[#666] lg:hidden xl:hidden 2xl:hidden flex justify-between items-center p-3 text-sm"
       >
         <div>
           <p>© 2022 SLEORPELS</p>
