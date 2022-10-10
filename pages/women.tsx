@@ -12,7 +12,7 @@ import EmbeddedAnnounce from "../components/global/EmbeddedAnnounce";
 import { API } from "../apiendpoint";
 
 export default function Women() {
-  const { data, error } = useSWR(`${API}api/women-home?populate=*`, fetcher());
+  const { data, error } = useSWR(`${API}/api/women-home?populate=*`, fetcher());
 
   return (
     <>
