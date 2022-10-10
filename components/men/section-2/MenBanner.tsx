@@ -3,12 +3,10 @@ import { fetcher } from "../../../composable/fetcher";
 import Link from "next/link";
 import Image from "next/image";
 import Head from "next/head";
+import { API } from "../../../apiendpoint";
 
 export default function MenBanner() {
-  const { data: cover, error } = useSWR(
-    "https://sleorpels.herokuapp.com/api/men-banner",
-    fetcher()
-  );
+  const { data: cover, error } = useSWR(`${API}/api/men-banner`, fetcher());
   return (
     <>
       <Head>

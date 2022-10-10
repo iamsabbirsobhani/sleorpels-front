@@ -3,6 +3,7 @@ import { GetServerSideProps } from "next";
 import { useState, useRef } from "react";
 import Image from "next/image";
 import Head from "next/head";
+import { API } from "../../apiendpoint";
 
 type SelectedImageUrl = {
   id: number;
@@ -224,9 +225,7 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
   // );
 
   // production api end point
-  const res = await fetch(
-    `https://sleorpels.herokuapp.com/api/products/${pid}?populate=*`
-  );
+  const res = await fetch(`${API}/api/products/${pid}?populate=*`);
 
   const data = await res.json();
 

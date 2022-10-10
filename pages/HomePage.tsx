@@ -3,10 +3,11 @@ import Image from "next/image";
 import useSWR from "swr";
 import { fetcher } from "../composable/fetcher";
 import Link from "next/link";
+import { API } from "../apiendpoint";
 
 export default function HomePage() {
   const { data: cover, error } = useSWR(
-    "https://sleorpels.herokuapp.com/api/home-cover-pic?populate=*",
+    `${API}/api/home-cover-pic?populate=*`,
     fetcher()
   );
 

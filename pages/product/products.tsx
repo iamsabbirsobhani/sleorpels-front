@@ -8,16 +8,14 @@ import useSWR from "swr";
 import loading from "../public/sleorpels-loading.png";
 import HomePage from "../HomePage";
 import { fetcher } from "../../composable/fetcher";
+import { API } from "../../apiendpoint";
 
 export default function Men() {
   // const { data, error } = useSWR(
   //   "http://192.168.0.100:1337/api/products?populate=*",
   //   fetcher()
   // );
-  const { data, error } = useSWR(
-    "https://sleorpels.herokuapp.com/api/products?populate=*",
-    fetcher()
-  );
+  const { data, error } = useSWR(`${API}/api/products?populate=*`, fetcher());
 
   return (
     <>

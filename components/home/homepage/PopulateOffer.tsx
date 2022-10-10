@@ -14,28 +14,28 @@ type HiddenOffer = {
   button: string;
 };
 import Link from "next/link";
-
+import { API } from "../../../apiendpoint";
 export default function PopulateOffer(props: any) {
   const [hiddenOfferStyle, sethiddenOfferStyle] = useState<HiddenOffer>();
 
-  // const { data: informs, error } = useSWR(
-  //   "http://192.168.0.100:1337/api/informs?populate=*",
-  //   fetcher()
-  // );
-
-  // const { data: hiddenOffer, error: hiddenOfferError } = useSWR(
-  //   "http://192.168.0.100:1337/api/hidden-offer?populate=*",
-  //   fetcher()
-  // );
   const { data: informs, error } = useSWR(
-    "https://sleorpels.herokuapp.com/api/informs?populate=*",
+    `${API}/api/informs?populate=*`,
     fetcher()
   );
 
   const { data: hiddenOffer, error: hiddenOfferError } = useSWR(
-    "https://sleorpels.herokuapp.com/api/hidden-offer?populate=*",
+    `${API}/api/hidden-offer?populate=*`,
     fetcher()
   );
+  // const { data: informs, error } = useSWR(
+  //   "https://sleorpels.herokuapp.com/api/informs?populate=*",
+  //   fetcher()
+  // );
+
+  // const { data: hiddenOffer, error: hiddenOfferError } = useSWR(
+  //   "https://sleorpels.herokuapp.com/api/hidden-offer?populate=*",
+  //   fetcher()
+  // );
 
   useEffect(() => {
     if (informs?.data.length && hiddenOffer && hiddenOffer?.data.attributes)

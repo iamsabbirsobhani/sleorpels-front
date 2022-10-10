@@ -11,12 +11,13 @@ type HiddenOffer = {
 import { hiddenOfferDOM } from "../../composable/hiddenOffer";
 import Link from "next/link";
 import SalesBanner from "../men/section-1/SalesBanner";
+import { API } from "../../apiendpoint";
 
 export default function EmbeddedAnnounce(props: any) {
   const [hiddenOfferStyle, sethiddenOfferStyle] = useState<HiddenOffer>();
 
   const { data, error } = useSWR(
-    "https://sleorpels.herokuapp.com/api/hidden-offer?populate=*",
+    `${API}/api/hidden-offer?populate=*`,
     fetcher()
   );
   console.log(data);

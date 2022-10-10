@@ -9,12 +9,10 @@ import SectionFourCustomW from "../components/women/section-4/SectionFourCustomW
 import TrendingBrandsW from "../components/women/section-5/TrendingBrandsW";
 import SalesBanner from "../components/men/section-1/SalesBanner";
 import EmbeddedAnnounce from "../components/global/EmbeddedAnnounce";
+import { API } from "../apiendpoint";
 
 export default function Women() {
-  const { data, error } = useSWR(
-    "https://sleorpels.herokuapp.com/api/women-home?populate=*",
-    fetcher()
-  );
+  const { data, error } = useSWR(`${API}api/women-home?populate=*`, fetcher());
 
   return (
     <>
