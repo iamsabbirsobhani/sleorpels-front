@@ -15,6 +15,7 @@ import {
   setOpenNavOption,
   resetActivateOption,
 } from "../../../features/global/globalSlice";
+import Sale from "../../women/navbar/sale";
 
 export default function OptionDetails(props: any) {
   const {
@@ -30,6 +31,7 @@ export default function OptionDetails(props: any) {
     brands,
     outlet,
     marketplace,
+    womenSale,
   } = props;
 
   const dispatch = useDispatch();
@@ -67,6 +69,10 @@ export default function OptionDetails(props: any) {
       {outlet && <OutletOption />}
       {/* marketplace now option */}
       {marketplace && <MarketplaceOption />}
+
+      {/* women */}
+      {/* Sale option */}
+      {womenSale && <Sale />}
     </div>
   );
 }

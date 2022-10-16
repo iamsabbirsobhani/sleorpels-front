@@ -146,7 +146,10 @@ export default function Navbar() {
                     onClick={() => {
                       router.push("/women");
                     }}
-                    style={{ fontFamily: "Futura PT Demi" }}
+                    style={{
+                      fontFamily: "Futura PT Demi",
+                      backgroundColor: isWomen ? "#525050" : undefined,
+                    }}
                     className=" uppercase font-semibold tracking-wider text-white w-36 hover:bg-gray-50/10 h-[3.6rem] border-l-[1px] border-r-[1px] border-gray-500/30"
                   >
                     Women
@@ -256,7 +259,26 @@ export default function Navbar() {
               )}
             </div>
             {/*  below women navbar options */}
-            <div>{isWomen ? <MenNavOptions isMen={isMen} /> : null}</div>
+            <div>
+              {isWomen ? <MenNavOptions isMen={isMen} /> : null}
+
+              {openNavOption && options && isWomen && (
+                <OptionDetails
+                  womenSale={options[0].isTrue}
+                  newin={options[1].isTrue}
+                  clothing={options[2].isTrue}
+                  shoes={options[3].isTrue}
+                  sportswear={options[4].isTrue}
+                  accessories={options[5].isTrue}
+                  summer={options[6].isTrue}
+                  trending={options[7].isTrue}
+                  topman={options[8].isTrue}
+                  brands={options[9].isTrue}
+                  outlet={options[10].isTrue}
+                  marketplace={options[11].isTrue}
+                />
+              )}
+            </div>
           </div>
         </div>
       </div>

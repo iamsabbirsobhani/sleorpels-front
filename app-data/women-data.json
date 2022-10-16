@@ -1,0 +1,222 @@
+{
+    "women-nav-options": [
+        {
+            "id": 1,
+            "name": "Sale",
+            "shop-by-product": [
+                {
+                    "id": 1,
+                    "name": "SALE Selling fast",
+                    "url": "#"
+                },
+                {
+                    "id": 2,
+                    "name": "SALE Dresses",
+                    "url": "#"
+                },
+                {
+                    "id": 3,
+                    "name": "SALE Tops",
+                    "url": "#"
+                },
+                {
+                    "id": 4,
+                    "name": "SALE Shoes",
+                    "url": "#"
+                },
+                {
+                    "id": 5,
+                    "name": "SALE Coats & Jackets",
+                    "url": "#"
+                },
+                {
+                    "id": 6,
+                    "name": "SALE Ankle Boots",
+                    "url": "#"
+                },
+                {
+                    "id": 7,
+                    "name": "SALE Jumpers & Cardigans",
+                    "url": "#"
+                },
+                {
+                    "id": 8,
+                    "name": "SALE Hoodies & Sweatshirts",
+                    "url": "#"
+                },
+                {
+                    "id": 9,
+                    "name": "SALE Accessories",
+                    "url": "#"
+                },
+                {
+                    "id": 10,
+                    "name": "SALE Activewear",
+                    "url": "#"
+                },
+                {
+                    "id": 11,
+                    "name": "SALE Bags & Purses",
+                    "url": "#"
+                },
+                {
+                    "id": 12,
+                    "name": "SALE Designer brands",
+                    "url": "#"
+                },
+                {
+                    "id": 13,
+                    "name": "SALE Face + Body",
+                    "url": "#"
+                },
+                {
+                    "id": 14,
+                    "name": "SALE Jeans",
+                    "url": "#"
+                },
+                {
+                    "id": 15,
+                    "name": "SALE Jewellery & Watches",
+                    "url": "#"
+                },
+                {
+                    "id": 16,
+                    "name": "SALE Jumpsuits & Playsuits",
+                    "url": "#"
+                },
+                {
+                    "id": 17,
+                    "name": "SALE Lingerie & Nightwear",
+                    "url": "#"
+                },
+                {
+                    "id": 18,
+                    "name": "SALE Shorts",
+                    "url": "#"
+                },
+                {
+                    "id": 19,
+                    "name": "SALE Skirts",
+                    "url": "#"
+                },
+                {
+                    "id": 20,
+                    "name": "SALE Socks & Tights",
+                    "url": "#"
+                },
+                {
+                    "id": 21,
+                    "name": "SALE Sunglasses",
+                    "url": "#"
+                },
+                {
+                    "id": 22,
+                    "name": "SALE Swimwear",
+                    "url": "#"
+                },
+                {
+                    "id": 23,
+                    "name": "SALE T-shirts & Vests",
+                    "url": "#"
+                },
+                {
+                    "id": 24,
+                    "name": "SALE Trainers",
+                    "url": "#"
+                },
+                {
+                    "id": 25,
+                    "name": "SALE Trousers & Leggings",
+                    "url": "#"
+                },
+                {
+                    "id": 26,
+                    "name": "SALE Winter coats",
+                    "url": "#"
+                },
+                {
+                    "id": 27,
+                    "name": "A-Z of brands",
+                    "url": "#"
+                }
+            ],
+            "shop-by-edit": [
+                {
+                    "id": 1,
+                    "name": "Biggest deals",
+                    "url": "#"
+                },
+                {
+                    "id": 2,
+                    "name": "Sale under \u00a315",
+                    "url": "#"
+                },
+                {
+                    "id": 3,
+                    "name": "Top saved",
+                    "url": "#"
+                },
+                {
+                    "id": 4,
+                    "name": "Dresses under \u00a315",
+                    "url": "#"
+                },
+                {
+                    "id": 5,
+                    "name": "Jeans under \u00a320",
+                    "url": "#"
+                },
+                {
+                    "id": 6,
+                    "name": "Sale: Autumn essentials",
+                    "url": "#"
+                },
+                {
+                    "id": 7,
+                    "name": "Sale: Sneakerbrands",
+                    "url": "#"
+                },
+                {
+                    "id": 8,
+                    "name": "Occasionwear",
+                    "url": "#"
+                },
+                {
+                    "id": 9,
+                    "name": "Last chance to buy",
+                    "url": "#"
+                }
+            ],
+            "shop-sale-by-body-fit": [
+                {
+                    "id": 1,
+                    "title": "Curve & Plus size",
+                    "name": "SLEORPELS Curve & Plus size",
+                    "url": "#",
+                    "imgUrl": "https://firebasestorage.googleapis.com/v0/b/sleorpels.appspot.com/o/women%2Fnavbar%2Fsale%2Fww_sale_curve%2Bplus_3m_1942133.webp?alt=media&token=735ff108-1c39-4dc4-b96b-205a7cc68c58"
+                },
+                {
+                    "id": 2,
+                    "title": "Petite",
+                    "name": "Petite",
+                    "url": "#",
+                    "imgUrl": "https://firebasestorage.googleapis.com/v0/b/sleorpels.appspot.com/o/women%2Fnavbar%2Fsale%2Fww_sale_petite_3m_1115120250.jpg?alt=media&token=468e6bac-51e6-406b-af11-a7c6f4c8b06d"
+                },
+                {
+                    "id": 3,
+                    "title": "Maternity",
+                    "name": "Maternity",
+                    "url": "#",
+                    "imgUrl": "https://firebasestorage.googleapis.com/v0/b/sleorpels.appspot.com/o/women%2Fnavbar%2Fsale%2Fww_sale_maternity_3m_1964729.webp?alt=media&token=74722924-335f-475f-9130-d93ce1365c5e"
+                },
+                {
+                    "id": 4,
+                    "title": "Tall",
+                    "name": "Tall",
+                    "url": "#",
+                    "imgUrl": "https://firebasestorage.googleapis.com/v0/b/sleorpels.appspot.com/o/women%2Fnavbar%2Fsale%2Fww_sale_tall_3m_108444108.webp?alt=media&token=ad330b08-86bc-4dec-82e7-3905e4249dd0"
+                }
+            ]
+        }
+    ]
+}
