@@ -20,7 +20,6 @@ export default function EmbeddedAnnounce(props: any) {
     `${API}/api/hidden-offer?populate=*`,
     fetcher()
   );
-  console.log(data);
 
   useEffect(() => {
     if (data?.data.attributes) {

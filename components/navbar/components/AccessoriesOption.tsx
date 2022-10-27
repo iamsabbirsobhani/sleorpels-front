@@ -17,7 +17,7 @@ export default function AccessoriesOption() {
             title={"Shop by product"}
             col={1}
           />
-          <div className=" absolute w-[1px] top-0 bg-gray-500/30 h-full right-0"></div>
+          <div className=" absolute w-[1px] to p-0 bg-gray-500/30 h-full right-0"></div>
         </div>
 
         {/* shop by brands */}

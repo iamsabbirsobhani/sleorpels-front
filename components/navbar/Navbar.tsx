@@ -265,8 +265,8 @@ export default function Navbar() {
               {openNavOption && options && isWomen && (
                 <OptionDetails
                   womenSale={options[0].isTrue}
-                  newin={options[1].isTrue}
-                  clothing={options[2].isTrue}
+                  womenNewIn={options[1].isTrue}
+                  womenClothing={options[2].isTrue}
                   shoes={options[3].isTrue}
                   sportswear={options[4].isTrue}
                   accessories={options[5].isTrue}

@@ -4,7 +4,7 @@ import Head from "next/head";
 
 export default function SectionTwo(props: any) {
   const { data } = props;
-  console.log(data);
+
   return (
     <>
       <Head>

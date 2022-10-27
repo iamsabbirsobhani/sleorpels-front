@@ -217,6 +217,287 @@
                     "imgUrl": "https://firebasestorage.googleapis.com/v0/b/sleorpels.appspot.com/o/women%2Fnavbar%2Fsale%2Fww_sale_tall_3m_108444108.webp?alt=media&token=ad330b08-86bc-4dec-82e7-3905e4249dd0"
                 }
             ]
+        },
+        {
+            "id": 2,
+            "name": "New In",
+            "new-products": [
+                {
+                    "id": 1,
+                    "name": "View all",
+                    "url": "#"
+                },
+                {
+                    "id": 2,
+                    "name": "Clothing",
+                    "url": "#"
+                },
+                {
+                    "id": 3,
+                    "name": "Shoes",
+                    "url": "#"
+                },
+                {
+                    "id": 4,
+                    "name": "Accessories",
+                    "url": "#"
+                },
+                {
+                    "id": 5,
+                    "name": "Face + Body",
+                    "url": "#"
+                },
+                {
+                    "id": 6,
+                    "name": "Topshop",
+                    "url": "#"
+                },
+                {
+                    "id": 7,
+                    "name": "Back in stock",
+                    "url": "#"
+                },
+                {
+                    "id": 8,
+                    "name": "Outlet",
+                    "url": "#"
+                },
+                {
+                    "id": 9,
+                    "name": "Trending now",
+                    "url": "#"
+                }
+            ],
+            "shop-by-body-fit": [
+                {
+                    "id": 1,
+                    "title": "SLEORPELS Curve & Plus Size",
+                    "name": "SLEORPELS Curve & Plus Size",
+                    "url": "#",
+                    "imgUrl": "https://firebasestorage.googleapis.com/v0/b/sleorpels.appspot.com/o/women%2Fnavbar%2Fnew-in%2Fww_gbl_newin_asoscurve%26plussize_3m_115932472.webp?alt=media&token=2c952e29-be0c-493f-ad06-8e0ee9315e0b"
+                },
+                {
+                    "id": 2,
+                    "title": "Maternity",
+                    "name": "Maternity",
+                    "url": "#",
+                    "imgUrl": "https://firebasestorage.googleapis.com/v0/b/sleorpels.appspot.com/o/women%2Fnavbar%2Fnew-in%2Fww_gbl_newin_maternity_3m_110248938.jpg?alt=media&token=3981f683-4318-492f-a0f6-a320f43067d3"
+                },
+                {
+                    "id": 3,
+                    "title": "Petite",
+                    "name": "Petite",
+                    "url": "#",
+                    "imgUrl": "https://firebasestorage.googleapis.com/v0/b/sleorpels.appspot.com/o/women%2Fnavbar%2Fnew-in%2Fww_gbl_newin_petite_3m_119339985.webp?alt=media&token=2d7f4149-5c13-4e5b-ac6e-453bd516aab2"
+                },
+                {
+                    "id": 4,
+                    "title": "Tall",
+                    "name": "Tall",
+                    "url": "#",
+                    "imgUrl": "https://firebasestorage.googleapis.com/v0/b/sleorpels.appspot.com/o/women%2Fnavbar%2Fnew-in%2Fww_gbl_newin_tall_3m_112163446.jpg?alt=media&token=7bd1e65a-56cd-43d9-b3bb-70515e071568"
+                }
+            ],
+            "new-edits": [
+                {
+                    "id": 1,
+                    "title": "SEQUINNED STUFF",
+                    "name": "SEQUINNED STUFF",
+                    "url": "#",
+                    "imgUrl": "https://firebasestorage.googleapis.com/v0/b/sleorpels.appspot.com/o/women%2Fnavbar%2Fnew-in%2Fww_global_embelllishment_1650x1884.webp?alt=media&token=01acc786-9513-46fe-ae70-4fa3e2462f1e"
+                },
+                {
+                    "id": 2,
+                    "title": "NEW - SHOES",
+                    "name": "NEW - SHOES",
+                    "url": "#",
+                    "imgUrl": "https://firebasestorage.googleapis.com/v0/b/sleorpels.appspot.com/o/women%2Fnavbar%2Fnew-in%2Fww_global_asos_design_gas_station_trend_1650x1884.webp?alt=media&token=1ccff986-8dc2-44f4-8b02-497d68a94d5c"
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "name": "Clothing",
+            "shop-by-product": [
+                {
+                    "id": 1,
+                    "name": "New in",
+                    "url": "#"
+                },
+                {
+                    "id": 2,
+                    "name": "Dresses",
+                    "url": "#"
+                },
+                {
+                    "id": 3,
+                    "name": "Tops",
+                    "url": "#"
+                },
+                {
+                    "id": 4,
+                    "name": "Coats & Jackets",
+                    "url": "#"
+                },
+                {
+                    "id": 5,
+                    "name": "Jumpers & Cardigans",
+                    "url": "#"
+                },
+                {
+                    "id": 6,
+                    "name": "Tracksuits & Joggers",
+                    "url": "#"
+                },
+                {
+                    "id": 7,
+                    "name": "Blazers",
+                    "url": "#"
+                },
+                {
+                    "id": 8,
+                    "name": "Co-ords",
+                    "url": "#"
+                },
+                {
+                    "id": 9,
+                    "name": "Designer",
+                    "url": "#"
+                },
+                {
+                    "id": 10,
+                    "name": "Exclusives at SLEORPELS",
+                    "url": "#"
+                },
+                {
+                    "id": 11,
+                    "name": "Hoodies & Sweatshirts",
+                    "url": "#"
+                },
+                {
+                    "id": 12,
+                    "name": "Jeans",
+                    "url": "#"
+                },
+                {
+                    "id": 13,
+                    "name": "Jumpsuits & Playsuits",
+                    "url": "#"
+                },
+                {
+                    "id": 14,
+                    "name": "Lingerie & Nightwear",
+                    "url": "#"
+                },
+                {
+                    "id": 15,
+                    "name": "Loungewear",
+                    "url": "#"
+                },
+                {
+                    "id": 16,
+                    "name": "Multipacks",
+                    "url": "#"
+                },
+                {
+                    "id": 17,
+                    "name": "Shirts & Blouses",
+                    "url": "#"
+                },
+                {
+                    "id": 18,
+                    "name": "Shorts",
+                    "url": "#"
+                },
+                {
+                    "id": 19,
+                    "name": "Skirts",
+                    "url": "#"
+                },
+                {
+                    "id": 20,
+                    "name": "Socks & Tights",
+                    "url": "#"
+                },
+                {
+                    "id": 21,
+                    "name": "Sportswear",
+                    "url": "#"
+                },
+                {
+                    "id": 22,
+                    "name": "Suits & Tailoring",
+                    "url": "#"
+                },
+                {
+                    "id": 23,
+                    "name": "Swimwear & Beachwear",
+                    "url": "#"
+                },
+                {
+                    "id": 24,
+                    "name": "Trousers & Leggings",
+                    "url": "#"
+                }
+            ],
+            "shop-by-body-fit": [
+                {
+                    "id": 1,
+                    "name": "Plus Size",
+                    "url": "#",
+                    "imgUrl": "https://firebasestorage.googleapis.com/v0/b/sleorpels.appspot.com/o/essential-menu-options%2Fmen-navbar-options%2Fclothing%2Fshop-by-body-fit%2Fmw_gbl_clothing_plussize_3M_114780539.webp?alt=media&token=c437b767-2ca0-427d-abc1-1facfcdcf764"
+                },
+                {
+                    "id": 2,
+                    "name": "Tall",
+                    "url": "#",
+                    "imgUrl": "https://firebasestorage.googleapis.com/v0/b/sleorpels.appspot.com/o/essential-menu-options%2Fmen-navbar-options%2Fclothing%2Fshop-by-body-fit%2Fmw_gbl_clothing_tall_3M_116445282.webp?alt=media&token=33378bea-b099-4cba-943c-4df4407fcebd"
+                }
+            ],
+            "shop-by-edit": [
+                {
+                    "id": 1,
+                    "title": "Autumn styles",
+                    "name": "Autumn styles",
+                    "url": "#",
+                    "imgUrl": "https://firebasestorage.googleapis.com/v0/b/sleorpels.appspot.com/o/women%2Fnavbar%2Fclothing%2Fww_gbl_clothing_autumnstyles_3m_103813428.webp?alt=media&token=e26c2b92-1e02-499a-9e8a-bb8838140b4c"
+                },
+                {
+                    "id": 2,
+                    "title": "Workwear",
+                    "name": "Workwear",
+                    "url": "#",
+                    "imgUrl": "https://firebasestorage.googleapis.com/v0/b/sleorpels.appspot.com/o/women%2Fnavbar%2Fclothing%2Fww_gbl_clothing_workwear_3m_110028391.webp?alt=media&token=40d62306-1c8a-4e42-9387-4267c5cc1562"
+                },
+                {
+                    "id": 3,
+                    "title": "Occasionwear",
+                    "name": "Occasionwear",
+                    "url": "#",
+                    "imgUrl": "https://firebasestorage.googleapis.com/v0/b/sleorpels.appspot.com/o/women%2Fnavbar%2Fclothing%2Fww_gbl_clothing_occassionwear2_3m_118714289.webp?alt=media&token=0436ca76-8357-4b65-82a7-6ab4e2904e6c"
+                },
+                {
+                    "id": 4,
+                    "title": "Wedding",
+                    "name": "Wedding",
+                    "url": "#",
+                    "imgUrl": "https://firebasestorage.googleapis.com/v0/b/sleorpels.appspot.com/o/women%2Fnavbar%2Fclothing%2Fww_gbl_clothing_wedding_3m_1858721.webp?alt=media&token=237f3ff5-440c-472e-960d-999f8b215401"
+                },
+                {
+                    "id": 5,
+                    "title": "Modest fashion",
+                    "name": "Modest fashion",
+                    "url": "#",
+                    "imgUrl": "https://firebasestorage.googleapis.com/v0/b/sleorpels.appspot.com/o/women%2Fnavbar%2Fclothing%2Fww_gbl_clothing_modest2_3m_114177385.webp?alt=media&token=08b54ea8-7e06-48d8-95ea-4d7bb9bd1109"
+                },
+                {
+                    "id": 6,
+                    "title": "Halloween",
+                    "name": "Halloween",
+                    "url": "#",
+                    "imgUrl": "https://firebasestorage.googleapis.com/v0/b/sleorpels.appspot.com/o/women%2Fnavbar%2Fclothing%2Fclothing_ww_halloween_gbl_105358225_2m.webp?alt=media&token=168cc6f9-7d35-44b5-9776-4da9d23db425"
+                }
+            ]
         }
     ]
 }

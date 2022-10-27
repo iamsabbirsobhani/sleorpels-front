@@ -16,6 +16,8 @@ import {
   resetActivateOption,
 } from "../../../features/global/globalSlice";
 import Sale from "../../women/navbar/sale";
+import NewIn from "../../women/navbar/NewIn";
+import Clothing from "../../women/navbar/Clothing";
 
 export default function OptionDetails(props: any) {
   const {
@@ -32,6 +34,8 @@ export default function OptionDetails(props: any) {
     outlet,
     marketplace,
     womenSale,
+    womenNewIn,
+    womenClothing,
   } = props;
 
   const dispatch = useDispatch();
@@ -73,6 +77,8 @@ export default function OptionDetails(props: any) {
       {/* women */}
       {/* Sale option */}
       {womenSale && <Sale />}
+      {womenNewIn && <NewIn />}
+      {womenClothing && <Clothing />}
     </div>
   );
 }
