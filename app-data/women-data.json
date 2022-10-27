@@ -498,6 +498,128 @@
                     "imgUrl": "https://firebasestorage.googleapis.com/v0/b/sleorpels.appspot.com/o/women%2Fnavbar%2Fclothing%2Fclothing_ww_halloween_gbl_105358225_2m.webp?alt=media&token=168cc6f9-7d35-44b5-9776-4da9d23db425"
                 }
             ]
+        },
+        {
+            "id": 4,
+            "name": "Shoes",
+            "shop-by-product": [
+                {
+                    "id": 1,
+                    "name": "View all",
+                    "url": "#"
+                },
+                {
+                    "id": 2,
+                    "name": "New in",
+                    "url": "#"
+                },
+                {
+                    "id": 3,
+                    "name": "Trainers",
+                    "url": "#"
+                },
+                {
+                    "id": 4,
+                    "name": "Boots",
+                    "url": "#"
+                },
+                {
+                    "id": 5,
+                    "name": "Flat shoes",
+                    "url": "#"
+                },
+                {
+                    "id": 6,
+                    "name": "Heels",
+                    "url": "#"
+                },
+                {
+                    "id": 7,
+                    "name": "Loafers",
+                    "url": "#"
+                },
+                {
+                    "id": 8,
+                    "name": "Sandals",
+                    "url": "#"
+                },
+                {
+                    "id": 9,
+                    "name": "Sliders & Flip flops",
+                    "url": "#"
+                },
+                {
+                    "id": 10,
+                    "name": "Slippers",
+                    "url": "#"
+                },
+                {
+                    "id": 11,
+                    "name": "Sports Trainers",
+                    "url": "#"
+                },
+                {
+                    "id": 12,
+                    "name": "Wide Fit",
+                    "url": "#"
+                }
+            ],
+            "shop-by-brands": [
+                {
+                    "id": 1,
+                    "title": "SLEORPELS Design",
+                    "name": "SLEORPELS Design",
+                    "url": "#",
+                    "imgUrl": "https://firebasestorage.googleapis.com/v0/b/sleorpels.appspot.com/o/women%2Fnavbar%2Fshoes%2Fww_uk_autumn_chelseaboots_3M_118734531.webp?alt=media&token=95dafbaa-198d-4c54-b4bd-e0d25ff811e9"
+                },
+                {
+                    "id": 2,
+                    "title": "Aldo",
+                    "name": "Aldo",
+                    "url": "#",
+                    "imgUrl": "https://firebasestorage.googleapis.com/v0/b/sleorpels.appspot.com/o/women%2Fnavbar%2Fshoes%2Fww_gbl_shoes_shopbybrands_3M_103174901.webp?alt=media&token=3caa6787-8716-4670-9c45-0d67d683bc5f"
+                },
+                {
+                    "id": 3,
+                    "title": "Converse",
+                    "name": "Converse",
+                    "url": "#",
+                    "imgUrl": "https://firebasestorage.googleapis.com/v0/b/sleorpels.appspot.com/o/women%2Fnavbar%2Fshoes%2Fww_GBL_shoes_shopbybrands_3m_115184697.webp?alt=media&token=43d41790-ba8f-4d38-817c-70e8cde40789"
+                },
+                {
+                    "id": 4,
+                    "title": "Dr Martens",
+                    "name": "Dr Martens",
+                    "url": "#",
+                    "imgUrl": "https://firebasestorage.googleapis.com/v0/b/sleorpels.appspot.com/o/women%2Fnavbar%2Fshoes%2Fmw_au_dr_martens_480x480.webp?alt=media&token=bebcfb37-1f7f-447e-9487-8c35c85aabb5"
+                },
+                {
+                    "id": 5,
+                    "title": "Public Desire",
+                    "name": "Public Desire",
+                    "url": "#",
+                    "imgUrl": "https://firebasestorage.googleapis.com/v0/b/sleorpels.appspot.com/o/women%2Fnavbar%2Fshoes%2Fww_gbl_shoes_shopbybrands_3M_103038503.webp?alt=media&token=cab0448a-33d1-464b-a0a9-e1ff6b39ec60"
+                },
+                {
+                    "id": 6,
+                    "title": "Rald",
+                    "name": "Rald",
+                    "url": "#",
+                    "imgUrl": "https://firebasestorage.googleapis.com/v0/b/sleorpels.appspot.com/o/women%2Fnavbar%2Fshoes%2Fww_GBL_shoes_shopbybrands_2m_1880079.webp?alt=media&token=09555556-cd5a-43fe-986a-d03c2f777267"
+                }
+            ],
+            "others": [
+                {
+                    "id": 1,
+                    "name": "Chunky Trainers",
+                    "imgUrl": "https://firebasestorage.googleapis.com/v0/b/sleorpels.appspot.com/o/women%2Fnavbar%2Fshoes%2Fww_global_winter_boots_1650x1884_080922.webp?alt=media&token=9854f236-da04-44f2-bc37-d7f123dd650b"
+                },
+                {
+                    "id": 2,
+                    "name": "Knee High Boots",
+                    "imgUrl": "https://firebasestorage.googleapis.com/v0/b/sleorpels.appspot.com/o/women%2Fnavbar%2Fshoes%2Fww_newbalance_shoes__1650x1884_14092022.webp?alt=media&token=7afa1b55-3feb-435b-afaa-76e0362b2429"
+                }
+            ]
         }
     ]
 }
