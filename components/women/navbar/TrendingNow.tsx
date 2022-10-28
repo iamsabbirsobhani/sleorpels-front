@@ -1,0 +1,110 @@
+import RoundedSmallOption from "../../../components/navbar/components/options-template/RoundedSmallOption";
+import data from "../../../app-data/women-data.json";
+import RoundedBigOption from "../../../components/navbar/components/options-template/RoundedBigOption";
+import ImageTiles from "../../../components/navbar/components/options-template/ImageTiles";
+import Image from "next/image";
+import ListOptions from "../../navbar/components/options-template/ListOptions";
+
+export default function TrendingNow() {
+  return (
+    <>
+      <div
+        className=" grid grid-cols-3 relative "
+        style={{
+          gridTemplateColumns: "250px fit-content(30%) auto",
+        }}
+      >
+        {/* shop by products */}
+        <div className="grid relative">
+          <ListOptions
+            optionNo={8}
+            genderNavOption={"women-nav-options"}
+            optionGroup={"shop-by-product"}
+            data={data}
+            title={"Shop by product"}
+            col={1}
+          />
+          <div className=" absolute w-[1px] to p-0 bg-gray-500/30 h-full right-0"></div>
+        </div>
+
+        {/* new drops */}
+
+        <div className="grid relative ml-3">
+          {data["women-nav-options"]?.map(
+            (option: any) =>
+              option.id === 8 && (
+                <div key={option.id}>
+                  <h1 className=" underline-offset-4 font-bold underline uppercase mb-3 tracking-wider">
+                    New drops
+                  </h1>
+                  <div className="flex items-center flex-wrap justify-center">
+                    {option["new-drops"]?.map((link: any) => (
+                      <div
+                        key={link.id}
+                        className=" w-32  text-center p-2 mt-9 mb-8 ml-3"
+                      >
+                        <a href={link.url} className=" ">
+                          <div className=" border w-24 h-24 m-auto p-[2px]  rounded-full text-gray-600/95 hover:text-blue-500 hover:border-blue-500 ">
+                            <Image
+                              src={link.imgUrl}
+                              width={80}
+                              height={80}
+                              className="rounded-[50%]  "
+                              blurDataURL={link.imgUrl}
+                              placeholder="blur"
+                            />
+                            <p className="text-sm   antialiased tracking-wide mt-3">
+                              {link.name}
+                            </p>
+                          </div>
+                        </a>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )
+          )}
+          <div className=" absolute w-[1px] top-0 bg-gray-500/30 h-full right-0"></div>
+        </div>
+
+        {/* others */}
+        <div className="    ml-2">
+          {data["women-nav-options"]?.map(
+            (option: any) =>
+              option.id === 8 && (
+                <div
+                  key={option.id}
+                  className=" flex justify-around flex-wrap "
+                >
+                  {option["others"]?.map((other: any) => (
+                    <div
+                      key={other.id}
+                      style={{ width: 220, height: 130 }}
+                      className=" mt-5 mr-5 outline outline-gray-500/50 outline-1 outline-offset-2 relative hover:outline-blue-500 cursor-pointer"
+                    >
+                      <Image
+                        src={other.imgUrl}
+                        width={220}
+                        height={130}
+                        layout="responsive"
+                        className="  object-cover"
+                        blurDataURL={other.imgUrl}
+                        placeholder="blur"
+                      />
+                      <div
+                        style={{ fontFamily: "Futura PT Bold" }}
+                        className=" absolute left-0 right-0  bottom-5  uppercase text-center tracking-wider text-gray-800/70 z-10"
+                      >
+                        <h1>{other.name}</h1>
+                      </div>
+                      <div className="  bg-gradient-to-t from-gray-200/70 to-gray-200/5 absolute top-0 left-0 right-0 bottom-0"></div>
+                    </div>
+                  ))}
+                </div>
+              )
+          )}
+        </div>
+      </div>
+    </>
+  );
+}

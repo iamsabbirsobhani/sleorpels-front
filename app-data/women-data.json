@@ -948,94 +948,116 @@
         {
             "id": 8,
             "name": "Trending Now",
-            "most-wanted": [
+            "shop-by-product": [
                 {
                     "id": 1,
                     "name": "Blazers",
-                    "url": "#",
-                    "imgUrl": "https://firebasestorage.googleapis.com/v0/b/sleorpels.appspot.com/o/essential-menu-options%2Fmen-navbar-options%2Ftrending-now%2Fmost-wanted%2F1661091763.webp?alt=media&token=087fd717-23f3-407d-8030-35b749582d44"
+                    "url": "#"
                 },
                 {
                     "id": 2,
                     "name": "Cardigans",
-                    "url": "#",
-                    "imgUrl": "https://firebasestorage.googleapis.com/v0/b/sleorpels.appspot.com/o/essential-menu-options%2Fmen-navbar-options%2Ftrending-now%2Fmost-wanted%2F1661091765.webp?alt=media&token=b65dc4bc-77c2-445a-b235-b4fd7caff7fc"
+                    "url": "#"
                 },
                 {
                     "id": 3,
-                    "name": "Denim",
-                    "url": "#",
-                    "imgUrl": "https://firebasestorage.googleapis.com/v0/b/sleorpels.appspot.com/o/essential-menu-options%2Fmen-navbar-options%2Ftrending-now%2Fmost-wanted%2F1661091766.webp?alt=media&token=3313035e-86ad-40f2-b6a6-45fdef86865b"
+                    "name": "Cargo Trousers",
+                    "url": "#"
                 },
                 {
                     "id": 4,
-                    "name": "Gilets",
-                    "url": "#",
-                    "imgUrl": "https://firebasestorage.googleapis.com/v0/b/sleorpels.appspot.com/o/essential-menu-options%2Fmen-navbar-options%2Ftrending-now%2Fmost-wanted%2F1661091768.webp?alt=media&token=955adf13-3122-4afa-9c22-171fb764e5c0"
+                    "name": "Hoodies",
+                    "url": "#"
                 },
                 {
                     "id": 5,
-                    "name": "Overshirts",
-                    "url": "#",
-                    "imgUrl": "https://firebasestorage.googleapis.com/v0/b/sleorpels.appspot.com/o/essential-menu-options%2Fmen-navbar-options%2Ftrending-now%2Fmost-wanted%2F1661091769.webp?alt=media&token=943934b9-2c4c-47d7-b5c2-7ec9c53df5d2"
+                    "name": "Knee High Boots",
+                    "url": "#"
                 },
                 {
                     "id": 6,
-                    "name": "Oversized Suits",
-                    "url": "#",
-                    "imgUrl": "https://firebasestorage.googleapis.com/v0/b/sleorpels.appspot.com/o/essential-menu-options%2Fmen-navbar-options%2Ftrending-now%2Fmost-wanted%2F1661091770.webp?alt=media&token=bb2f0fe3-1e9a-4315-8303-eac93998d062"
+                    "name": "Long Sleeve Tops",
+                    "url": "#"
+                },
+                {
+                    "id": 7,
+                    "name": "Midi Skirts",
+                    "url": "#"
+                },
+                {
+                    "id": 8,
+                    "name": "Puffer Jackets",
+                    "url": "#"
+                },
+                {
+                    "id": 9,
+                    "name": "Straight Leg Jeans",
+                    "url": "#"
+                },
+                {
+                    "id": 10,
+                    "name": "Trainers",
+                    "url": "#"
                 }
             ],
             "new-drops": [
                 {
                     "id": 1,
-                    "name": "Abercrombie and Fitch",
+                    "title": "Dr Martens",
+                    "name": "Dr Martens",
                     "url": "#",
-                    "imgUrl": "https://firebasestorage.googleapis.com/v0/b/sleorpels.appspot.com/o/essential-menu-options%2Fmen-navbar-options%2Ftrending-now%2Fnew-drops%2F1661091935.webp?alt=media&token=e2f3d62d-6241-4bb9-880f-ae46b7696553"
+                    "imgUrl": "https://firebasestorage.googleapis.com/v0/b/sleorpels.appspot.com/o/women%2Fnavbar%2Ftrending-now%2Fww_gbl_trendingnow_drmartens_3M_110123453.webp?alt=media&token=062a30bd-583b-4d83-8258-de0865ff6791"
                 },
                 {
                     "id": 2,
-                    "name": "Converse",
+                    "title": "Reclaimed Vintage",
+                    "name": "Reclaimed Vintage",
                     "url": "#",
-                    "imgUrl": "https://firebasestorage.googleapis.com/v0/b/sleorpels.appspot.com/o/essential-menu-options%2Fmen-navbar-options%2Ftrending-now%2Fnew-drops%2F1661091936.webp?alt=media&token=f80ace66-a969-46e1-971d-f8618e957722"
+                    "imgUrl": "https://firebasestorage.googleapis.com/v0/b/sleorpels.appspot.com/o/women%2Fnavbar%2Ftrending-now%2Fww_global_reclaimed_vintage_480x480.webp?alt=media&token=e7f30452-5a8e-49c9-b13b-f710b3d332f3"
                 },
                 {
                     "id": 3,
-                    "name": "Deus",
+                    "title": "The North Face",
+                    "name": "The North Face",
                     "url": "#",
-                    "imgUrl": "https://firebasestorage.googleapis.com/v0/b/sleorpels.appspot.com/o/essential-menu-options%2Fmen-navbar-options%2Ftrending-now%2Fnew-drops%2F1661091937.webp?alt=media&token=fabb83cc-fc94-4e7a-a089-45a1ed81ffe9"
+                    "imgUrl": "https://firebasestorage.googleapis.com/v0/b/sleorpels.appspot.com/o/women%2Fnavbar%2Ftrending-now%2Fww_de_northface_480x480.webp?alt=media&token=eccf98c7-f4ab-4b77-881d-166d88efbda9"
                 },
                 {
                     "id": 4,
-                    "name": "Polo Ralph Lauren",
+                    "title": "UGG",
+                    "name": "UGG",
                     "url": "#",
-                    "imgUrl": "https://firebasestorage.googleapis.com/v0/b/sleorpels.appspot.com/o/essential-menu-options%2Fmen-navbar-options%2Ftrending-now%2Fnew-drops%2F1661091939.webp?alt=media&token=45c5b8cf-989f-4740-a1d9-73fd803222e6"
+                    "imgUrl": "https://firebasestorage.googleapis.com/v0/b/sleorpels.appspot.com/o/women%2Fnavbar%2Ftrending-now%2Fww_fr_shoes_ugg_3M_115463648.webp?alt=media&token=a3162cc3-c3d2-4b9a-9db8-7a09f4e22c96"
                 }
             ],
             "others": [
                 {
                     "id": 1,
-                    "name": "Pastels",
+                    "title": "Party Season",
+                    "name": "Party Season",
                     "url": "#",
-                    "imgUrl": "https://firebasestorage.googleapis.com/v0/b/sleorpels.appspot.com/o/essential-menu-options%2Fmen-navbar-options%2Ftrending-now%2Fothers%2F1661092066.webp?alt=media&token=05a807f0-aa2f-4d0a-b02d-b0efd15e8d94"
+                    "imgUrl": "https://firebasestorage.googleapis.com/v0/b/sleorpels.appspot.com/o/women%2Fnavbar%2Ftrending-now%2Fww_global_colour_and_shine_pu_1650x876.webp?alt=media&token=efb5046c-7b13-437a-b634-3bec4d906cb5"
                 },
                 {
                     "id": 2,
-                    "name": "Cargo trousers",
+                    "title": "The Great Outdoors",
+                    "name": "The Great Outdoors",
                     "url": "#",
-                    "imgUrl": "https://firebasestorage.googleapis.com/v0/b/sleorpels.appspot.com/o/essential-menu-options%2Fmen-navbar-options%2Ftrending-now%2Fothers%2F1661092068.webp?alt=media&token=599e466d-4441-40a3-ac59-72cbf59d01ba"
+                    "imgUrl": "https://firebasestorage.googleapis.com/v0/b/sleorpels.appspot.com/o/women%2Fnavbar%2Ftrending-now%2Fww_global_Chunky%2BKnits_1650x876.webp?alt=media&token=8df1b5e0-1aa1-4e46-ad26-35129279a484"
                 },
                 {
                     "id": 3,
-                    "name": "New sunny shapes",
+                    "title": "Halloween",
+                    "name": "Halloween",
                     "url": "#",
-                    "imgUrl": "https://firebasestorage.googleapis.com/v0/b/sleorpels.appspot.com/o/essential-menu-options%2Fmen-navbar-options%2Ftrending-now%2Fothers%2F1661092069.webp?alt=media&token=3d75ecad-4b46-4a26-880f-fb1cc6e8131c"
+                    "imgUrl": "https://firebasestorage.googleapis.com/v0/b/sleorpels.appspot.com/o/women%2Fnavbar%2Ftrending-now%2Fww_global_asos_design_halloween_1650x876.webp?alt=media&token=5b3c41ac-c882-411c-86e7-d1450b71aba2"
                 },
                 {
                     "id": 4,
-                    "name": "Tonal",
+                    "title": "Autumn Bestsellers",
+                    "name": "Autumn Bestsellers",
                     "url": "#",
-                    "imgUrl": "https://firebasestorage.googleapis.com/v0/b/sleorpels.appspot.com/o/essential-menu-options%2Fmen-navbar-options%2Ftrending-now%2Fothers%2F1661092071.webp?alt=media&token=22183525-b118-4978-b29b-6cacfc9ba841"
+                    "imgUrl": "https://firebasestorage.googleapis.com/v0/b/sleorpels.appspot.com/o/women%2Fnavbar%2Ftrending-now%2Fww_global_ultimate_coat_asos_design_1650x876.webp?alt=media&token=272edf5a-8bfe-4c5b-ae52-2996c60091d9"
                 }
             ]
         }

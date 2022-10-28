@@ -271,7 +271,7 @@ export default function Navbar() {
                   womenSportswear={options[4].isTrue}
                   womenAccessories={options[5].isTrue}
                   summer={options[6].isTrue}
-                  trending={options[7].isTrue}
+                  womenTrending={options[7].isTrue}
                   topman={options[8].isTrue}
                   brands={options[9].isTrue}
                   outlet={options[10].isTrue}
