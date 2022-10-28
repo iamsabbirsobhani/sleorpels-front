@@ -620,6 +620,330 @@
                     "imgUrl": "https://firebasestorage.googleapis.com/v0/b/sleorpels.appspot.com/o/women%2Fnavbar%2Fshoes%2Fww_newbalance_shoes__1650x1884_14092022.webp?alt=media&token=7afa1b55-3feb-435b-afaa-76e0362b2429"
                 }
             ]
+        },
+        {
+            "id": 5,
+            "name": "Sportswear",
+            "shop-by-product": [
+                {
+                    "id": 1,
+                    "name": "View all",
+                    "url": "#"
+                },
+                {
+                    "id": 2,
+                    "name": "Leggings",
+                    "url": "#"
+                },
+                {
+                    "id": 3,
+                    "name": "Accessories",
+                    "url": "#"
+                },
+                {
+                    "id": 4,
+                    "name": "Tops",
+                    "url": "#"
+                },
+                {
+                    "id": 5,
+                    "name": "Hoodies & Sweatshirts",
+                    "url": "#"
+                },
+                {
+                    "id": 6,
+                    "name": "Joggers",
+                    "url": "#"
+                },
+                {
+                    "id": 7,
+                    "name": "Shorts",
+                    "url": "#"
+                },
+                {
+                    "id": 8,
+                    "name": "Trainers",
+                    "url": "#"
+                },
+                {
+                    "id": 9,
+                    "name": "Sports bras",
+                    "url": "#"
+                },
+                {
+                    "id": 10,
+                    "name": "Outlet Sports & Lifestyle",
+                    "url": "#"
+                }
+            ],
+            "shop-by-activity": [
+                {
+                    "id": 1,
+                    "title": "Gym & Training",
+                    "name": "Gym & Training",
+                    "url": "#",
+                    "imgUrl": "https://firebasestorage.googleapis.com/v0/b/sleorpels.appspot.com/o/women%2Fnavbar%2Fsportswear%2Fww_gbl_clothing_autumnstyles_3m_103813428.webp?alt=media&token=f8396730-12c7-4e72-96a5-b8029a907293"
+                },
+                {
+                    "id": 2,
+                    "title": "Lifestyle",
+                    "name": "Lifestyle",
+                    "url": "#",
+                    "imgUrl": "https://firebasestorage.googleapis.com/v0/b/sleorpels.appspot.com/o/women%2Fnavbar%2Fsportswear%2Fww_sportswear_lifestyle_3m_1636443.webp?alt=media&token=594cbbdb-854e-4c89-bb39-e9a31b118eb3"
+                },
+                {
+                    "id": 3,
+                    "title": "Outdoors",
+                    "name": "Outdoors",
+                    "url": "#",
+                    "imgUrl": "https://firebasestorage.googleapis.com/v0/b/sleorpels.appspot.com/o/women%2Fnavbar%2Fsportswear%2Fww_sportswear_outdoors_3m_114939980.jpg?alt=media&token=f78e8c9b-899a-4d58-b716-d24e60f59f40"
+                },
+                {
+                    "id": 4,
+                    "title": "Running",
+                    "name": "Running",
+                    "url": "#",
+                    "imgUrl": "https://firebasestorage.googleapis.com/v0/b/sleorpels.appspot.com/o/women%2Fnavbar%2Fsportswear%2Fww_gbl_sportswear_running_3m_101080096.webp?alt=media&token=de128455-8581-4878-bf94-80684d669b6b"
+                },
+                {
+                    "id": 5,
+                    "title": "Swim",
+                    "name": "Swim",
+                    "url": "#",
+                    "imgUrl": "https://firebasestorage.googleapis.com/v0/b/sleorpels.appspot.com/o/women%2Fnavbar%2Fsportswear%2Fww_sportswear_swim_3m_117407916.webp?alt=media&token=b78a3006-f8b9-47e5-b624-c714f236753f"
+                },
+                {
+                    "id": 6,
+                    "title": "Yoga & Studio",
+                    "name": "Yoga & Studio",
+                    "url": "#",
+                    "imgUrl": "https://firebasestorage.googleapis.com/v0/b/sleorpels.appspot.com/o/women%2Fnavbar%2Fsportswear%2Fww_gbl_sportswear_yoga%26studio_3m_101277861.webp?alt=media&token=379aaa58-ee71-46aa-8d92-fc11c28fc5ea"
+                }
+            ],
+            "shop-by-brands": [
+                {
+                    "id": 1,
+                    "title": "adidas",
+                    "name": "adidas",
+                    "url": "#",
+                    "imgUrl": "https://firebasestorage.googleapis.com/v0/b/sleorpels.appspot.com/o/women%2Fnavbar%2Fsportswear%2Fww_GBL_sportswear_shopbybrands_2m_2017933.webp?alt=media&token=add2b1db-5435-4111-9303-d53b0b5c1180"
+                },
+                {
+                    "id": 2,
+                    "title": "SLEORPELS 4505",
+                    "name": "SLEORPELS 4505",
+                    "url": "#",
+                    "imgUrl": "https://firebasestorage.googleapis.com/v0/b/sleorpels.appspot.com/o/women%2Fnavbar%2Fsportswear%2Fww_gbl_sportswear_shopbybrands_3M_1760200.webp?alt=media&token=6394e7f5-205d-4c46-b39e-49f2983dde3c"
+                },
+                {
+                    "id": 3,
+                    "title": "Nike",
+                    "name": "Nike",
+                    "url": "#",
+                    "imgUrl": "https://firebasestorage.googleapis.com/v0/b/sleorpels.appspot.com/o/women%2Fnavbar%2Fsportswear%2Fww_gbl_sportswear_shopbybrands_3M_1964731.webp?alt=media&token=8651b722-cbad-4cbe-9e71-4d3f2ee2e5ca"
+                },
+                {
+                    "id": 4,
+                    "title": "Puma",
+                    "name": "Puma",
+                    "url": "#",
+                    "imgUrl": "https://firebasestorage.googleapis.com/v0/b/sleorpels.appspot.com/o/women%2Fnavbar%2Fsportswear%2Fww_gbl_sportswear_puma_3m_115093363.webp?alt=media&token=270ff691-8041-41e7-aad1-3dce7ef2a5fa"
+                },
+                {
+                    "id": 5,
+                    "title": "Reebok",
+                    "name": "Reebok",
+                    "url": "#",
+                    "imgUrl": "https://firebasestorage.googleapis.com/v0/b/sleorpels.appspot.com/o/women%2Fnavbar%2Fsportswear%2Fww_sportswear_reebok_5wl_1663806.webp?alt=media&token=94078a17-f85d-44da-8353-37d79d7951e3"
+                },
+                {
+                    "id": 6,
+                    "title": "The North Face",
+                    "name": "The North Face",
+                    "url": "#",
+                    "imgUrl": "https://firebasestorage.googleapis.com/v0/b/sleorpels.appspot.com/o/women%2Fnavbar%2Fsportswear%2Fww_gbl_sportswear_northface_3m_100999784.webp?alt=media&token=a5682813-e2a8-4abf-9c21-387daccb67b0"
+                }
+            ],
+            "others": [
+                {
+                    "id": 1,
+                    "title": "Bestselling Trainers",
+                    "name": "Bestselling Trainers",
+                    "url": "#",
+                    "imgUrl": "https://firebasestorage.googleapis.com/v0/b/sleorpels.appspot.com/o/women%2Fnavbar%2Fsportswear%2Fww_gbl_sportswear_bestsellingtrainers_4WL_1975686.jpg?alt=media&token=c75f65ab-a344-41a3-bdba-d2530bc2761b"
+                },
+                {
+                    "id": 2,
+                    "title": "Adidas Originals Gazelle",
+                    "name": "Adidas Originals Gazelle",
+                    "url": "#",
+                    "imgUrl": "https://firebasestorage.googleapis.com/v0/b/sleorpels.appspot.com/o/women%2Fnavbar%2Fsportswear%2Fadidasgazelle_071022.webp?alt=media&token=b06d2d46-d1ad-482c-bc94-b49a5f1e4c0b"
+                },
+                {
+                    "id": 3,
+                    "title": "New Balance",
+                    "name": "New Balance",
+                    "url": "#",
+                    "imgUrl": "https://firebasestorage.googleapis.com/v0/b/sleorpels.appspot.com/o/women%2Fnavbar%2Fsportswear%2Fww_gbl_sportswear_newbalance_4WL_105355493.jpg?alt=media&token=bf167591-ce9c-4b0e-a56a-47354ebb834f"
+                }
+            ]
+        },
+        {
+            "id": 6,
+            "name": "Accessories",
+            "shop-by-product": [
+                {
+                    "id": 1,
+                    "name": "View all",
+                    "url": "#"
+                },
+                {
+                    "id": 2,
+                    "name": "New in",
+                    "url": "#"
+                },
+                {
+                    "id": 3,
+                    "name": "Beanies",
+                    "url": "#"
+                },
+                {
+                    "id": 4,
+                    "name": "Belts",
+                    "url": "#"
+                },
+                {
+                    "id": 5,
+                    "name": "Caps",
+                    "url": "#"
+                },
+                {
+                    "id": 6,
+                    "name": "Gifts",
+                    "url": "#"
+                },
+                {
+                    "id": 7,
+                    "name": "Hair accessories",
+                    "url": "#"
+                },
+                {
+                    "id": 8,
+                    "name": "Hats",
+                    "url": "#"
+                },
+                {
+                    "id": 9,
+                    "name": "Scarves",
+                    "url": "#"
+                },
+                {
+                    "id": 10,
+                    "name": "Socks & Tights",
+                    "url": "#"
+                },
+                {
+                    "id": 11,
+                    "name": "Sunglasses",
+                    "url": "#"
+                }
+            ],
+            "shop-by-brands": [
+                {
+                    "id": 1,
+                    "title": "View all",
+                    "name": "View all",
+                    "url": "#",
+                    "imgUrl": "https://firebasestorage.googleapis.com/v0/b/sleorpels.appspot.com/o/women%2Fnavbar%2Faccessories%2Fww_us_accessories_viewall_2m_117634381.webp?alt=media&token=072595eb-33a9-430a-8892-a3bc3c271fbe"
+                },
+                {
+                    "id": 2,
+                    "title": "Bum Bags",
+                    "name": "Bum Bags",
+                    "url": "#",
+                    "imgUrl": "https://firebasestorage.googleapis.com/v0/b/sleorpels.appspot.com/o/women%2Fnavbar%2Faccessories%2Fww_us_accessories_bumbags_2m_114924781.webp?alt=media&token=242b5c24-957a-4ab2-9831-8a6d0ee4edc4"
+                },
+                {
+                    "id": 3,
+                    "title": "Clutches",
+                    "name": "Clutches",
+                    "url": "#",
+                    "imgUrl": "https://firebasestorage.googleapis.com/v0/b/sleorpels.appspot.com/o/women%2Fnavbar%2Faccessories%2Fww_gbl_accessories_clutches_3M_2037722.webp?alt=media&token=663a78af-dd3b-4969-8080-156fd4cdb872"
+                },
+                {
+                    "id": 4,
+                    "title": "Cross Body Bags",
+                    "name": "Cross Body Bags",
+                    "url": "#",
+                    "imgUrl": "https://firebasestorage.googleapis.com/v0/b/sleorpels.appspot.com/o/women%2Fnavbar%2Faccessories%2Fww_us_accessories_crossbodybags_2m_115283371.webp?alt=media&token=41c9b6fd-13b3-4c7d-9e67-fde738014f8b"
+                },
+                {
+                    "id": 5,
+                    "title": "Shoulder Bags",
+                    "name": "Shoulder Bags",
+                    "url": "#",
+                    "imgUrl": "https://firebasestorage.googleapis.com/v0/b/sleorpels.appspot.com/o/women%2Fnavbar%2Faccessories%2Fww_us_accessories_shoulderbags_2m_115024905.webp?alt=media&token=28668883-e115-4109-b66d-987cb088710b"
+                },
+                {
+                    "id": 6,
+                    "title": "Tote Bags",
+                    "name": "Tote Bags",
+                    "url": "#",
+                    "imgUrl": "https://firebasestorage.googleapis.com/v0/b/sleorpels.appspot.com/o/women%2Fnavbar%2Faccessories%2Fww_us_accessories_totebags_2m_116067808.webp?alt=media&token=59c5e6d9-954c-4e98-aa8f-d3711a6f4bd1"
+                }
+            ],
+            "shop-by-jewellery": [
+                {
+                    "id": 1,
+                    "title": "View all",
+                    "name": "View all",
+                    "url": "#",
+                    "imgUrl": "https://firebasestorage.googleapis.com/v0/b/sleorpels.appspot.com/o/women%2Fnavbar%2Faccessories%2Fww_us_accessories_viewall_2m_116064742.webp?alt=media&token=04cfa2d4-706b-42ac-bcd8-ed0f78640b46"
+                },
+                {
+                    "id": 2,
+                    "title": "Bracelets",
+                    "name": "Bracelets",
+                    "url": "#",
+                    "imgUrl": "https://firebasestorage.googleapis.com/v0/b/sleorpels.appspot.com/o/women%2Fnavbar%2Faccessories%2Fww_us_accessories_bracelets_2m_108889791.webp?alt=media&token=c29dd262-5119-4e02-bff1-2a695594aaeb"
+                },
+                {
+                    "id": 3,
+                    "title": "Earrings",
+                    "name": "Earrings",
+                    "url": "#",
+                    "imgUrl": "https://firebasestorage.googleapis.com/v0/b/sleorpels.appspot.com/o/women%2Fnavbar%2Faccessories%2Fww_us_accessories_earrings_2m_119058976.webp?alt=media&token=49759350-ba25-4dd9-bdbf-6a43311ad80e"
+                },
+                {
+                    "id": 4,
+                    "title": "Necklaces",
+                    "name": "Necklaces",
+                    "url": "#",
+                    "imgUrl": "https://firebasestorage.googleapis.com/v0/b/sleorpels.appspot.com/o/women%2Fnavbar%2Faccessories%2Fww_us_accessories_necklaces_2m_114880972.webp?alt=media&token=19344b54-b0a8-4522-9e3d-cb383a3229c7"
+                },
+                {
+                    "id": 5,
+                    "title": "Rings",
+                    "name": "Rings",
+                    "url": "#",
+                    "imgUrl": "https://firebasestorage.googleapis.com/v0/b/sleorpels.appspot.com/o/women%2Fnavbar%2Faccessories%2Fww_us_accessories_rings_2m_117749739.webp?alt=media&token=39e3e9d2-a5f0-4e6d-8adf-b33f8573d7a7"
+                },
+                {
+                    "id": 6,
+                    "title": "Plated Jewellery",
+                    "name": "Plated Jewellery",
+                    "url": "#",
+                    "imgUrl": "https://firebasestorage.googleapis.com/v0/b/sleorpels.appspot.com/o/women%2Fnavbar%2Faccessories%2Fww_gbl_accessories_goldplated_3M_114994731.webp?alt=media&token=fe47eb51-9521-4a9c-878b-d9e2ba253867"
+                }
+            ],
+            "others": [
+                {
+                    "id": 1,
+                    "name": "AUTUMN ACCESSORIES",
+                    "imgUrl": "https://firebasestorage.googleapis.com/v0/b/sleorpels.appspot.com/o/women%2Fnavbar%2Faccessories%2Fww_gbl_hats_beanies_2WL_116008539.webp?alt=media&token=66a2f7b8-97a0-4f22-9137-a98cef62c25e",
+                    "url": "#"
+                }
+            ]
         }
     ]
 }

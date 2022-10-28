@@ -19,6 +19,7 @@ import Sale from "../../women/navbar/sale";
 import NewIn from "../../women/navbar/NewIn";
 import Clothing from "../../women/navbar/Clothing";
 import Shoes from "../../women/navbar/Shoes";
+import Sportswear from "../../women/navbar/Sportswear";
 
 export default function OptionDetails(props: any) {
   const {
@@ -38,6 +39,7 @@ export default function OptionDetails(props: any) {
     womenNewIn,
     womenClothing,
     womenShoes,
+    womenSportswear,
   } = props;
 
   const dispatch = useDispatch();
@@ -82,6 +84,7 @@ export default function OptionDetails(props: any) {
       {womenNewIn && <NewIn />}
       {womenClothing && <Clothing />}
       {womenShoes && <Shoes />}
+      {womenSportswear && <Sportswear />}
     </div>
   );
 }
