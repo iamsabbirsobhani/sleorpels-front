@@ -848,7 +848,7 @@
                     "url": "#"
                 }
             ],
-            "shop-by-brands": [
+            "shop-by-bags": [
                 {
                     "id": 1,
                     "title": "View all",
@@ -942,6 +942,100 @@
                     "name": "AUTUMN ACCESSORIES",
                     "imgUrl": "https://firebasestorage.googleapis.com/v0/b/sleorpels.appspot.com/o/women%2Fnavbar%2Faccessories%2Fww_gbl_hats_beanies_2WL_116008539.webp?alt=media&token=66a2f7b8-97a0-4f22-9137-a98cef62c25e",
                     "url": "#"
+                }
+            ]
+        },
+        {
+            "id": 8,
+            "name": "Trending Now",
+            "most-wanted": [
+                {
+                    "id": 1,
+                    "name": "Blazers",
+                    "url": "#",
+                    "imgUrl": "https://firebasestorage.googleapis.com/v0/b/sleorpels.appspot.com/o/essential-menu-options%2Fmen-navbar-options%2Ftrending-now%2Fmost-wanted%2F1661091763.webp?alt=media&token=087fd717-23f3-407d-8030-35b749582d44"
+                },
+                {
+                    "id": 2,
+                    "name": "Cardigans",
+                    "url": "#",
+                    "imgUrl": "https://firebasestorage.googleapis.com/v0/b/sleorpels.appspot.com/o/essential-menu-options%2Fmen-navbar-options%2Ftrending-now%2Fmost-wanted%2F1661091765.webp?alt=media&token=b65dc4bc-77c2-445a-b235-b4fd7caff7fc"
+                },
+                {
+                    "id": 3,
+                    "name": "Denim",
+                    "url": "#",
+                    "imgUrl": "https://firebasestorage.googleapis.com/v0/b/sleorpels.appspot.com/o/essential-menu-options%2Fmen-navbar-options%2Ftrending-now%2Fmost-wanted%2F1661091766.webp?alt=media&token=3313035e-86ad-40f2-b6a6-45fdef86865b"
+                },
+                {
+                    "id": 4,
+                    "name": "Gilets",
+                    "url": "#",
+                    "imgUrl": "https://firebasestorage.googleapis.com/v0/b/sleorpels.appspot.com/o/essential-menu-options%2Fmen-navbar-options%2Ftrending-now%2Fmost-wanted%2F1661091768.webp?alt=media&token=955adf13-3122-4afa-9c22-171fb764e5c0"
+                },
+                {
+                    "id": 5,
+                    "name": "Overshirts",
+                    "url": "#",
+                    "imgUrl": "https://firebasestorage.googleapis.com/v0/b/sleorpels.appspot.com/o/essential-menu-options%2Fmen-navbar-options%2Ftrending-now%2Fmost-wanted%2F1661091769.webp?alt=media&token=943934b9-2c4c-47d7-b5c2-7ec9c53df5d2"
+                },
+                {
+                    "id": 6,
+                    "name": "Oversized Suits",
+                    "url": "#",
+                    "imgUrl": "https://firebasestorage.googleapis.com/v0/b/sleorpels.appspot.com/o/essential-menu-options%2Fmen-navbar-options%2Ftrending-now%2Fmost-wanted%2F1661091770.webp?alt=media&token=bb2f0fe3-1e9a-4315-8303-eac93998d062"
+                }
+            ],
+            "new-drops": [
+                {
+                    "id": 1,
+                    "name": "Abercrombie and Fitch",
+                    "url": "#",
+                    "imgUrl": "https://firebasestorage.googleapis.com/v0/b/sleorpels.appspot.com/o/essential-menu-options%2Fmen-navbar-options%2Ftrending-now%2Fnew-drops%2F1661091935.webp?alt=media&token=e2f3d62d-6241-4bb9-880f-ae46b7696553"
+                },
+                {
+                    "id": 2,
+                    "name": "Converse",
+                    "url": "#",
+                    "imgUrl": "https://firebasestorage.googleapis.com/v0/b/sleorpels.appspot.com/o/essential-menu-options%2Fmen-navbar-options%2Ftrending-now%2Fnew-drops%2F1661091936.webp?alt=media&token=f80ace66-a969-46e1-971d-f8618e957722"
+                },
+                {
+                    "id": 3,
+                    "name": "Deus",
+                    "url": "#",
+                    "imgUrl": "https://firebasestorage.googleapis.com/v0/b/sleorpels.appspot.com/o/essential-menu-options%2Fmen-navbar-options%2Ftrending-now%2Fnew-drops%2F1661091937.webp?alt=media&token=fabb83cc-fc94-4e7a-a089-45a1ed81ffe9"
+                },
+                {
+                    "id": 4,
+                    "name": "Polo Ralph Lauren",
+                    "url": "#",
+                    "imgUrl": "https://firebasestorage.googleapis.com/v0/b/sleorpels.appspot.com/o/essential-menu-options%2Fmen-navbar-options%2Ftrending-now%2Fnew-drops%2F1661091939.webp?alt=media&token=45c5b8cf-989f-4740-a1d9-73fd803222e6"
+                }
+            ],
+            "others": [
+                {
+                    "id": 1,
+                    "name": "Pastels",
+                    "url": "#",
+                    "imgUrl": "https://firebasestorage.googleapis.com/v0/b/sleorpels.appspot.com/o/essential-menu-options%2Fmen-navbar-options%2Ftrending-now%2Fothers%2F1661092066.webp?alt=media&token=05a807f0-aa2f-4d0a-b02d-b0efd15e8d94"
+                },
+                {
+                    "id": 2,
+                    "name": "Cargo trousers",
+                    "url": "#",
+                    "imgUrl": "https://firebasestorage.googleapis.com/v0/b/sleorpels.appspot.com/o/essential-menu-options%2Fmen-navbar-options%2Ftrending-now%2Fothers%2F1661092068.webp?alt=media&token=599e466d-4441-40a3-ac59-72cbf59d01ba"
+                },
+                {
+                    "id": 3,
+                    "name": "New sunny shapes",
+                    "url": "#",
+                    "imgUrl": "https://firebasestorage.googleapis.com/v0/b/sleorpels.appspot.com/o/essential-menu-options%2Fmen-navbar-options%2Ftrending-now%2Fothers%2F1661092069.webp?alt=media&token=3d75ecad-4b46-4a26-880f-fb1cc6e8131c"
+                },
+                {
+                    "id": 4,
+                    "name": "Tonal",
+                    "url": "#",
+                    "imgUrl": "https://firebasestorage.googleapis.com/v0/b/sleorpels.appspot.com/o/essential-menu-options%2Fmen-navbar-options%2Ftrending-now%2Fothers%2F1661092071.webp?alt=media&token=22183525-b118-4978-b29b-6cacfc9ba841"
                 }
             ]
         }
