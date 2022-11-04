@@ -10,8 +10,6 @@ export default function MenNavOptions(props: any) {
     (state: any) => state.global.activatedOption
   );
 
-  console.log(props.isWomen);
-
   const dispatch = useDispatch();
 
   return (

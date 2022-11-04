@@ -260,9 +260,7 @@ export default function Navbar() {
             </div>
             {/*  below women navbar options */}
             <div>
-              {isWomen ? (
-                <MenNavOptions isWomen={isWomen} isMen={isMen} />
-              ) : null}
+              {isWomen ? <MenNavOptions isMen={isMen} /> : null}
 
               {openNavOption && options && isWomen && (
                 <OptionDetails
