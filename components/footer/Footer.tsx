@@ -60,7 +60,7 @@ export default function Footer() {
 
         <div className="flex justify-between items-center p-2 bg-[#ddd] text-[#666]">
           <div>
-            <p>© 2022 SLEORPELS</p>
+            <p>© 2022 SLEORPELS | SABBIR SOBHANI</p>
           </div>
           <div className=" flex items-center">
             <p className=" mr-3 ml-3">Privacy & Cookies</p>
@@ -77,7 +77,7 @@ export default function Footer() {
         className=" bg-[#ddd] text-[#666] lg:hidden xl:hidden 2xl:hidden flex justify-between items-center p-3 text-sm"
       >
         <div>
-          <p>© 2022 SLEORPELS</p>
+          <p>© 2022 SLEORPELS | SOBHANI</p>
         </div>
         <div className=" flex items-center">
           <p className=" mr-2">Privacy & Cookies</p>

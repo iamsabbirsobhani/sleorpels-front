@@ -4,6 +4,7 @@ import { useState, useRef } from "react";
 import Image from "next/image";
 import Head from "next/head";
 import { API } from "../../apiendpoint";
+import { ReactMarkdown } from "react-markdown/lib/react-markdown";
 
 type SelectedImageUrl = {
   id: number;
@@ -69,7 +70,7 @@ export default function ProductDetails(props: any) {
         />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
-      <div className=" max-w-5xl m-auto mb-10">
+      <div className=" max-w-5xl m-auto mb-10 mt-20">
         {props.data && props.data.data.attributes && product ? (
           <div className=" flex justify-between mt-8 lg:flex-row xl:flex-row 2xl:flex-row flex-col">
             {/* product image part */}
@@ -209,6 +210,17 @@ export default function ProductDetails(props: any) {
                 </div>
               </div>
             </div>
+            {/* product description */}
+          </div>
+        ) : null}
+        {props.data && props.data.data.attributes && product ? (
+          <div className=" mt-5 mb-4 p-2">
+            {/* <div>
+              <h1>PRODUCT DETAILS</h1>
+            </div> */}
+            <ReactMarkdown className={" font-[16px] text-sm "}>
+              {props.data.data.attributes.productSnippet ?? null}
+            </ReactMarkdown>
           </div>
         ) : null}
       </div>

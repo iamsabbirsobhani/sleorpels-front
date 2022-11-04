@@ -54,7 +54,7 @@ const Home = (props: any) => {
           <meta name="twitter:card" content="summary_large_image" />
         </Head>
 
-        <div className=" w-64 m-auto animate-pulse absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center">
+        <div className=" h-[100vh] w-64 m-auto animate-pulse relative top-0 left-0 right-0 bottom-0 flex justify-center items-center">
           <div className=" absolute z-50 w-72 h-20 bg-transparent"></div>
           <Image
             className=" object-cover"

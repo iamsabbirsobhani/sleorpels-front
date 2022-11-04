@@ -14,6 +14,7 @@ interface GlobalType {
   options: any;
   openNavOption: boolean;
   activatedOption: number;
+  isLoading: boolean;
 }
 
 // Define the initial state using that type
@@ -36,6 +37,9 @@ const initialState: GlobalType = {
   options: options["men-nav-options-isopen"],
   openNavOption: false,
   activatedOption: 0,
+
+  // global loading
+  isLoading: false,
 };
 
 // geo flag
@@ -52,6 +56,10 @@ export const globalSlice = createSlice({
   name: "global",
   initialState,
   reducers: {
+    // global loading state
+    setIsLoading: (state, payload) => {
+      state.isLoading = payload.payload;
+    },
     // nav-men-options section
     resetActivateOption: (state) => {
       state.activatedOption = 0;
@@ -150,6 +158,7 @@ export const {
   closeOptions,
   setOpenNavOption,
   resetActivateOption,
+  setIsLoading,
 } = globalSlice.actions;
 
 export default globalSlice.reducer;

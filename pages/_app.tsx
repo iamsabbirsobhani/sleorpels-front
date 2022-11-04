@@ -8,6 +8,7 @@ import "../public/nprogress.css";
 import { useEffect } from "react";
 import Navbar from "../components/navbar/Navbar";
 import Footer from "../components/footer/Footer";
+import Loading from "../components/Loading";
 
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
@@ -32,6 +33,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   }, [router]);
   return (
     <Provider store={store}>
+      {/* <Loading /> */}
       <Navbar />
       <Component {...pageProps} />
       <Footer />
