@@ -220,12 +220,12 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
   const pid = context.params?.pid;
 
   // development api end point
-  const res = await fetch(
-    `http://192.168.0.100:1337/api/products/${pid}?populate=*`
-  );
+  // const res = await fetch(
+  //   `http://192.168.0.100:1337/api/products/${pid}?populate=*`
+  // );
 
   // production api end point
-  // const res = await fetch(`${API}/api/products/${pid}?populate=*`);
+  const res = await fetch(`${API}/api/products/${pid}?populate=*`);
 
   const data = await res.json();
 
