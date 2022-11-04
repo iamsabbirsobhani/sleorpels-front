@@ -11,6 +11,7 @@ const nextConfig = {
       "firebasestorage.googleapis.com",
     ],
   },
+  experimental: { appDir: true }
 };
 
 module.exports = nextConfig;
