@@ -4,8 +4,13 @@ import useSWR from "swr";
 import { fetcher } from "../composable/fetcher";
 import Link from "next/link";
 import { API } from "../apiendpoint";
+import Loading from "../components/Loading";
+import { useState } from "react";
 
 export default function HomePage() {
+  const [isHomeBannerFullyLoaded, setisHomeBannerFullyLoaded] =
+    useState<boolean>(true);
+
   const { data: cover, error } = useSWR(
     `${API}/api/home-cover-pic?populate=*`,
     fetcher()
@@ -15,6 +20,9 @@ export default function HomePage() {
     <>
       <div className=" relative ">
         <PopulateOffer />
+
+        {/* until the banner image fully loaded this loading screen will be displayed, to avoid footer cling with navbar */}
+        {isHomeBannerFullyLoaded ? <Loading /> : null}
 
         {cover?.data.attributes.mobile && cover?.data.attributes.desktop && (
           <div className=" relative">
@@ -35,6 +43,11 @@ export default function HomePage() {
                 width={1000}
                 height={500}
                 priority
+                placeholder="blur"
+                blurDataURL="https://images.unsplash.com/flagged/photo-1593005510509-d05b264f1c9c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+                onLoadingComplete={() => {
+                  setisHomeBannerFullyLoaded(false);
+                }}
               />
             </div>
             <div className=" visible lg:hidden xl:hidden 2xl:hidden absolute top-0 bottom-0 left-0 right-0 flex justify-center items-center flex-col ">

@@ -215,9 +215,6 @@ export default function ProductDetails(props: any) {
         ) : null}
         {props.data && props.data.data.attributes && product ? (
           <div className=" mt-5 mb-4 p-2">
-            {/* <div>
-              <h1>PRODUCT DETAILS</h1>
-            </div> */}
             <ReactMarkdown className={" font-[16px] text-sm "}>
               {props.data.data.attributes.productSnippet ?? null}
             </ReactMarkdown>
