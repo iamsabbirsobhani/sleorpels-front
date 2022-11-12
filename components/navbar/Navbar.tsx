@@ -15,6 +15,7 @@ import {
   resetActivateOption,
 } from "../../features/global/globalSlice";
 import OptionDetails from "./components/OptionDetails";
+import UserCard from "./components/user/UserCard";
 export default function Navbar() {
   const router = useRouter();
   const url = router.pathname;
@@ -183,7 +184,7 @@ export default function Navbar() {
               {/* login user wishlist */}
               <div className=" flex justify-between w-44">
                 {/* user */}
-                <div className=" text-white cursor-pointer">
+                <div className=" text-white cursor-pointer group relative">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="h-6 w-6"
@@ -198,6 +199,9 @@ export default function Navbar() {
                       d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
                     />
                   </svg>
+                  <div className=" opacity-0 absolute -top-64 z-[-100] group-hover:top-5 invisible group-hover:visible group-hover:opacity-100  transition-all duration-1000">
+                    <UserCard />
+                  </div>
                 </div>
 
                 {/* love */}
@@ -237,6 +241,7 @@ export default function Navbar() {
                 </div>
               </div>
             </div>
+
             {/* below men navbar options */}
             <div className=" ">
               {isMen ? <MenNavOptions isMen={isMen} /> : null}

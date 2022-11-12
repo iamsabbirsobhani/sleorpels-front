@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 export default function SlideOffer() {
   const [movePx, setmovePx] = useState(0);
   const moveObjectTouch = (e: any) => {
-    console.log(e.touches[0].pageX);
+    // console.log(e.touches[0].pageX);
     setmovePx(e.touches[0].pageX);
   };
   const moveObjectTouchMove = (e: any) => {
