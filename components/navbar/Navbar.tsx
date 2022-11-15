@@ -195,7 +195,7 @@ export default function Navbar() {
                   onMouseLeave={() => {
                     setuserMouseOver(false);
                   }}
-                  className=" text-white cursor-pointer h-[3.6rem] group w-12 flex justify-center items-center"
+                  className=" text-white cursor-pointer h-[3.6rem] group w-12 flex flex-col justify-center items-center relative"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -211,6 +211,15 @@ export default function Navbar() {
                       d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
                     />
                   </svg>
+                  <div
+                    className={
+                      userMouseOver
+                        ? " opacity-100 visible absolute bottom-0 delay-300 duration-[0.8s]"
+                        : " opacity-0 invisible absolute bottom-0 delay-300 duration-[1.5s]"
+                    }
+                  >
+                    <div className=" w-0 h-0 border-r-[15px] border-r-transparent border-l-transparent border-l-[15px] border-b-[12px] border-b-gray-300 "></div>
+                  </div>
                 </div>
 
                 {/* love */}
