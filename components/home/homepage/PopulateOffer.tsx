@@ -38,12 +38,13 @@ export default function PopulateOffer(props: any) {
   // );
 
   useEffect(() => {
-    if (informs?.data.length && hiddenOffer && hiddenOffer?.data.attributes)
-      startSlide(document, informs?.data.length);
-  }, [informs?.data.length]);
+    if (informs?.data?.length && hiddenOffer && hiddenOffer?.data?.attributes)
+      startSlide(document, informs?.data?.length);
+    console.log(informs);
+  }, [informs?.data?.length]);
 
   useEffect(() => {
-    if (hiddenOffer?.data.attributes) {
+    if (hiddenOffer?.data?.attributes) {
       sethiddenOfferStyle({
         textColor: hiddenOffer?.data.attributes.textColor,
         bgColor: hiddenOffer?.data.attributes.backgroundColor,
@@ -53,10 +54,10 @@ export default function PopulateOffer(props: any) {
     }
 
     // change text color of hiddenOffer
-    hiddenOfferDOM(document, hiddenOffer?.data.attributes.textColor);
+    hiddenOfferDOM(document, hiddenOffer?.data?.attributes?.textColor);
   }, [hiddenOffer]);
 
-  return hiddenOffer && hiddenOffer?.data.attributes ? (
+  return hiddenOffer && hiddenOffer?.data?.attributes ? (
     <>
       <div
         style={{
@@ -90,7 +91,7 @@ export default function PopulateOffer(props: any) {
           <ReactMarkdown
             className={"markdown-offer-title font-bold font-[14px] text-sm "}
           >
-            {hiddenOffer?.data.attributes.offerTitle ?? null}
+            {hiddenOffer?.data?.attributes?.offerTitle ?? null}
           </ReactMarkdown>
           {hiddenOffer && hiddenOffer?.data && (
             <div className=" opacity-0 invisible group-hover:visible group-hover:opacity-100 transition-all duration-1000 bg-white/80 absolute  w-full -bottom-[max-h-max] z-10 p-2 mt-3">
@@ -126,8 +127,8 @@ export default function PopulateOffer(props: any) {
                 className=" text-center font-semibold tracking-wider"
                 style={slider}
               >
-                {item?.attributes.msg} <br />
-                {item?.attributes.condition ?? null}
+                {item?.attributes?.msg} <br />
+                {item?.attributes?.condition ?? null}
               </h1>
             ))}
           </div>

@@ -18,17 +18,17 @@ export default function HomePage() {
 
   return (
     <>
-      <div className=" relative ">
+      <div className=" relative top-0">
         <PopulateOffer />
 
         {/* until the banner image fully loaded this loading screen will be displayed, to avoid footer cling with navbar */}
         {isHomeBannerFullyLoaded ? <Loading /> : null}
 
-        {cover?.data.attributes.mobile && cover?.data.attributes.desktop && (
+        {cover?.data?.attributes.mobile && cover?.data?.attributes.desktop && (
           <div className=" relative">
             <div className=" visible lg:hidden xl:hidden 2xl:hidden">
               <Image
-                src={cover?.data.attributes.mobile}
+                src={cover?.data?.attributes.mobile}
                 layout="responsive"
                 objectFit="fill"
                 width={500}
@@ -37,7 +37,7 @@ export default function HomePage() {
             </div>
             <div className="hidden lg:block xl:block 2xl:block">
               <Image
-                src={cover?.data.attributes.desktop}
+                src={cover?.data?.attributes.desktop}
                 layout="responsive"
                 objectFit="fill"
                 width={1000}

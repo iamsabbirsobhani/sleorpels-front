@@ -29,6 +29,8 @@ export default function Navbar() {
   const dispatch = useDispatch<any>();
   const [scrlY, setscrlY] = useState(0);
 
+  const [userMouseOver, setuserMouseOver] = useState(false);
+
   const [openOptions, setopenOptions] = useState(false);
   useEffect(() => {
     // console.log("Is this men page: ", url.includes("men"));
@@ -81,7 +83,7 @@ export default function Navbar() {
       <div id="desk-navbar" className=" hidden lg:block xl:block 2xl:block">
         <div
           id="top-navbar-info"
-          className=" z-30 relative w-full bg-gray-50 h-7 flex justify-end items-center"
+          className=" z-40 relative w-full bg-gray-50 h-7 flex justify-end items-center"
         >
           <div
             style={{ fontFamily: "Futura PT Light" }}
@@ -111,19 +113,21 @@ export default function Navbar() {
         </div>
 
         {/* Navbar */}
-        <div className=" relative z-30">
-          <div
-            className={
-              "w-full h-[3.6rem] bg-[#2d2d2d] fixed top-7  transition-all duration-300 " +
-              ` ${
-                scrlY < 10
-                  ? " top-7 "
-                  : showNav
-                  ? " top-[0px] fixed "
-                  : " -top-[120px] fixed "
-              }`
-            }
-          >
+        {/* Navbar wrapper -> Navbar ->  (UserCard) (MenNavbar) (WomenNavbar) 👈-siblings */}
+        {/* Navbar wrapper needed because of, I wanted the UserCard behind the main navbar and up front the men/women navbar. Since fixed doesn't work with z-index (as intended) but relative, I wrap the navbar with a fixed wrapper and make the main navbar as relative so it works as intended. */}
+        <div
+          className={
+            " wrapper fixed w-full z-30 " +
+            ` ${
+              scrlY < 20
+                ? " top-7 "
+                : showNav
+                ? " top-[0px] fixed transition-all duration-300 "
+                : " -top-[120px] fixed transition-all duration-300"
+            }`
+          }
+        >
+          <div className=" h-[3.6rem] bg-[#2d2d2d] relative transition-all duration-300 ">
             <div
               onMouseEnter={() => {
                 dispatch(resetActivateOption());
@@ -182,9 +186,17 @@ export default function Navbar() {
               </div>
 
               {/* login user wishlist */}
-              <div className=" flex justify-between w-44">
+              <div className=" flex justify-between w-44 h-[3.5rem] items-center relative">
                 {/* user */}
-                <div className=" text-white cursor-pointer group relative">
+                <div
+                  onMouseEnter={() => {
+                    setuserMouseOver(true);
+                  }}
+                  onMouseLeave={() => {
+                    setuserMouseOver(false);
+                  }}
+                  className=" text-white cursor-pointer h-[3.6rem] group w-12 flex justify-center items-center"
+                >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="h-6 w-6"
@@ -199,9 +211,6 @@ export default function Navbar() {
                       d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
                     />
                   </svg>
-                  <div className=" opacity-0 absolute -top-64 z-[-100] group-hover:top-5 invisible group-hover:visible group-hover:opacity-100  transition-all duration-1000">
-                    <UserCard />
-                  </div>
                 </div>
 
                 {/* love */}
@@ -242,29 +251,25 @@ export default function Navbar() {
               </div>
             </div>
 
-            {/* below men navbar options */}
-            <div className=" ">
-              {isMen ? <MenNavOptions isMen={isMen} /> : null}
-
-              {openNavOption && options && isMen && (
-                <OptionDetails
-                  sale={options[0].isTrue}
-                  newin={options[1].isTrue}
-                  clothing={options[2].isTrue}
-                  shoes={options[3].isTrue}
-                  sportswear={options[4].isTrue}
-                  accessories={options[5].isTrue}
-                  summer={options[6].isTrue}
-                  trending={options[7].isTrue}
-                  topman={options[8].isTrue}
-                  brands={options[9].isTrue}
-                  outlet={options[10].isTrue}
-                  marketplace={options[11].isTrue}
-                />
-              )}
+            {/* user card */}
+            <div
+              onMouseOver={() => {
+                setuserMouseOver(true);
+              }}
+              onMouseOut={() => {
+                setuserMouseOver(false);
+              }}
+              className={
+                userMouseOver
+                  ? " opacity-100 visible top-[2.3rem] z-[-1]  absolute  transition-all duration-1000 right-0"
+                  : " opacity-0 invisible -top-80  z-[-1]  absolute  transition-all duration-300 right-0"
+              }
+            >
+              <UserCard />
             </div>
+
             {/*  below women navbar options */}
-            <div>
+            <div className="relative z-[-5] -top-1">
               {isWomen ? <MenNavOptions isMen={isMen} /> : null}
 
               {openNavOption && options && isWomen && (
@@ -284,6 +289,29 @@ export default function Navbar() {
                 />
               )}
             </div>
+
+            {/* below men navbar options */}
+            {/* top -1 because of the "default/undefined gap like 1 or 2 pixels' " between the main navbar and Men Navbar  */}
+            <div className=" relative z-[-5] -top-1">
+              {isMen ? <MenNavOptions isMen={isMen} /> : null}
+
+              {openNavOption && options && isMen && (
+                <OptionDetails
+                  sale={options[0].isTrue}
+                  newin={options[1].isTrue}
+                  clothing={options[2].isTrue}
+                  shoes={options[3].isTrue}
+                  sportswear={options[4].isTrue}
+                  accessories={options[5].isTrue}
+                  summer={options[6].isTrue}
+                  trending={options[7].isTrue}
+                  topman={options[8].isTrue}
+                  brands={options[9].isTrue}
+                  outlet={options[10].isTrue}
+                  marketplace={options[11].isTrue}
+                />
+              )}
+            </div>
           </div>
         </div>
       </div>
@@ -295,7 +323,7 @@ export default function Navbar() {
             dispatch(setOpenNavOption(false));
           }}
           id="overlay-options"
-          className="hidden lg:block xl:block 2xl:block bg-gray-500/60 top-0 w-full fixed bottom-0 left-0 right-0 z-20"
+          className="hidden lg:block xl:block 2xl:block bg-gray-500/60 top-0 w-full fixed bottom-0 left-0 right-0 z-10"
         ></div>
       ) : null}
 
