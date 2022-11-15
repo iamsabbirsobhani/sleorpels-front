@@ -197,8 +197,8 @@ export default function Navbar() {
                   }}
                   className={
                     userMouseOver
-                      ? "text-white cursor-pointer h-[3.6rem] group w-12 flex flex-col justify-center items-center relative rounded-md outline-1   outline-gray-300 outline-double delay-300 duration-[0.8s] transition-all"
-                      : " text-white cursor-pointer h-[3.6rem] group w-12 flex flex-col justify-center items-center relative delay-300 duration-[.8s] transition-all rounded-md outline-0 outline-none  outline-gray-300 outline-double"
+                      ? "text-white cursor-pointer h-[3.6rem] group w-12 flex flex-col justify-center items-center relative rounded-md outline-1   outline-[#eee] outline-double delay-300 duration-[0.8s] transition-all"
+                      : " text-white cursor-pointer h-[3.6rem] group w-12 flex flex-col justify-center items-center relative delay-300 duration-[.8s] transition-all rounded-md outline-0 outline-none  outline-[#eee] outline-double"
                   }
                 >
                   <svg
@@ -222,7 +222,7 @@ export default function Navbar() {
                         : " opacity-0 invisible absolute bottom-0 delay-300 duration-[1.5s]"
                     }
                   >
-                    <div className=" w-0 h-0 border-r-[15px] border-r-transparent border-l-transparent border-l-[15px] border-b-[12px] border-b-gray-300 "></div>
+                    <div className=" w-0 h-0 border-r-[15px] border-r-transparent border-l-transparent border-l-[15px] border-b-[12px] border-b-[#eee] "></div>
                   </div>
                 </div>
 
@@ -274,8 +274,8 @@ export default function Navbar() {
               }}
               className={
                 userMouseOver
-                  ? " opacity-100 visible top-[2.3rem] z-[-1]  absolute  transition-all delay-150 duration-[.8s] right-8"
-                  : " opacity-100 invisible -top-80  z-[-1]  absolute  transition-all delay-300 duration-[1.5s] right-8"
+                  ? " opacity-100 visible top-[3.5rem] z-[-1]  absolute  transition-all delay-150 duration-[.8s] right-8"
+                  : " opacity-100 invisible -top-80  z-[-1]  absolute  transition-all delay-300 duration-[1.6s] right-8"
               }
             >
               <UserCard />
