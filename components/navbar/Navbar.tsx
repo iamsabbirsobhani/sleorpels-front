@@ -261,8 +261,8 @@ export default function Navbar() {
               }}
               className={
                 userMouseOver
-                  ? " opacity-100 visible top-[2.3rem] z-[-1]  absolute  transition-all duration-1000 right-0"
-                  : " opacity-0 invisible -top-80  z-[-1]  absolute  transition-all duration-300 right-0"
+                  ? " opacity-100 visible top-[2.3rem] z-[-1]  absolute  transition-all delay-150 duration-[.8s] right-0"
+                  : " opacity-100 invisible -top-80  z-[-1]  absolute  transition-all delay-300 duration-[1.5s] right-0"
               }
             >
               <UserCard />
