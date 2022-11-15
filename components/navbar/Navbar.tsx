@@ -195,7 +195,11 @@ export default function Navbar() {
                   onMouseLeave={() => {
                     setuserMouseOver(false);
                   }}
-                  className=" text-white cursor-pointer h-[3.6rem] group w-12 flex flex-col justify-center items-center relative"
+                  className={
+                    userMouseOver
+                      ? "text-white cursor-pointer h-[3.6rem] group w-12 flex flex-col justify-center items-center relative rounded-md outline-1   outline-gray-300 outline-double delay-300 duration-[0.8s] transition-all"
+                      : " text-white cursor-pointer h-[3.6rem] group w-12 flex flex-col justify-center items-center relative delay-300 duration-[.8s] transition-all rounded-md outline-0 outline-none  outline-gray-300 outline-double"
+                  }
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
