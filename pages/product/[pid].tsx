@@ -89,7 +89,7 @@ export default function ProductDetails(props: any) {
         {props.data && props.data.data.attributes && product ? (
           <div className=" flex justify-between mt-8 lg:flex-row xl:flex-row 2xl:flex-row flex-col">
             {/* product image part */}
-            <div className=" flex-col-reverse flex lg:flex-row xl:flex-row 2xl:flex-row ">
+            <div className=" flex-col-reverse flex lg:flex-row xl:flex-row 2xl:flex-row relative">
               <div className=" ml-2  mr-2 mt-2 lg:inline-block xl:inline-block 2xl:inline-block inline-flex">
                 {product.p_images.data.length >= 0 &&
                   product.p_images.data.map((item: any) => (
@@ -123,31 +123,33 @@ export default function ProductDetails(props: any) {
                     </div>
                   ))}
               </div>
-              <Image
-                className=" object-cover"
-                src={
-                  selectedImageUrl?.url ||
-                  product.p_images.data[0].attributes.url
-                }
-                alt={product.productName}
-                width={900}
-                height={1000}
-                objectFit="cover"
-                blurDataURL={product.p_images.data[0].attributes.url}
-                placeholder="blur" // Optional blur-up while loading
-                onLoadingComplete={() => {
-                  loadingExclueDuplicateLoading(
+              <div className=" relative">
+                <Image
+                  className=" object-cover"
+                  src={
                     selectedImageUrl?.url ||
-                      product.p_images.data[0].attributes.url
-                  );
-                }}
-              />
+                    product.p_images.data[0].attributes.url
+                  }
+                  alt={product.productName}
+                  width={900}
+                  height={1000}
+                  objectFit="cover"
+                  blurDataURL={product.p_images.data[0].attributes.url}
+                  placeholder="blur" // Optional blur-up while loading
+                  onLoadingComplete={() => {
+                    loadingExclueDuplicateLoading(
+                      selectedImageUrl?.url ||
+                        product.p_images.data[0].attributes.url
+                    );
+                  }}
+                />
 
-              {isImageFullyLoaded ? (
-                <div className=" absolute top-0 bottom-0 left-0 right-0 flex justify-center items-center">
-                  <Loading />
-                </div>
-              ) : null}
+                {isImageFullyLoaded ? (
+                  <div className=" absolute top-0 bottom-0 left-0 right-0 flex justify-center items-center">
+                    <Loading />
+                  </div>
+                ) : null}
+              </div>
             </div>
 
             {/* product details part */}
