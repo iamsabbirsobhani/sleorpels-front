@@ -9,12 +9,14 @@ import loading from "../../public/sleorpels-loading.png";
 import HomePage from "../HomePage";
 import { fetcher } from "../../composable/fetcher";
 import { API } from "../../apiendpoint";
-
+import Loading from "../../components/loading/img-loading/Loading";
+import { useState } from "react";
 export default function Men() {
   // const { data, error } = useSWR(
   //   "http://192.168.0.100:1337/api/products?populate=*",
   //   fetcher()
   // );
+
   const { data, error } = useSWR(`${API}/api/products?populate=*`, fetcher());
 
   if (!data)
@@ -66,7 +68,7 @@ export default function Men() {
           {data?.data &&
             data?.data.map((item: any) => (
               <Link key={item.id} href={`/product/${item.id}`}>
-                <div className=" cursor-pointer flex justify-center ">
+                <div className=" cursor-pointer flex justify-center relative">
                   <ProductCard
                     width={900}
                     height={1000}

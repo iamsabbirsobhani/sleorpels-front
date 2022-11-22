@@ -1,4 +1,6 @@
 import Image from "next/image";
+import { useState } from "react";
+import Loading from "../loading/img-loading/Loading";
 
 type props = {
   width: number;
@@ -10,6 +12,9 @@ type props = {
 };
 
 export default function ProductCard(props: props) {
+  const [isProductFullyLoaded, setisProductFullyLoaded] =
+    useState<boolean>(true);
+
   function computedOffPrice() {
     return (
       props.productPrice - Math.ceil((props.productPrice * props.off) / 100)
@@ -30,7 +35,15 @@ export default function ProductCard(props: props) {
             height={props.height}
             blurDataURL={props.src}
             placeholder="blur"
+            onLoadingComplete={() => {
+              setisProductFullyLoaded(false);
+            }}
           />
+          {isProductFullyLoaded ? (
+            <div className=" absolute top-0 bottom-0 left-0 right-0 flex justify-center items-center">
+              <Loading />
+            </div>
+          ) : null}
 
           <div>
             <p className=" break-all">{props.productName}</p>

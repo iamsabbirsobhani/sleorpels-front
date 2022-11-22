@@ -6,8 +6,37 @@ import Link from "next/link";
 import { API } from "../apiendpoint";
 import Loading from "../components/Loading";
 import { useState } from "react";
+import { useQuery, gql } from "@apollo/client";
 
 export default function HomePage() {
+  // demo all the products categorized by "Men"
+  const GET_LOCATIONS = gql`
+    {
+      products(filters: { type: { typeName: { eq: "Men" } } }) {
+        data {
+          id
+          attributes {
+            type {
+              data {
+                attributes {
+                  typeName
+                }
+              }
+            }
+            productName
+            price
+          }
+        }
+      }
+    }
+  `;
+
+  const { loading, error: er, data } = useQuery(GET_LOCATIONS);
+
+  console.log(loading ? "Loading..." : "Loaded");
+
+  console.log(data, er);
+
   const [isHomeBannerFullyLoaded, setisHomeBannerFullyLoaded] =
     useState<boolean>(true);
 

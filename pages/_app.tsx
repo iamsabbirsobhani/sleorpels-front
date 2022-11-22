@@ -9,6 +9,13 @@ import { useEffect } from "react";
 import Navbar from "../components/navbar/Navbar";
 import Footer from "../components/footer/Footer";
 import Loading from "../components/Loading";
+import { ApolloClient, InMemoryCache, ApolloProvider } from "@apollo/client";
+import { API } from "../apiendpoint";
+
+const client = new ApolloClient({
+  uri: `${API}/graphql`,
+  cache: new InMemoryCache(),
+});
 
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
@@ -31,12 +38,15 @@ function MyApp({ Component, pageProps }: AppProps) {
       router.events.off("routeChangeError", handleStop);
     };
   }, [router]);
+
   return (
     <Provider store={store}>
       {/* <Loading /> */}
-      <Navbar />
-      <Component {...pageProps} />
-      <Footer />
+      <ApolloProvider client={client}>
+        <Navbar />
+        <Component {...pageProps} />
+        <Footer />
+      </ApolloProvider>
     </Provider>
   );
 }

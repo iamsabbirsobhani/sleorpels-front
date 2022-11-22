@@ -1,10 +1,11 @@
 import { useRouter } from "next/router";
 import { GetServerSideProps } from "next";
-import { useState, useRef } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import Head from "next/head";
 import { API } from "../../apiendpoint";
 import { ReactMarkdown } from "react-markdown/lib/react-markdown";
+import Loading from "../../components/loading/img-loading/Loading";
 
 type SelectedImageUrl = {
   id: number;
@@ -22,7 +23,9 @@ export default function ProductDetails(props: any) {
     id: product.p_images.data[0].id,
     url: product.p_images.data[0].attributes.url,
   });
-
+  const [isImageFullyLoaded, setisImageFullyLoaded] = useState<boolean>(true);
+  const [getCurrentLoadedImageUrl, setgetCurrentLoadedImageUrl] =
+    useState<any>(null);
   const [selectSize, setselectSize] = useState<SelectSize>();
 
   const router = useRouter();
@@ -41,11 +44,23 @@ export default function ProductDetails(props: any) {
       ? "#57534e"
       : size === "L"
       ? "#52525b"
-      : size === "X"
-      ? "#525252"
       : size === "XL"
+      ? "#525252"
+      : size === "XXL"
       ? "#57534e"
       : "none";
+  }
+
+  // algorithm for showing loading indicator, but not showing loading indicator for the same image that already loaded
+  function loadingExclueDuplicateLoading(url: any) {
+    if (url === getCurrentLoadedImageUrl) {
+      setisImageFullyLoaded(false);
+    } else if (getCurrentLoadedImageUrl === null) {
+      setisImageFullyLoaded(false);
+    } else {
+      setisImageFullyLoaded(true);
+    }
+    setgetCurrentLoadedImageUrl(url);
   }
 
   return (
@@ -81,6 +96,7 @@ export default function ProductDetails(props: any) {
                     <div
                       key={item.id}
                       onClick={() => {
+                        loadingExclueDuplicateLoading(item.attributes.url);
                         setselectedImageUrl({
                           id: item.id,
                           url: item.attributes.url,
@@ -119,7 +135,19 @@ export default function ProductDetails(props: any) {
                 objectFit="cover"
                 blurDataURL={product.p_images.data[0].attributes.url}
                 placeholder="blur" // Optional blur-up while loading
+                onLoadingComplete={() => {
+                  loadingExclueDuplicateLoading(
+                    selectedImageUrl?.url ||
+                      product.p_images.data[0].attributes.url
+                  );
+                }}
               />
+
+              {isImageFullyLoaded ? (
+                <div className=" absolute top-0 bottom-0 left-0 right-0 flex justify-center items-center">
+                  <Loading />
+                </div>
+              ) : null}
             </div>
 
             {/* product details part */}
