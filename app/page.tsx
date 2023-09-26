@@ -4,7 +4,6 @@ import { useSelector, useDispatch } from 'react-redux';
 import ProductCard from '../components/product/ProductCard';
 import Link from 'next/link';
 import useSWR from 'swr';
-import HomePage from './HomePage';
 import { fetcher } from '../composable/fetcher';
 import Script from 'next/script';
 import { API } from '../apiendpoint';
@@ -19,7 +18,7 @@ export default function Home() {
     <main className="">
       <div className="diaphonia-logo flex items-center m-24">
         {/* <HomePage /> */}
-        <h1>sdf</h1>
+        <h1>Sleorpels</h1>
       </div>
     </main>
   );
