@@ -1,6 +1,6 @@
-import data from "../../../../app-data/app-data.json";
-import Image from "next/image";
-import ListOptions from "../options-template/ListOptions";
+import data from '../../../../app-data/app-data.json';
+import Image from 'next/image';
+import ListOptions from '../options-template/ListOptions';
 
 export default function BrandsOption() {
   return (
@@ -8,17 +8,17 @@ export default function BrandsOption() {
       <div
         className=" grid grid-cols-3 relative mb-5"
         style={{
-          gridTemplateColumns: "500px auto auto",
+          gridTemplateColumns: '500px auto auto',
         }}
       >
         {/* shop by product */}
         <div className=" relative">
           <ListOptions
             optionNo={10}
-            genderNavOption={"men-nav-options"}
-            optionGroup={"top-brands"}
+            genderNavOption={'men-nav-options'}
+            optionGroup={'top-brands'}
             data={data}
-            title={"Top brands"}
+            title={'Top brands'}
             col={2}
           />
           <div className=" absolute w-[1px] top-0 bg-gray-500/30 h-full right-0"></div>
@@ -26,14 +26,14 @@ export default function BrandsOption() {
 
         {/* others */}
         <div className="    ml-2 relative">
-          {data["men-nav-options"]?.map(
+          {data['men-nav-options']?.map(
             (option: any) =>
               option.id === 10 && (
                 <div
                   key={option.id}
                   className=" flex justify-around flex-wrap "
                 >
-                  {option["others"]?.map((other: any) => (
+                  {option['others']?.map((other: any) => (
                     <div
                       key={other.id}
                       style={{ width: 220, height: 130 }}
@@ -45,9 +45,10 @@ export default function BrandsOption() {
                         height={130}
                         layout="responsive"
                         className="  object-cover"
+                        alt="image"
                       />
                       <div
-                        style={{ fontFamily: "Futura PT Bold" }}
+                        style={{ fontFamily: 'Futura PT Bold' }}
                         className=" absolute left-0 right-0  bottom-5  uppercase text-center tracking-wider text-gray-800/70 z-10"
                       >
                         <h1>{other.name}</h1>
@@ -57,20 +58,20 @@ export default function BrandsOption() {
                   ))}
                   <div className=" absolute w-[1px] top-0 bg-gray-500/30 h-full right-0"></div>
                 </div>
-              )
+              ),
           )}
         </div>
 
         {/* others second */}
         <div className="    ml-2 relative">
-          {data["men-nav-options"]?.map(
+          {data['men-nav-options']?.map(
             (option: any) =>
               option.id === 10 && (
                 <div
                   key={option.id}
                   className=" flex justify-around flex-wrap "
                 >
-                  {option["others-second"]?.map((other: any) => (
+                  {option['others-second']?.map((other: any) => (
                     <div
                       key={other.id}
                       style={{ width: 220, height: 130 }}
@@ -84,9 +85,10 @@ export default function BrandsOption() {
                         className="  object-cover"
                         blurDataURL={other.imgUrl}
                         placeholder="blur"
+                        alt="image"
                       />
                       <div
-                        style={{ fontFamily: "Futura PT Bold" }}
+                        style={{ fontFamily: 'Futura PT Bold' }}
                         className=" absolute left-0 right-0  bottom-5  uppercase text-center tracking-wider text-gray-800/70 z-10"
                       >
                         <h1>{other.name}</h1>
@@ -95,7 +97,7 @@ export default function BrandsOption() {
                     </div>
                   ))}
                 </div>
-              )
+              ),
           )}
         </div>
       </div>
