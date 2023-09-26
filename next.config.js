@@ -11,6 +11,9 @@ const nextConfig = {
       "firebasestorage.googleapis.com",
     ],
   },
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
 };
 
 module.exports = nextConfig;

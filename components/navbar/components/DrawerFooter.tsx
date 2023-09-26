@@ -1,12 +1,12 @@
-import FooterIcon from "../../FooterIcon";
-import footer from "../../../app-data/app-data.json";
-import { DetailedHTMLProps, useState, useEffect } from "react";
-import { useRef } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import FooterIcon from '../../FooterIcon';
+import footer from '../../../app-data/app-data.json';
+import { DetailedHTMLProps, useState, useEffect } from 'react';
+import { useRef } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import {
   setAccordionItemId,
   delAccordionItem,
-} from "../../../features/global/globalSlice";
+} from '../../../features/global/globalSlice';
 import {
   faPlus,
   faMinus,
@@ -14,10 +14,10 @@ import {
   faCircleQuestion,
   faBox,
   faMessage,
-} from "@fortawesome/free-solid-svg-icons";
-import layer from "../../../public/layer.svg";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import Image from "next/image";
+} from '@fortawesome/free-solid-svg-icons';
+import layer from '../../../public/layer.svg';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import Image from 'next/image';
 
 export default function DrawerFooter() {
   const itemId = useSelector((state: any) => state.global.accordionItemId);
@@ -53,13 +53,13 @@ export default function DrawerFooter() {
         {/* user-data */}
         <div className=" flex bg-[#f8f8f8] p-3 px-5">
           <div className="">
-            {footer["user-data"].map((data: any) => (
+            {footer['user-data'].map((data: any) => (
               <div
                 key={data.id}
                 className="flex  svg-cls items-center hover:text-sky-500 cursor-pointer text-lg h-12"
               >
                 <div className=" mr-3">
-                  {data.name === "My Account" ? (
+                  {data.name === 'My Account' ? (
                     <svg
                       className="sgv w-5 h-5"
                       xmlns="http://www.w3.org/2000/svg"
@@ -83,9 +83,9 @@ export default function DrawerFooter() {
                         </g>
                       </g>
                     </svg>
-                  ) : data.name === "My Orders" ? (
+                  ) : data.name === 'My Orders' ? (
                     <FontAwesomeIcon icon={faBox} className=" w-5 h-5" />
-                  ) : data.name === "Returns Information" ? (
+                  ) : data.name === 'Returns Information' ? (
                     <FontAwesomeIcon
                       icon={faCircleQuestion}
                       className=" w-5 h-5"
@@ -108,7 +108,7 @@ export default function DrawerFooter() {
             {footer.options.map((item) => (
               <div key={item.id}>
                 <div
-                  style={{ fontFamily: "Futura PT Book" }}
+                  style={{ fontFamily: 'Futura PT Book' }}
                   className=" text-gray-500 text-base collapse-btn w-full  flex items-center bg-[#eee] justify-between cursor-pointer h-10 border-b-[1px] border-[#ddd] p-3"
                   onClick={() => handleAccord(item.id)}
                 >
@@ -133,14 +133,14 @@ export default function DrawerFooter() {
                 <div
                   className=" bg-[#f8f8f8] px-3"
                   style={{
-                    display: itemId.includes(item.id) ? "block" : "none",
-                    height: itemId.includes(item.id) ? "100%" : "0",
+                    display: itemId.includes(item.id) ? 'block' : 'none',
+                    height: itemId.includes(item.id) ? '100%' : '0',
                   }}
                 >
                   {item.option.map((option, index) => (
                     <p
                       key={index}
-                      style={{ fontFamily: "Futura PT Light" }}
+                      style={{ fontFamily: 'Futura PT Light' }}
                       className=" hover:text-sky-500 cursor-pointer h-12 p-[0.70rem]"
                     >
                       {option}
@@ -157,6 +157,7 @@ export default function DrawerFooter() {
                   width={25}
                   height={25}
                   className=" rounded-full hover:outline outline-1  outline-offset-2 outline-blue-500"
+                  alt="flag"
                 />
               )}
             </div>
