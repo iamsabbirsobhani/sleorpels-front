@@ -62,6 +62,7 @@ export default function HomePage() {
                 objectFit="fill"
                 width={500}
                 height={800}
+                alt="image"
               />
             </div>
             <div className="hidden lg:block xl:block 2xl:block">
@@ -77,6 +78,7 @@ export default function HomePage() {
                 onLoadingComplete={() => {
                   setisHomeBannerFullyLoaded(false);
                 }}
+                alt="image"
               />
             </div>
             <div className=" visible lg:hidden xl:hidden 2xl:hidden absolute top-0 bottom-0 left-0 right-0 flex justify-center items-center flex-col ">
