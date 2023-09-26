@@ -24,7 +24,7 @@ export default function DrawerFooter() {
   const flag = useSelector((state: any) => state.global.flagUrl);
   const dispatch = useDispatch();
 
-  const handleAccord = (id: number) => {
+  const handleAccord = (id: any) => {
     if (!itemId.includes(id)) {
       dispatch(setAccordionItemId(id));
     } else {
