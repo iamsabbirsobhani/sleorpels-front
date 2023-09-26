@@ -1,11 +1,11 @@
-import { useRouter } from "next/router";
-import { GetServerSideProps } from "next";
-import { useState, useEffect } from "react";
-import Image from "next/image";
-import Head from "next/head";
-import { API } from "../../apiendpoint";
-import { ReactMarkdown } from "react-markdown/lib/react-markdown";
-import Loading from "../../components/loading/img-loading/Loading";
+import { useRouter } from 'next/router';
+import { GetServerSideProps } from 'next';
+import { useState, useEffect } from 'react';
+import Image from 'next/image';
+import Head from 'next/head';
+import { API } from '../../apiendpoint';
+import { ReactMarkdown } from 'react-markdown/lib/react-markdown';
+import Loading from '../../components/loading/img-loading/Loading';
 
 type SelectedImageUrl = {
   id: number;
@@ -38,17 +38,17 @@ export default function ProductDetails(props: any) {
   }
 
   function sizeStyle(size: string) {
-    return size === "S"
-      ? "#475569"
-      : size === "M"
-      ? "#57534e"
-      : size === "L"
-      ? "#52525b"
-      : size === "XL"
-      ? "#525252"
-      : size === "XXL"
-      ? "#57534e"
-      : "none";
+    return size === 'S'
+      ? '#475569'
+      : size === 'M'
+      ? '#57534e'
+      : size === 'L'
+      ? '#52525b'
+      : size === 'XL'
+      ? '#525252'
+      : size === 'XXL'
+      ? '#57534e'
+      : 'none';
   }
 
   // algorithm for showing loading indicator, but not showing loading indicator for the same image that already loaded
@@ -106,8 +106,8 @@ export default function ProductDetails(props: any) {
                       style={{
                         border:
                           selectedImageUrl?.id === item.id
-                            ? "2px solid #14b8a6"
-                            : "0",
+                            ? '2px solid #14b8a6'
+                            : '0',
                       }}
                     >
                       <Image
@@ -119,6 +119,7 @@ export default function ProductDetails(props: any) {
                         placeholder="blur"
                         layout="responsive"
                         objectFit="cover"
+                        alt="image"
                       />
                     </div>
                   ))}
@@ -139,7 +140,7 @@ export default function ProductDetails(props: any) {
                   onLoadingComplete={() => {
                     loadingExclueDuplicateLoading(
                       selectedImageUrl?.url ||
-                        product.p_images.data[0].attributes.url
+                        product.p_images.data[0].attributes.url,
                     );
                   }}
                 />
@@ -159,21 +160,21 @@ export default function ProductDetails(props: any) {
               {product.off ? (
                 <div className=" mt-3">
                   <h1>
-                    Was ${product.price}.00{" "}
+                    Was ${product.price}.00{' '}
                     <span className=" font-bold text-red-600">
-                      {" "}
+                      {' '}
                       Now ${computedOffPrice()}.00
-                    </span>{" "}
+                    </span>{' '}
                     <span className=" normal-case text-red-600">
                       (-{product.off}%)
-                    </span>{" "}
+                    </span>{' '}
                   </h1>
                 </div>
               ) : (
                 <div>
                   <p
                     className=" font-extrabold text-lg tracking-wide mt-3"
-                    style={{ fontFamily: "futura-price" }}
+                    style={{ fontFamily: 'futura-price' }}
                   >
                     $&nbsp;{product.price}.00
                   </p>
@@ -181,7 +182,7 @@ export default function ProductDetails(props: any) {
               )}
 
               <p className=" uppercase font-bold mt-3">
-                Colour:{" "}
+                Colour:{' '}
                 <span className=" normal-case font-normal">
                   {product.color}
                 </span>
@@ -194,7 +195,7 @@ export default function ProductDetails(props: any) {
                     <div
                       className={
                         sizeStyle(item.attributes.sizeName) +
-                        " w-6 text-center text-white font-bold rounded-sm cursor-pointer border-[1px] border-white shadow-md"
+                        ' w-6 text-center text-white font-bold rounded-sm cursor-pointer border-[1px] border-white shadow-md'
                       }
                       onClick={() => {
                         setselectSize({
@@ -205,12 +206,12 @@ export default function ProductDetails(props: any) {
                       key={item.id}
                       style={{
                         backgroundColor: sizeStyle(item.attributes.sizeName),
-                        marginRight: "5px",
+                        marginRight: '5px',
                         outline:
                           selectSize?.id === item.id
                             ? `3px solid #52525b`
-                            : "none",
-                        transition: "outline 150ms linear",
+                            : 'none',
+                        transition: 'outline 150ms linear',
                       }}
                     >
                       <p>{item.attributes.sizeName}</p>
@@ -245,7 +246,7 @@ export default function ProductDetails(props: any) {
         ) : null}
         {props.data && props.data.data.attributes && product ? (
           <div className=" mt-5 mb-4 p-2">
-            <ReactMarkdown className={" font-[16px] text-sm "}>
+            <ReactMarkdown className={' font-[16px] text-sm '}>
               {props.data.data.attributes.productSnippet ?? null}
             </ReactMarkdown>
           </div>
