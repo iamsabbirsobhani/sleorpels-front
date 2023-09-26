@@ -1,7 +1,7 @@
-import Image from "next/image";
-import FooterIcon from "../FooterIcon";
-import footer from "../../app-data/app-data.json";
-import { useSelector } from "react-redux";
+import Image from 'next/image';
+import FooterIcon from '../FooterIcon';
+import footer from '../../app-data/app-data.json';
+import { useSelector } from 'react-redux';
 
 export default function Footer() {
   const flag = useSelector((state: any) => state.global.flagUrl);
@@ -15,9 +15,9 @@ export default function Footer() {
           </div>
           <div className=" mr-5 ml-5 w-[1px] h-6 bg-slate-500/50"></div>
           <div className=" flex justify-between items-center w-1/5 ">
-            {footer["payment-methods"].map((payment) => (
+            {footer['payment-methods'].map((payment) => (
               <div key={payment.id} className="mr-3 flex items-center">
-                <Image src={payment.url} width={40} height={25} />
+                <Image src={payment.url} width={40} height={25} alt="image" />
               </div>
             ))}
           </div>
@@ -26,7 +26,7 @@ export default function Footer() {
           {footer.options.map((item) => (
             <div key={item.id}>
               <h1
-                style={{ fontFamily: "Futura PT Bold" }}
+                style={{ fontFamily: 'Futura PT Bold' }}
                 className=" text-gray-500 text-base"
               >
                 {item.name}
@@ -34,7 +34,7 @@ export default function Footer() {
               {item.option.map((option, index) => (
                 <p
                   key={index}
-                  style={{ fontFamily: "Futura PT Light" }}
+                  style={{ fontFamily: 'Futura PT Light' }}
                   className=" mt-3 mb-3"
                 >
                   {option}
@@ -52,6 +52,7 @@ export default function Footer() {
                   width={25}
                   height={25}
                   className=" rounded-full"
+                  alt="image"
                 />
               )}
             </div>
@@ -73,7 +74,7 @@ export default function Footer() {
       </footer>
 
       <footer
-        style={{ fontFamily: "Futura PT Light" }}
+        style={{ fontFamily: 'Futura PT Light' }}
         className=" bg-[#ddd] text-[#666] lg:hidden xl:hidden 2xl:hidden flex justify-between items-center p-3 text-sm"
       >
         <div>
