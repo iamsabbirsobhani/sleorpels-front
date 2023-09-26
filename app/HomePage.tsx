@@ -1,3 +1,4 @@
+// 'use client';
 import PopulateOffer from '../components/home/homepage/PopulateOffer';
 import Image from 'next/image';
 import useSWR from 'swr';

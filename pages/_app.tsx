@@ -1,16 +1,16 @@
-import "../styles/globals.css";
-import type { AppProps } from "next/app";
-import store from "../app/store";
-import { Provider } from "react-redux";
-import { useRouter } from "next/router";
-import NProgress from "nprogress";
-import "../public/nprogress.css";
-import { useEffect } from "react";
-import Navbar from "../components/navbar/Navbar";
-import Footer from "../components/footer/Footer";
-import Loading from "../components/Loading";
-import { ApolloClient, InMemoryCache, ApolloProvider } from "@apollo/client";
-import { API } from "../apiendpoint";
+import '../styles/globals.css';
+import type { AppProps } from 'next/app';
+import store from '../store';
+import { Provider } from 'react-redux';
+import { useRouter } from 'next/router';
+import NProgress from 'nprogress';
+import '../public/nprogress.css';
+import { useEffect } from 'react';
+import Navbar from '../components/navbar/Navbar';
+import Footer from '../components/footer/Footer';
+import Loading from '../components/Loading';
+import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
+import { API } from '../apiendpoint';
 
 const client = new ApolloClient({
   uri: `${API}/graphql`,
@@ -28,14 +28,14 @@ function MyApp({ Component, pageProps }: AppProps) {
       NProgress.done();
     };
 
-    router.events.on("routeChangeStart", handleStart);
-    router.events.on("routeChangeComplete", handleStop);
-    router.events.on("routeChangeError", handleStop);
+    router.events.on('routeChangeStart', handleStart);
+    router.events.on('routeChangeComplete', handleStop);
+    router.events.on('routeChangeError', handleStop);
 
     return () => {
-      router.events.off("routeChangeStart", handleStart);
-      router.events.off("routeChangeComplete", handleStop);
-      router.events.off("routeChangeError", handleStop);
+      router.events.off('routeChangeStart', handleStart);
+      router.events.off('routeChangeComplete', handleStop);
+      router.events.off('routeChangeError', handleStop);
     };
   }, [router]);
 

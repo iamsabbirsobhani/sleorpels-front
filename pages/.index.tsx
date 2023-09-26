@@ -1,15 +1,15 @@
-import Head from "next/head";
-import Image from "next/image";
-import styles from "../styles/Home.module.css";
-import { useSelector, useDispatch } from "react-redux";
-import ProductCard from "../components/product/ProductCard";
-import Link from "next/link";
-import useSWR from "swr";
-import loading from "../public/sleorpels-loading.png";
-import HomePage from "./HomePage";
-import { fetcher } from "../composable/fetcher";
-import Script from "next/script";
-import { API } from "../apiendpoint";
+import Head from 'next/head';
+import Image from 'next/image';
+import styles from '../styles/Home.module.css';
+import { useSelector, useDispatch } from 'react-redux';
+import ProductCard from '../components/product/ProductCard';
+import Link from 'next/link';
+import useSWR from 'swr';
+import loading from '../public/sleorpels-loading.png';
+import HomePage from './HomePage';
+import { fetcher } from '../composable/fetcher';
+import Script from 'next/script';
+import { API } from '../apiendpoint';
 
 const Home = (props: any) => {
   const count = useSelector((state: any) => state.global.value);
