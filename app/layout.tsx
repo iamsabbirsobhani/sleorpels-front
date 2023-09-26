@@ -1,3 +1,4 @@
+import './globals.css';
 import { Metadata } from 'next';
 import { Suspense } from 'react';
 import { Providers } from './provider';

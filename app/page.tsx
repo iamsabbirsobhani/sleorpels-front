@@ -7,6 +7,9 @@ import useSWR from 'swr';
 import { fetcher } from '../composable/fetcher';
 import Script from 'next/script';
 import { API } from '../apiendpoint';
+import HomePage from '../pages/HomePage';
+import Navbar from '../components/navbar/Navbar';
+import Footer from '../components/footer/Footer';
 
 export default function Home() {
   const count = useSelector((state: any) => state.global.value);
@@ -16,9 +19,10 @@ export default function Home() {
 
   return (
     <main className="">
-      <div className="diaphonia-logo flex items-center m-24">
-        {/* <HomePage /> */}
-        <h1>Sleorpels</h1>
+      <div className="">
+        <Navbar />
+        <HomePage />
+        <Footer />
       </div>
     </main>
   );

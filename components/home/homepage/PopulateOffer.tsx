@@ -41,21 +41,7 @@ export default function PopulateOffer(props: any) {
     if (informs?.data?.length && hiddenOffer && hiddenOffer?.data?.attributes)
       startSlide(document, informs?.data?.length);
     console.log(informs);
-  }, [
-    informs?.data?.length,
-    hiddenOffer,
-    hiddenOffer?.data?.attributes,
-    error,
-    hiddenOfferError,
-    hiddenOfferStyle,
-    hiddenOfferStyle?.bgColor,
-    hiddenOfferStyle?.borderColor,
-    hiddenOfferStyle?.button,
-    hiddenOfferStyle?.textColor,
-    informs,
-    informs?.data,
-    informs?.data?.length,
-  ]);
+  }, [informs?.data?.length]);
 
   useEffect(() => {
     if (hiddenOffer?.data?.attributes) {

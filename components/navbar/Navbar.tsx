@@ -4,7 +4,7 @@ import { useState, useEffect, Dispatch } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchFlag } from '../../features/global/globalSlice';
 import Image from 'next/image';
-import { useRouter } from 'next/router';
+import { usePathname, useRouter } from 'next/navigation';
 import MenNavOptions from './components/MenNavOptions';
 import { hideOnScroll } from '../../composable/onScrollHide';
 import {
@@ -18,14 +18,16 @@ import OptionDetails from './components/OptionDetails';
 import UserCard from './components/user/UserCard';
 export default function Navbar() {
   const router = useRouter();
-  const url = router.pathname;
+  const pathname = usePathname();
+  const url = pathname;
+
   const flag = useSelector((state: any) => state.global.flagUrl);
   const status = useSelector((state: any) => state.global.status);
   const showNav = useSelector((state: any) => state.global.showNavDesk);
   const options = useSelector((state: any) => state.global.options);
   const openNavOption = useSelector((state: any) => state.global.openNavOption);
-  const [isMen, setisMen] = useState(url.match(/\bmen/)?.index);
-  const [isWomen, setisWomen] = useState(url.match(/\bwomen/)?.index);
+  const [isMen, setisMen] = useState(url?.match(/\bmen/)?.index);
+  const [isWomen, setisWomen] = useState(url?.match(/\bwomen/)?.index);
   const dispatch = useDispatch<any>();
   const [scrlY, setscrlY] = useState(0);
 
@@ -44,8 +46,8 @@ export default function Navbar() {
 
   // checking url if men or women
   useEffect(() => {
-    setisWomen(url.match(/\bwomen/)?.index);
-    setisMen(url.match(/\bmen/)?.index);
+    setisWomen(url?.match(/\bwomen/)?.index);
+    setisMen(url?.match(/\bmen/)?.index);
   }, [url]);
 
   useEffect(() => {

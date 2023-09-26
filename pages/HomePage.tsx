@@ -1,3 +1,4 @@
+'use client';
 import PopulateOffer from '../components/home/homepage/PopulateOffer';
 import Image from 'next/image';
 import useSWR from 'swr';
@@ -6,37 +7,8 @@ import Link from 'next/link';
 import { API } from '../apiendpoint';
 import Loading from '../components/Loading';
 import { useState } from 'react';
-import { useQuery, gql } from '@apollo/client';
 
 export default function HomePage() {
-  // demo all the products categorized by "Men"
-  const GET_LOCATIONS = gql`
-    {
-      products(filters: { type: { typeName: { eq: "Men" } } }) {
-        data {
-          id
-          attributes {
-            type {
-              data {
-                attributes {
-                  typeName
-                }
-              }
-            }
-            productName
-            price
-          }
-        }
-      }
-    }
-  `;
-
-  const { loading, error: er, data } = useQuery(GET_LOCATIONS);
-
-  console.log(loading ? 'Loading...' : 'Loaded');
-
-  console.log(data, er);
-
   const [isHomeBannerFullyLoaded, setisHomeBannerFullyLoaded] =
     useState<boolean>(true);
 
@@ -127,7 +99,7 @@ export default function HomePage() {
               <div>
                 <h2
                   style={{ fontFamily: 'Futura PT Bold' }}
-                  className=" bg-white w-[32rem] text-center m-auto p-2 font-extrabold text-6xl"
+                  className=" bg-white w-[32rem] text-center m-auto p-2 font-extrabold text-6xl "
                 >
                   This is SLEORPELS
                 </h2>
