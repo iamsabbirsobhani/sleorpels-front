@@ -50,7 +50,7 @@ export default function Navbar() {
 
   useEffect(() => {
     hideOnScroll(dispatch, setShowDeskNav, null, undefined, true, window);
-  }, []);
+  }, [dispatch]);
 
   useEffect(() => {
     window.addEventListener('scroll', () => {

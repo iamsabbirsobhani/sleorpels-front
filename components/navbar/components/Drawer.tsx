@@ -1,18 +1,18 @@
-import { useEffect, useState, useRef } from "react";
-import DrawerMen from "./DrawerMen";
-import { useSelector, useDispatch } from "react-redux";
+import { useEffect, useState, useRef } from 'react';
+import DrawerMen from './DrawerMen';
+import { useSelector, useDispatch } from 'react-redux';
 import {
   setOpenDrawer,
   setScroll,
   setShowNav,
-} from "../../../features/global/globalSlice";
-import DrawerFooter from "./DrawerFooter";
-import DrawerWomen from "./DrawerWomen";
+} from '../../../features/global/globalSlice';
+import DrawerFooter from './DrawerFooter';
+import DrawerWomen from './DrawerWomen';
 
 type DrawerProps = {
   openDrawer: boolean;
 };
-import { hideOnScroll } from "../../../composable/onScrollHide";
+import { hideOnScroll } from '../../../composable/onScrollHide';
 export function Drawer(props: DrawerProps) {
   const [openMen, setopenMen] = useState(false);
   const [openWomen, setopenWomen] = useState(true);
@@ -32,15 +32,15 @@ export function Drawer(props: DrawerProps) {
     //     previousPosition = scrl.scrollTop;
     //   }
     // });
-    hideOnScroll(dispatch, setShowNav, document, "#scroller");
-  }, []);
+    hideOnScroll(dispatch, setShowNav, document, '#scroller');
+  });
   return (
     <>
       <div
         style={{
-          opacity: props.openDrawer ? "1" : "0",
-          visibility: props.openDrawer ? "visible" : "hidden",
-          transition: "all 0.24s ease-in",
+          opacity: props.openDrawer ? '1' : '0',
+          visibility: props.openDrawer ? 'visible' : 'hidden',
+          transition: 'all 0.24s ease-in',
         }}
         onClick={() => {
           dispatch(setOpenDrawer(false));
@@ -54,16 +54,16 @@ export function Drawer(props: DrawerProps) {
       {/* drawer */}
       <div
         style={{
-          left: props.openDrawer ? "0" : "-100%",
-          transition: "left 0.24s linear",
+          left: props.openDrawer ? '0' : '-100%',
+          transition: 'left 0.24s linear',
         }}
         id="scroller"
         className=" z-50 fixed h-full top-0 bottom-0 sm:w-[45%] w-[86%] bg-white overflow-y-scroll"
       >
         <div
           className={
-            " fixed z-50 sm:w-[45%] w-[86%] flex border-b-[1px] border-gray-500/20 bg-white items-center transition-all duration-300 " +
-            `${showNav ? "top-0" : "-top-[60px]"}`
+            ' fixed z-50 sm:w-[45%] w-[86%] flex border-b-[1px] border-gray-500/20 bg-white items-center transition-all duration-300 ' +
+            `${showNav ? 'top-0' : '-top-[60px]'}`
           }
         >
           <button
@@ -72,7 +72,7 @@ export function Drawer(props: DrawerProps) {
               setopenWomen(true);
             }}
             style={{
-              borderBottom: openWomen ? "2px solid #111827" : "none",
+              borderBottom: openWomen ? '2px solid #111827' : 'none',
             }}
             className=" w-1/2 uppercase p-3 font-semibold"
           >
@@ -85,7 +85,7 @@ export function Drawer(props: DrawerProps) {
               setopenMen(true);
             }}
             style={{
-              borderBottom: openMen ? "2px solid #111827" : "none",
+              borderBottom: openMen ? '2px solid #111827' : 'none',
             }}
             className=" w-1/2 uppercase p-3 font-semibold"
           >
@@ -96,8 +96,8 @@ export function Drawer(props: DrawerProps) {
         {/* drawer for men */}
         <div
           style={{
-            display: openMen ? "block" : "none",
-            transition: "display 0.24ms ease-out",
+            display: openMen ? 'block' : 'none',
+            transition: 'display 0.24ms ease-out',
           }}
           className=" mt-16"
         >
@@ -107,8 +107,8 @@ export function Drawer(props: DrawerProps) {
         {/* drawer for women */}
         <div
           style={{
-            display: openWomen ? "block" : "none",
-            transition: "display 0.24ms ease-out",
+            display: openWomen ? 'block' : 'none',
+            transition: 'display 0.24ms ease-out',
           }}
           className=" mt-16"
         >
@@ -120,11 +120,11 @@ export function Drawer(props: DrawerProps) {
       </div>
       <div
         style={{
-          transition: "left 0.24s linear",
+          transition: 'left 0.24s linear',
         }}
         className={
-          " z-40 absolute text-black top-0 left-2/3 " +
-          `${props.openDrawer ? "left-[86%] sm:left-[45%]" : "left-[-100%]"}`
+          ' z-40 absolute text-black top-0 left-2/3 ' +
+          `${props.openDrawer ? 'left-[86%] sm:left-[45%]' : 'left-[-100%]'}`
         }
       >
         <button

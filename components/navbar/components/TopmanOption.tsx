@@ -1,6 +1,6 @@
-import data from "../../../app-data/app-data.json";
-import ListOptions from "./options-template/ListOptions";
-import Image from "next/image";
+import data from '../../../app-data/app-data.json';
+import ListOptions from './options-template/ListOptions';
+import Image from 'next/image';
 
 export default function TopmanOption() {
   return (
@@ -8,17 +8,17 @@ export default function TopmanOption() {
       <div
         className=" grid grid-cols-3 relative mb-5"
         style={{
-          gridTemplateColumns: "500px auto auto",
+          gridTemplateColumns: '500px auto auto',
         }}
       >
         {/* shop by product */}
         <div className=" relative">
           <ListOptions
             optionNo={9}
-            genderNavOption={"men-nav-options"}
-            optionGroup={"shop-by-product"}
+            genderNavOption={'men-nav-options'}
+            optionGroup={'shop-by-product'}
             data={data}
-            title={"Shop by product"}
+            title={'Shop by product'}
             col={2}
           />
           <div className=" absolute w-[1px] top-0 bg-gray-500/30 h-full right-0"></div>
@@ -26,14 +26,14 @@ export default function TopmanOption() {
 
         {/* others */}
         <div className="    ml-2 relative">
-          {data["men-nav-options"]?.map(
+          {data['men-nav-options']?.map(
             (option: any) =>
               option.id === 9 && (
                 <div
                   key={option.id}
                   className=" flex justify-around flex-wrap "
                 >
-                  {option["others"]?.map((other: any) => (
+                  {option['others']?.map((other: any) => (
                     <div
                       key={other.id}
                       style={{ width: 220, height: 130 }}
@@ -47,9 +47,10 @@ export default function TopmanOption() {
                         className="  object-cover"
                         blurDataURL={other.imgUrl}
                         placeholder="blur"
+                        alt="topman"
                       />
                       <div
-                        style={{ fontFamily: "Futura PT Bold" }}
+                        style={{ fontFamily: 'Futura PT Bold' }}
                         className=" absolute left-0 right-0  bottom-5  uppercase text-center tracking-wider text-gray-800/70 z-10"
                       >
                         <h1>{other.name}</h1>
@@ -59,20 +60,20 @@ export default function TopmanOption() {
                   ))}
                   <div className=" absolute w-[1px] top-0 bg-gray-500/30 h-full right-0"></div>
                 </div>
-              )
+              ),
           )}
         </div>
 
         {/* others second */}
         <div className="    ml-2 relative">
-          {data["men-nav-options"]?.map(
+          {data['men-nav-options']?.map(
             (option: any) =>
               option.id === 9 && (
                 <div
                   key={option.id}
                   className=" flex justify-around flex-wrap "
                 >
-                  {option["others-second"]?.map((other: any) => (
+                  {option['others-second']?.map((other: any) => (
                     <div
                       key={other.id}
                       style={{ width: 220, height: 130 }}
@@ -86,9 +87,10 @@ export default function TopmanOption() {
                         className="  object-cover"
                         blurDataURL={other.imgUrl}
                         placeholder="blur"
+                        alt="topman"
                       />
                       <div
-                        style={{ fontFamily: "Futura PT Bold" }}
+                        style={{ fontFamily: 'Futura PT Bold' }}
                         className=" absolute left-0 right-0  bottom-5  uppercase text-center tracking-wider text-gray-800/70 z-10"
                       >
                         <h1>{other.name}</h1>
@@ -97,7 +99,7 @@ export default function TopmanOption() {
                     </div>
                   ))}
                 </div>
-              )
+              ),
           )}
         </div>
       </div>
