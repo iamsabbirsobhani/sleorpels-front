@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from 'next/image';
 export default function RoundedSmallOption(props: any) {
   const { data, title, optionNo, optionGroup, genderNavOption } = props;
 
@@ -24,6 +24,7 @@ export default function RoundedSmallOption(props: any) {
                       className=" rounded-full"
                       blurDataURL={item.imgUrl}
                       placeholder="blur"
+                      alt="image"
                     />
                   </div>
                   <div className=" relative">
@@ -37,7 +38,7 @@ export default function RoundedSmallOption(props: any) {
                 </div>
               ))}
             </div>
-          )
+          ),
       )}
     </div>
   );
