@@ -1,21 +1,21 @@
-import Link from "next/link";
-import MobileNavbar from "./MobileNavbar";
-import { useState, useEffect, Dispatch } from "react";
-import { useSelector, useDispatch } from "react-redux";
-import { fetchFlag } from "../../features/global/globalSlice";
-import Image from "next/image";
-import { useRouter } from "next/router";
-import MenNavOptions from "./components/MenNavOptions";
-import { hideOnScroll } from "../../composable/onScrollHide";
+import Link from 'next/link';
+import MobileNavbar from './MobileNavbar';
+import { useState, useEffect, Dispatch } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { fetchFlag } from '../../features/global/globalSlice';
+import Image from 'next/image';
+import { useRouter } from 'next/router';
+import MenNavOptions from './components/MenNavOptions';
+import { hideOnScroll } from '../../composable/onScrollHide';
 import {
   setShowDeskNav,
   openOption,
   closeOptions,
   setOpenNavOption,
   resetActivateOption,
-} from "../../features/global/globalSlice";
-import OptionDetails from "./components/OptionDetails";
-import UserCard from "./components/user/UserCard";
+} from '../../features/global/globalSlice';
+import OptionDetails from './components/OptionDetails';
+import UserCard from './components/user/UserCard';
 export default function Navbar() {
   const router = useRouter();
   const url = router.pathname;
@@ -35,7 +35,7 @@ export default function Navbar() {
   useEffect(() => {
     // console.log("Is this men page: ", url.includes("men"));
     // console.log("Is this women page: ", url.includes("women"));
-    if (status === "idle") {
+    if (status === 'idle') {
       dispatch(fetchFlag());
     }
 
@@ -53,27 +53,27 @@ export default function Navbar() {
   }, []);
 
   useEffect(() => {
-    window.addEventListener("scroll", () => {
+    window.addEventListener('scroll', () => {
       setscrlY(window.scrollY);
     });
   });
 
   useEffect(() => {
-    const a = document.querySelector("#men-nav-options");
-    const b = document.querySelector("#option-details");
+    const a = document.querySelector('#men-nav-options');
+    const b = document.querySelector('#option-details');
 
-    b?.addEventListener("mouseenter", (e) => {
+    b?.addEventListener('mouseenter', (e) => {
       dispatch(setOpenNavOption(true));
     });
 
-    a?.addEventListener("mouseleave", (e) => {
-      b?.addEventListener("mouseenter", (b) => {
+    a?.addEventListener('mouseleave', (e) => {
+      b?.addEventListener('mouseenter', (b) => {
         dispatch(setOpenNavOption(true));
       });
       dispatch(setOpenNavOption(false));
     });
 
-    document.addEventListener("mouseleave", (e) => {
+    document.addEventListener('mouseleave', (e) => {
       dispatch(resetActivateOption());
     });
   });
@@ -86,19 +86,19 @@ export default function Navbar() {
           className=" z-40 relative w-full bg-gray-50 h-7 flex justify-end items-center"
         >
           <div
-            style={{ fontFamily: "Futura PT Light" }}
+            style={{ fontFamily: 'Futura PT Light' }}
             className=" border-l-[1px]  border-r-[1px] border-gray-500/20 p-1 px-5 cursor-pointer hover:text-blue-500"
           >
             <p>Marketplace</p>
           </div>
           <div
-            style={{ fontFamily: "Futura PT Light" }}
+            style={{ fontFamily: 'Futura PT Light' }}
             className="  border-r-[1px] border-gray-500/20 p-1 px-5 cursor-pointer hover:text-blue-500"
           >
             <p>Help & FAQs</p>
           </div>
           <div
-            style={{ fontFamily: "Futura PT Light" }}
+            style={{ fontFamily: 'Futura PT Light' }}
             className="  border-r-[1px] border-gray-500/20 p-1 px-5 cursor-pointer mt-1 mr-4"
           >
             {flag && (
@@ -107,6 +107,7 @@ export default function Navbar() {
                 width={20}
                 height={20}
                 className=" rounded-full hover:outline outline-2  outline-offset-2 outline-blue-500"
+                alt="flag"
               />
             )}
           </div>
@@ -117,13 +118,13 @@ export default function Navbar() {
         {/* Navbar wrapper needed because of, I wanted the UserCard behind the main navbar and up front the men/women navbar. Since fixed doesn't work with z-index (as intended) but relative, I wrap the navbar with a fixed wrapper and make the main navbar as relative so it works as intended. */}
         <div
           className={
-            " wrapper fixed w-full z-30 " +
+            ' wrapper fixed w-full z-30 ' +
             ` ${
               scrlY < 20
-                ? " top-7 "
+                ? ' top-7 '
                 : showNav
-                ? " top-[0px] fixed transition-all duration-300 "
-                : " -top-[120px] fixed transition-all duration-300"
+                ? ' top-[0px] fixed transition-all duration-300 '
+                : ' -top-[120px] fixed transition-all duration-300'
             }`
           }
         >
@@ -134,11 +135,11 @@ export default function Navbar() {
               }}
               className=" flex items-center  justify-around  "
             >
-              <Link href={"/"} scroll={false}>
+              <Link href={'/'} scroll={false}>
                 <div>
                   <h1
                     title="Go to SLEORPELS Home"
-                    style={{ fontFamily: "Readex Pro" }}
+                    style={{ fontFamily: 'Readex Pro' }}
                     className="text-3xl tracking-tighter font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-gray-50 to-gray-300 cursor-pointer"
                   >
                     SLEORPELS®
@@ -149,11 +150,11 @@ export default function Navbar() {
                 <div>
                   <button
                     onClick={() => {
-                      router.push("/women");
+                      router.push('/women');
                     }}
                     style={{
-                      fontFamily: "Futura PT Demi",
-                      backgroundColor: isWomen ? "#525050" : undefined,
+                      fontFamily: 'Futura PT Demi',
+                      backgroundColor: isWomen ? '#525050' : undefined,
                     }}
                     className=" uppercase font-semibold tracking-wider text-white w-36 hover:bg-gray-50/10 h-[3.6rem] border-l-[1px] border-r-[1px] border-gray-500/30"
                   >
@@ -163,11 +164,11 @@ export default function Navbar() {
                 <div>
                   <button
                     onClick={() => {
-                      router.push("/men");
+                      router.push('/men');
                     }}
                     style={{
-                      fontFamily: "Futura PT Demi",
-                      backgroundColor: isMen ? "#525050" : undefined,
+                      fontFamily: 'Futura PT Demi',
+                      backgroundColor: isMen ? '#525050' : undefined,
                     }}
                     className="nav-desk-men-btn uppercase font-semibold tracking-wider text-white w-36 hover:bg-gray-50/10 h-[3.6rem] border-r-[1px] border-gray-500/30"
                   >
@@ -197,8 +198,8 @@ export default function Navbar() {
                   }}
                   className={
                     userMouseOver
-                      ? "text-white cursor-pointer h-[3.6rem] group w-12 flex flex-col justify-center items-center relative rounded-md outline-1   outline-[#eee] outline-double delay-300 duration-[0.8s] transition-all"
-                      : " text-white cursor-pointer h-[3.6rem] group w-12 flex flex-col justify-center items-center relative delay-300 duration-[.8s] transition-all rounded-md outline-0 outline-none  outline-[#eee] outline-double"
+                      ? 'text-white cursor-pointer h-[3.6rem] group w-12 flex flex-col justify-center items-center relative rounded-md outline-1   outline-[#eee] outline-double delay-300 duration-[0.8s] transition-all'
+                      : ' text-white cursor-pointer h-[3.6rem] group w-12 flex flex-col justify-center items-center relative delay-300 duration-[.8s] transition-all rounded-md outline-0 outline-none  outline-[#eee] outline-double'
                   }
                 >
                   <svg
@@ -218,8 +219,8 @@ export default function Navbar() {
                   <div
                     className={
                       userMouseOver
-                        ? " opacity-100 visible absolute bottom-0 delay-300 duration-[0.8s]"
-                        : " opacity-0 invisible absolute bottom-0 delay-300 duration-[1.5s]"
+                        ? ' opacity-100 visible absolute bottom-0 delay-300 duration-[0.8s]'
+                        : ' opacity-0 invisible absolute bottom-0 delay-300 duration-[1.5s]'
                     }
                   >
                     <div className=" w-0 h-0 border-r-[15px] border-r-transparent border-l-transparent border-l-[15px] border-b-[12px] border-b-[#eee] "></div>
@@ -274,8 +275,8 @@ export default function Navbar() {
               }}
               className={
                 userMouseOver
-                  ? " opacity-100 visible top-[3.5rem] z-[-1]  absolute  transition-all delay-150 duration-[.8s] right-8"
-                  : " opacity-100 invisible -top-80  z-[-1]  absolute  transition-all delay-300 duration-[1.6s] right-8"
+                  ? ' opacity-100 visible top-[3.5rem] z-[-1]  absolute  transition-all delay-150 duration-[.8s] right-8'
+                  : ' opacity-100 invisible -top-80  z-[-1]  absolute  transition-all delay-300 duration-[1.6s] right-8'
               }
             >
               <UserCard />

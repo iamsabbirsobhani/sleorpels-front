@@ -1,6 +1,6 @@
-import Link from "next/link";
-import Image from "next/image";
-import Head from "next/head";
+import Link from 'next/link';
+import Image from 'next/image';
+import Head from 'next/head';
 
 export default function SectionTwo(props: any) {
   const { data } = props;
@@ -41,6 +41,7 @@ export default function SectionTwo(props: any) {
                   objectFit="fill"
                   width={500}
                   height={550}
+                  alt="image"
                 />
               </div>
               <div className="hidden lg:block xl:block 2xl:block w-[97%] m-auto">
@@ -51,6 +52,7 @@ export default function SectionTwo(props: any) {
                   width={1000}
                   height={478}
                   priority
+                  alt="image"
                 />
               </div>
             </div>

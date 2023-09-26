@@ -1,9 +1,9 @@
-import RoundedSmallOption from "../../../components/navbar/components/options-template/RoundedSmallOption";
-import data from "../../../app-data/women-data.json";
-import RoundedBigOption from "../../../components/navbar/components/options-template/RoundedBigOption";
-import ImageTiles from "../../../components/navbar/components/options-template/ImageTiles";
-import Image from "next/image";
-import ListOptions from "../../navbar/components/options-template/ListOptions";
+import RoundedSmallOption from '../../../components/navbar/components/options-template/RoundedSmallOption';
+import data from '../../../app-data/women-data.json';
+import RoundedBigOption from '../../../components/navbar/components/options-template/RoundedBigOption';
+import ImageTiles from '../../../components/navbar/components/options-template/ImageTiles';
+import Image from 'next/image';
+import ListOptions from '../../navbar/components/options-template/ListOptions';
 
 export default function TrendingNow() {
   return (
@@ -11,17 +11,17 @@ export default function TrendingNow() {
       <div
         className=" grid grid-cols-3 relative "
         style={{
-          gridTemplateColumns: "250px fit-content(30%) auto",
+          gridTemplateColumns: '250px fit-content(30%) auto',
         }}
       >
         {/* shop by products */}
         <div className="grid relative">
           <ListOptions
             optionNo={8}
-            genderNavOption={"women-nav-options"}
-            optionGroup={"shop-by-product"}
+            genderNavOption={'women-nav-options'}
+            optionGroup={'shop-by-product'}
             data={data}
-            title={"Shop by product"}
+            title={'Shop by product'}
             col={1}
           />
           <div className=" absolute w-[1px] to p-0 bg-gray-500/30 h-full right-0"></div>
@@ -30,7 +30,7 @@ export default function TrendingNow() {
         {/* new drops */}
 
         <div className="grid relative ml-3">
-          {data["women-nav-options"]?.map(
+          {data['women-nav-options']?.map(
             (option: any) =>
               option.id === 8 && (
                 <div key={option.id}>
@@ -38,7 +38,7 @@ export default function TrendingNow() {
                     New drops
                   </h1>
                   <div className="flex items-center flex-wrap justify-center">
-                    {option["new-drops"]?.map((link: any) => (
+                    {option['new-drops']?.map((link: any) => (
                       <div
                         key={link.id}
                         className=" w-32  text-center p-2 mt-9 mb-8 ml-3"
@@ -52,6 +52,7 @@ export default function TrendingNow() {
                               className="rounded-[50%]  "
                               blurDataURL={link.imgUrl}
                               placeholder="blur"
+                              alt="image"
                             />
                             <p className="text-sm   antialiased tracking-wide mt-3">
                               {link.name}
@@ -62,21 +63,21 @@ export default function TrendingNow() {
                     ))}
                   </div>
                 </div>
-              )
+              ),
           )}
           <div className=" absolute w-[1px] top-0 bg-gray-500/30 h-full right-0"></div>
         </div>
 
         {/* others */}
         <div className="    ml-2">
-          {data["women-nav-options"]?.map(
+          {data['women-nav-options']?.map(
             (option: any) =>
               option.id === 8 && (
                 <div
                   key={option.id}
                   className=" flex justify-around flex-wrap "
                 >
-                  {option["others"]?.map((other: any) => (
+                  {option['others']?.map((other: any) => (
                     <div
                       key={other.id}
                       style={{ width: 220, height: 130 }}
@@ -90,9 +91,10 @@ export default function TrendingNow() {
                         className="  object-cover"
                         blurDataURL={other.imgUrl}
                         placeholder="blur"
+                        alt="image"
                       />
                       <div
-                        style={{ fontFamily: "Futura PT Bold" }}
+                        style={{ fontFamily: 'Futura PT Bold' }}
                         className=" absolute left-0 right-0  bottom-5  uppercase text-center tracking-wider text-gray-800/70 z-10"
                       >
                         <h1>{other.name}</h1>
@@ -101,7 +103,7 @@ export default function TrendingNow() {
                     </div>
                   ))}
                 </div>
-              )
+              ),
           )}
         </div>
       </div>

@@ -1,12 +1,12 @@
-import Image from "next/image";
-import { useEffect, useState } from "react";
+import Image from 'next/image';
+import { useEffect, useState } from 'react';
 
 export default function ImageTiles(props: any) {
   const { imgUrl, title, subtitle } = props;
   const [screenSize, setscreenSize] = useState<any>();
   useEffect(() => {
     setscreenSize(innerWidth);
-  });
+  }, [screenSize]);
   return (
     <>
       <div className=" flex lg:mt-0 xl:mt-0 2xl:mt-0 mt-5  flex-col basis-[150px]">
@@ -22,20 +22,20 @@ export default function ImageTiles(props: any) {
         </div>
         <div
           className={
-            " break-all text-center mt-5 mb-3 " +
+            ' break-all text-center mt-5 mb-3 ' +
             `${
-              screenSize <= 768 ? " w-[140px] text-sm " : " w-[300px] text-lg "
+              screenSize <= 768 ? ' w-[140px] text-sm ' : ' w-[300px] text-lg '
             }`
           }
         >
           <h1
             className=" font-bold uppercase antialiased tracking-wider "
-            style={{ fontFamily: "Futura PT Medium" }}
+            style={{ fontFamily: 'Futura PT Medium' }}
           >
             {title}
           </h1>
           <p
-            style={{ fontFamily: "Futura PT Book" }}
+            style={{ fontFamily: 'Futura PT Book' }}
             className="  tracking-wider"
           >
             {subtitle}

@@ -1,11 +1,11 @@
-import { offer } from "../../../dummy/PopulateOffer";
-import React from "react";
-import { useEffect, useState } from "react";
-import { startSlide } from "../../../composable/slide";
-import { fetcher } from "../../../composable/fetcher";
-import useSWR from "swr";
-import ReactMarkdown from "react-markdown";
-import { hiddenOfferDOM } from "../../../composable/hiddenOffer";
+import { offer } from '../../../dummy/PopulateOffer';
+import React from 'react';
+import { useEffect, useState } from 'react';
+import { startSlide } from '../../../composable/slide';
+import { fetcher } from '../../../composable/fetcher';
+import useSWR from 'swr';
+import ReactMarkdown from 'react-markdown';
+import { hiddenOfferDOM } from '../../../composable/hiddenOffer';
 
 type HiddenOffer = {
   textColor: string;
@@ -13,19 +13,19 @@ type HiddenOffer = {
   borderColor: string;
   button: string;
 };
-import Link from "next/link";
-import { API } from "../../../apiendpoint";
+import Link from 'next/link';
+import { API } from '../../../apiendpoint';
 export default function PopulateOffer(props: any) {
   const [hiddenOfferStyle, sethiddenOfferStyle] = useState<HiddenOffer>();
 
   const { data: informs, error } = useSWR(
     `${API}/api/informs?populate=*`,
-    fetcher()
+    fetcher(),
   );
 
   const { data: hiddenOffer, error: hiddenOfferError } = useSWR(
     `${API}/api/hidden-offer?populate=*`,
-    fetcher()
+    fetcher(),
   );
   // const { data: informs, error } = useSWR(
   //   "https://sleorpels.herokuapp.com/api/informs?populate=*",
@@ -41,7 +41,21 @@ export default function PopulateOffer(props: any) {
     if (informs?.data?.length && hiddenOffer && hiddenOffer?.data?.attributes)
       startSlide(document, informs?.data?.length);
     console.log(informs);
-  }, [informs?.data?.length]);
+  }, [
+    informs?.data?.length,
+    hiddenOffer,
+    hiddenOffer?.data?.attributes,
+    error,
+    hiddenOfferError,
+    hiddenOfferStyle,
+    hiddenOfferStyle?.bgColor,
+    hiddenOfferStyle?.borderColor,
+    hiddenOfferStyle?.button,
+    hiddenOfferStyle?.textColor,
+    informs,
+    informs?.data,
+    informs?.data?.length,
+  ]);
 
   useEffect(() => {
     if (hiddenOffer?.data?.attributes) {
@@ -65,7 +79,7 @@ export default function PopulateOffer(props: any) {
           color: hiddenOfferStyle?.textColor,
         }}
         className={
-          "hidden-offer   hidden lg:flex xl:flex 2xl:flex  w-full h-16 p-2  justify-between items-center border-b-[1px]  border-white relative top-[3.6rem] z-10"
+          'hidden-offer   hidden lg:flex xl:flex 2xl:flex  w-full h-16 p-2  justify-between items-center border-b-[1px]  border-white relative top-[3.6rem] z-10'
         }
       >
         <div className=" ml-5">
@@ -73,10 +87,10 @@ export default function PopulateOffer(props: any) {
             <button
               style={{
                 border: `2px solid ${hiddenOfferStyle?.borderColor}`,
-                fontFamily: "Futura PT Demi",
+                fontFamily: 'Futura PT Demi',
               }}
               className={
-                hiddenOfferStyle?.button + " hiddenOfferButton uppercase"
+                hiddenOfferStyle?.button + ' hiddenOfferButton uppercase'
               }
             >
               Women
@@ -85,11 +99,11 @@ export default function PopulateOffer(props: any) {
         </div>
 
         <div
-          style={{ fontFamily: "Futura PT Bold" }}
+          style={{ fontFamily: 'Futura PT Bold' }}
           className=" text-center group break-all tracking-wider antialiased text-gray-900 w-[70vw] relative cursor-default"
         >
           <ReactMarkdown
-            className={"markdown-offer-title font-bold font-[14px] text-sm "}
+            className={'markdown-offer-title font-bold font-[14px] text-sm '}
           >
             {hiddenOffer?.data?.attributes?.offerTitle ?? null}
           </ReactMarkdown>
@@ -107,10 +121,10 @@ export default function PopulateOffer(props: any) {
             <button
               style={{
                 border: `2px solid ${hiddenOfferStyle?.borderColor}`,
-                fontFamily: "Futura PT Demi",
+                fontFamily: 'Futura PT Demi',
               }}
               className={
-                hiddenOfferStyle?.button + " hiddenOfferButton uppercase"
+                hiddenOfferStyle?.button + ' hiddenOfferButton uppercase'
               }
             >
               Men
@@ -139,21 +153,21 @@ export default function PopulateOffer(props: any) {
 }
 
 const slide = {
-  width: "100%",
-  wordBreak: "break-all",
-  height: "4rem",
+  width: '100%',
+  wordBreak: 'break-all',
+  height: '4rem',
   padding: 0,
-  margin: "auto",
-  overflow: "hidden",
-  position: "relative",
-  transition: "all 0.24s ease",
-  fontFamily: "Futura PT Bold",
+  margin: 'auto',
+  overflow: 'hidden',
+  position: 'relative',
+  transition: 'all 0.24s ease',
+  fontFamily: 'Futura PT Bold',
 } as React.CSSProperties;
 
 const slider = {
-  position: "absolute",
-  visibility: "hidden",
-  transition: "transform 0.24s ease",
+  position: 'absolute',
+  visibility: 'hidden',
+  transition: 'transform 0.24s ease',
   // visibility: "hidden",
 } as React.CSSProperties;
 

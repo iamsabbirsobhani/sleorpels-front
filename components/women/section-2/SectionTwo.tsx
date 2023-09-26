@@ -1,6 +1,6 @@
-import Link from "next/link";
-import Image from "next/image";
-import Head from "next/head";
+import Link from 'next/link';
+import Image from 'next/image';
+import Head from 'next/head';
 
 export default function SectionTwo(props: any) {
   const { data } = props;
@@ -41,6 +41,7 @@ export default function SectionTwo(props: any) {
                   objectFit="fill"
                   width={500}
                   height={550}
+                  alt="image"
                 />
               </div>
               <div className="hidden lg:block xl:block 2xl:block w-[97%] m-auto">
@@ -51,12 +52,13 @@ export default function SectionTwo(props: any) {
                   width={1000}
                   height={478}
                   priority
+                  alt="image"
                 />
               </div>
               <div className=" visible lg:hidden xl:hidden 2xl:hidden absolute top-0 bottom-16 left-0 right-0 flex justify-end items-center flex-col ">
                 <div>
                   <h2
-                    style={{ fontFamily: "Futura PT Bold" }}
+                    style={{ fontFamily: 'Futura PT Bold' }}
                     className=" bg-white  text-center m-auto p-3 font-extrabold text-3xl"
                   >
                     Giving grunge
@@ -65,7 +67,7 @@ export default function SectionTwo(props: any) {
                 <div className=" flex flex-col mt-3">
                   <Link href="/men">
                     <button
-                      style={{ fontFamily: "Futura PT Bold" }}
+                      style={{ fontFamily: 'Futura PT Bold' }}
                       className=" mt-2 bg-white text-gray-900 hover:text-white hover:bg-gray-900 transition-all duration-500 align-text-bottom uppercase p-2 px-4 tracking-wider "
                     >
                       Shop now
@@ -77,7 +79,7 @@ export default function SectionTwo(props: any) {
               <div className=" hidden lg:flex xl:flex 2xl:flex absolute top-0 bottom-20 left-0 right-0 justify-end items-center flex-col">
                 <div>
                   <h2
-                    style={{ fontFamily: "Futura PT Bold" }}
+                    style={{ fontFamily: 'Futura PT Bold' }}
                     className=" bg-white text-center m-auto p-3 font-extrabold text-6xl"
                   >
                     Giving grunge
@@ -86,7 +88,7 @@ export default function SectionTwo(props: any) {
                 <div className=" flex mt-5">
                   <Link href="/men">
                     <button
-                      style={{ fontFamily: "Futura PT Bold" }}
+                      style={{ fontFamily: 'Futura PT Bold' }}
                       className=" mt-2 bg-white text-gray-900 hover:text-white hover:bg-gray-900 transition-all duration-500 align-text-bottom uppercase p-2 px-4 tracking-wider"
                     >
                       Shop now
