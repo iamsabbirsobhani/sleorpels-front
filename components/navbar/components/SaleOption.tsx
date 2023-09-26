@@ -1,5 +1,5 @@
-import data from "../../../app-data/app-data.json";
-import Image from "next/image";
+import data from '../../../app-data/app-data.json';
+import Image from 'next/image';
 export default function SaleOption() {
   return (
     <div className="grid  grid-cols-4">
@@ -8,14 +8,14 @@ export default function SaleOption() {
         <h1 className=" tracking-wider underline-offset-2 underline uppercase font-bold">
           SHOP BY PRODUCT
         </h1>
-        {data["men-nav-options"].map(
+        {data['men-nav-options'].map(
           (option) =>
             option.id === 1 && (
               <div
                 key={option.id}
                 className="grid gap-2  grid-cols-2   antialiased tracking-wide "
               >
-                {option["shop-by-product"]?.map((link) =>
+                {option['shop-by-product']?.map((link) =>
                   link.id === 1 || link.id === 25 ? (
                     <div
                       key={link.id}
@@ -43,23 +43,23 @@ export default function SaleOption() {
                         {link.name}
                       </a>
                     </div>
-                  )
+                  ),
                 )}
               </div>
-            )
+            ),
         )}
       </div>
 
       {/* shop by edit section  */}
       <div className="grid grid-cols-1   mt-3">
-        {data["men-nav-options"].map(
+        {data['men-nav-options'].map(
           (option) =>
             option.id === 1 && (
               <div key={option.id} className="">
                 <h1 className=" underline-offset-2 underline uppercase font-bold mb-3">
                   Shop by edit
                 </h1>
-                {option["shop-by-edit"]?.map((link) =>
+                {option['shop-by-edit']?.map((link) =>
                   link.id === 1 ? (
                     <div
                       key={link.id}
@@ -78,16 +78,16 @@ export default function SaleOption() {
                         {link.name}
                       </a>
                     </div>
-                  )
+                  ),
                 )}
               </div>
-            )
+            ),
         )}
       </div>
 
       {/* shop sale by body fit */}
       <div className="grid grid-cols-1  mt-3">
-        {data["men-nav-options"].map(
+        {data['men-nav-options'].map(
           (option) =>
             option.id === 1 && (
               <div key={option.id}>
@@ -95,7 +95,7 @@ export default function SaleOption() {
                   SHOP SALE BY BODY FIT
                 </h1>
                 <div className="flex items-center">
-                  {option["shop-sale-by-body-fit"]?.map((link) => (
+                  {option['shop-sale-by-body-fit']?.map((link) => (
                     <div key={link.id} className=" w-48  text-center p-2">
                       <a href={link.url} className=" ">
                         <div className=" border w-24 h-24 m-auto p-[2px]  rounded-full text-gray-600/95 hover:text-blue-500 hover:border-blue-500">
@@ -107,6 +107,7 @@ export default function SaleOption() {
                             style={imgStyle}
                             blurDataURL={link.imgUrl}
                             placeholder="blur"
+                            alt="image"
                           />
                           <p className="text-sm   antialiased tracking-wide">
                             {link.name}
@@ -117,7 +118,7 @@ export default function SaleOption() {
                   ))}
                 </div>
               </div>
-            )
+            ),
         )}
       </div>
     </div>
@@ -125,5 +126,5 @@ export default function SaleOption() {
 }
 
 const imgStyle = {
-  border: "2px solid gray",
+  border: '2px solid gray',
 };
