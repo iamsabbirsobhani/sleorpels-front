@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from 'next/image';
 export default function RoundedBigOption(props: any) {
   const { data, title, optionNo, optionGroup, genderNavOption } = props;
 
@@ -23,6 +23,7 @@ export default function RoundedBigOption(props: any) {
                           className="rounded-[50%]  "
                           blurDataURL={link.imgUrl}
                           placeholder="blur"
+                          alt="image"
                         />
                         <p className="text-sm   antialiased tracking-wide">
                           {link.name}
@@ -33,7 +34,7 @@ export default function RoundedBigOption(props: any) {
                 ))}
               </div>
             </div>
-          )
+          ),
       )}
     </>
   );

@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from 'next/image';
 export default function ImageTiles(props: any) {
   const { data, width, optionNo, height, optionGroup, genderNavOption } = props;
   return (
@@ -21,9 +21,10 @@ export default function ImageTiles(props: any) {
                     className=" mr-5 object-cover"
                     blurDataURL={other.imgUrl}
                     placeholder="blur"
+                    alt="image"
                   />
                   <div
-                    style={{ fontFamily: "Futura PT Bold" }}
+                    style={{ fontFamily: 'Futura PT Bold' }}
                     className=" absolute left-0 right-0  bottom-5  uppercase text-center tracking-wider text-gray-800/70 z-10"
                   >
                     <h1>{other.name}</h1>
@@ -32,7 +33,7 @@ export default function ImageTiles(props: any) {
                 </div>
               ))}
             </div>
-          )
+          ),
       )}
     </>
   );
